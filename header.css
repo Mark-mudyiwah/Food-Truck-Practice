@@ -1,5 +1,9 @@
 body{
     font-family: roboto,arial;
+     
+    background-size: cover;
+    background-position: center top;
+    
 }
 
 
@@ -17,6 +21,7 @@ body{
     right: 0;
     left: 0;
     top: 0;
+   
 }
 
 .menu-icon-container{
@@ -96,8 +101,8 @@ body{
     width: 18px;
     height: 18px;
     border-radius: 15px;
-    top:8px;
-    right: 8px;
+    top:3px;
+    right: 0px;
     color: white;
     font-weight: bold;
     font-size: small;
