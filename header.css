@@ -1,68 +1,105 @@
-.first-header-small{
+body{
+    font-family: roboto,arial;
+}
+
+
+
+
+.header{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(0, 46, 89);
+    background-color:rgb(218, 12, 12);
     color: white;
-    padding: 10px 4px;
+    padding: 4px 4px;
+    align-items: center;
+    height: 45px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
 }
 
-.second-header-bigger{
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    padding: 20px 4px;
-    background-color: rgb(20, 103, 226);
-
+.menu-icon-container{
+    height: 30px;
+    cursor: pointer;
 }
 
-.logo{
-    height: 40px;
-}
-
-.search-container{
-    height: 40px;
-    background-color: transparent ;
-    border: 1px solid white;
-    display: flex;
-}
-
-.search-bar{
-    width: 100%;
-    height: 90%;
-    background-color:transparent;
-    border: none;
-
-}
-
-.search-bar::placeholder{
-    color: rgb(207, 203, 203);
-    padding-left: 10px;
-    font-weight: bold;
-    font-size: 15px;
-    width: 100%;
-}
-
-.search-image-container{
+.menu-icon{
     height: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   padding-right: 10px;
+}
+
+
+
+.middle{
+    display: flex;
+    align-items: center;
+}
+.goodhope-text{
+
+    font-weight: bold;
+    font-size: large;
+}
+
+
+.truck-container{
+    height: 35px;
+}
+
+.truck-icon{
+    height: 100%;
+}
+
+
+.right-side{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.food-truck-text{
+    background-color: rgb(235, 183, 15);
+    color: black;
+    padding-left:12px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 15px;
+    font-size: small;
+    font-weight: bold;
+}
+
+
+.shopping-bag-container,
+.search-icon-container{
+    height: 30px;
+    cursor: pointer;
+    margin-right: 4px;
+    display: flex;
+    justify-content: center;
 
 }
+
+
+.shopping-bag-icon,
 .search-icon{
-    height: 20px;
+    height: 100%;
 }
 
 
-
-
-input:focus{
-    outline: none;
+.search-icon-container{
+    margin-right: 15px;
 }
 
-
-.search-container-primary{
-    padding: 12px 12px;
-    background-color: rgb(12, 74, 133) ;
+.cart-quantity-container{
+    position: absolute;
+    background-color: black;
+    padding-left:2px;
+    padding-top: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 15px;
+    top:8px;
+    right: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: small;
 }
+ 
