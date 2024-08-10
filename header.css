@@ -3,6 +3,8 @@ body{
      
     background-size: cover;
     background-position: center top;
+    color: black;
+    padding-top: 100px ;
     
 }
 
@@ -38,10 +40,11 @@ body{
 .middle{
     display: flex;
     align-items: center;
+    margin-left: 25px;
 }
 .goodhope-text{
-
-    font-weight: bold;
+    font-family:Abril Fatface;
+    font-weight:bold ;
     font-size: large;
 }
 
@@ -69,6 +72,7 @@ body{
     border-radius: 15px;
     font-size: small;
     font-weight: bold;
+    font-family: roboto;
 }
 
 
