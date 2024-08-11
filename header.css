@@ -4,7 +4,9 @@ body{
     background-size: cover;
     background-position: center top;
     color: black;
-    padding-top: 100px ;
+    padding-top: 40px ;
+    margin: 0;
+  
     
 }
 
@@ -112,3 +114,73 @@ body{
     font-size: small;
 }
  
+.main-primary{
+   display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 40px 4px;
+ 
+  
+}
+ 
+.welcome-container {
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 500;
+   
+}
+
+.motto-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    font-size: small;
+    padding-left:10px ;
+}
+
+.welcome-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}
+
+.welcome-links div{
+    background-color: yellow;
+    padding: 8px 10px;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.visit-butcher-text{
+    margin-right: 15px;
+}
+
+.welcome-to-text{
+    font-family: Abril Fatface ;
+
+}
+.goodhope-meats-text{
+    font-family: Abril Fatface ;
+    color: red;
+
+}
+
+.food-truck-text-second{
+    font-family: Abril Fatface ;
+    color:black;
+    background-color: yellow;
+    padding: 4px 8px;
+    border-radius: 18px;
+
+}
