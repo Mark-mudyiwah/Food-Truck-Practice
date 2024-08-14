@@ -164,6 +164,15 @@ body{
     border-radius: 4px;
 }
 
+.welcome-links div button{
+    background-color: yellow;
+    border: none;
+    font-family: roboto;
+    font-weight: bold;
+    font-size: medium;
+
+}
+
 .visit-butcher-text{
     margin-right: 15px;
 }
@@ -197,14 +206,104 @@ margin-top: 50px;
   text-decoration: underline;
   font-weight: 700;
   color:white;
-  background-color:rgb(49, 8, 8);
+  background-color: rgb(80, 6, 6);
 
 }
 
 .actual-intro{
-  background-color: rgb(49, 8, 8);
+    background-color: rgb(87, 10, 10);
     color:white;
     padding: 10px 10px;
     font-size: small;
     
 }
+
+.featured-products-container{
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 10px;
+    column-gap: 2px;
+}
+
+.product-container{
+    border:  2px solid yellow;
+ width: max-content;
+ 
+}
+
+.product-infomation{
+    display: flex;
+   justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+ 
+}
+
+.product-infomation div{
+    margin-bottom:6px ;
+}
+
+.image-container{
+    
+     width: 200px;
+     display: flex;
+    justify-content:center;
+  
+   
+}
+
+.product-image{
+width: 100%;
+
+}
+
+.product-name{
+    margin-top: 10px;
+    color:rgb(60, 181, 236);
+    font-weight: bold;
+}
+.product-price{
+    color: brown;
+    font-weight: bold;
+}
+
+.featured-products-heading{
+
+    
+    width: max-content;
+    padding: 6px 4px;
+    color: red;
+}
+
+.add-to-cart-button{
+    padding: 8px 10px;
+     background-color: orange;
+     border: 1px solid black;
+     border-radius: 8px;
+     width: 80%;
+     font-weight: bold;
+     font-size: medium;
+}
+
+.add-to-cart-container{
+   
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.more-product-info{
+    width: 100%;
+
+}
+
+.see-info-span{
+    color: blue;
+    font-size: small;
+    margin-left: 5px;
+    cursor: pointer;
+
+}
+
+ 
