@@ -1,6 +1,5 @@
 body{
     font-family: roboto,arial;
-     background-color: black;
     background-size: cover;
     background-position: center top;
     padding-top: 40px ;
@@ -117,7 +116,6 @@ body{
 .main-primary{
    display: flex;
     justify-content: center;
-    background-color: black;
     padding: 40px 4px;
  
   
@@ -130,8 +128,9 @@ body{
     align-items: center;
     flex-direction: column;
     margin-bottom: 10px;
-    color:white;
+ 
     font-weight: 500;
+    
    
 }
 
@@ -179,6 +178,9 @@ body{
 
 .welcome-to-text{
     font-family: Abril Fatface ;
+    background-color:black;
+    padding: 4px 8px;
+    border-radius: 18px;
 
 }
 .goodhope-meats-text{
@@ -198,7 +200,8 @@ body{
 
 .intro-container{
 
-margin-top: 50px;
+ margin-top: 50px;
+ 
  
 }
 
@@ -206,30 +209,41 @@ margin-top: 50px;
   text-decoration: underline;
   font-weight: 700;
   color:white;
-  background-color: rgb(80, 6, 6);
+  background-color:rgb(87, 10, 10);
+  padding: 4px 6px;
+  border-top: 1px solid rgb(87, 10, 10);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
+ 
 
 }
 
 .actual-intro{
-    background-color: rgb(87, 10, 10);
+    background-color: black;
     color:white;
     padding: 10px 10px;
     font-size: small;
+    border: 1px solid black;
+    border-radius: 8px;
+    line-height: 18px;
+    margin-top: 5px;
     
 }
 
 .featured-products-container{
 
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     row-gap: 10px;
-    column-gap: 2px;
+    column-gap: 12px;
+    padding: 4px 4px;
 }
 
 .product-container{
     border:  2px solid yellow;
- width: max-content;
- 
+   width: max-content;
+   border-radius: 8px;
 }
 
 .product-infomation{
@@ -246,10 +260,10 @@ margin-top: 50px;
 }
 
 .image-container{
-    
      width: 200px;
      display: flex;
     justify-content:center;
+
   
    
 }
@@ -261,7 +275,7 @@ width: 100%;
 
 .product-name{
     margin-top: 10px;
-    color:rgb(60, 181, 236);
+    color:black;
     font-weight: bold;
 }
 .product-price{
@@ -270,16 +284,16 @@ width: 100%;
 }
 
 .featured-products-heading{
-
-    
     width: max-content;
     padding: 6px 4px;
     color: red;
+    font-weight: bold;
+    font-size: large;
 }
 
 .add-to-cart-button{
     padding: 8px 10px;
-     background-color: orange;
+     background-color:rgb(47, 221, 221);
      border: 1px solid black;
      border-radius: 8px;
      width: 80%;
@@ -303,6 +317,55 @@ width: 100%;
     font-size: small;
     margin-left: 5px;
     cursor: pointer;
+
+}
+
+@media(max-width:400px) {
+    .featured-products-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 10px;
+        column-gap: 2px;
+    }
+    
+
+}
+
+@media(max-width:350px) {
+    .featured-products-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr); 
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+       
+        row-gap: 10px;
+        column-gap: 2px;
+        align-items: center;
+    }
+
+    .parent-grid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .product-container{
+        width: 1fr;
+        border-radius: 8px;
+    }
+
+    .image-container{
+        max-width: 100%;
+        display: flex;
+       justify-content:center;
+       padding-top: 1px;
+   
+     
+      
+   }
+    
 
 }
 
