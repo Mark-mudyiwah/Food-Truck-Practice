@@ -36,6 +36,8 @@ body{
     height: 100%;
 }
 
+ 
+
 
 
 .middle{
@@ -224,12 +226,11 @@ body{
 }
 
 .intro-span{
-  text-decoration: underline;
   font-weight: 700;
-  color:red;
- background-color: black;
+  color:black;
+ 
   padding: 4px 6px;
-  border-top: 1px solid rgb(87, 10, 10);
+   
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 
@@ -238,14 +239,15 @@ body{
 }
 
 .actual-intro{
-    background-color: black;
-    color:white;
-    padding: 10px 10px;
+   
+    color:black;
+    padding: 10px 8px;
     font-size: small;
     border: 1px solid black;
     border-radius: 8px;
     line-height: 18px;
     margin-top: 5px;
+ 
     
 }
 
@@ -451,11 +453,49 @@ border-radius: 10px;
     color: red;
     display: flex;
     justify-content: center;
-   
     font-weight: 300;
 }
 
-h3{
-    text-decoration: underline;
+ 
+.blog-posts-heading{
+    color: black;
+    display: flex;
+    justify-content: center;
 }
+
+.blog-posts-container{
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+  padding: 10px;
+}
+
+.blog-image-container{
+    flex: 0 0 auto; /* Prevents containers from shrinking or growing */
+    width: 60%;
+    margin-right: 10px;
+   
+}
+
+.blog-image{
+    height: 100%;
+    width: 100%;
+   
+}
+
+.sidebar{
+    color: black;
+    position: absolute;
+    top: 40px;
+    background-color: aliceblue;
+    width: 70%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 6px;
+    display: none;
+  
+}
+ 
  
