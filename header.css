@@ -15,11 +15,11 @@ body{
 .header{
     display: flex;
     justify-content: space-between;
-    background-color:rgb(218, 12, 12);
+    background-color:black;
     color: white;
     padding: 4px 4px;
     align-items: center;
-    height: 45px;
+    height: 50px;
     position: fixed;
     right: 0;
     left: 0;
@@ -28,7 +28,7 @@ body{
 }
 
 .menu-icon-container{
-    height: 30px;
+    height: 26px;
     cursor: pointer;
 }
 
@@ -79,7 +79,7 @@ body{
 
 .shopping-bag-container,
 .search-icon-container{
-    height: 30px;
+    height: 28px;
     cursor: pointer;
     margin-right: 4px;
     display: flex;
@@ -100,17 +100,17 @@ body{
 
 .cart-quantity-container{
     position: absolute;
-    background-color: black;
-    padding-left:2px;
-    padding-top: 3px;
-    width: 18px;
-    height: 18px;
+    background-color:rgb(179, 24, 24);
+    padding:2px 2px;
+    
+    width: 13px;
+    height: 12px;
     border-radius: 15px;
-    top:3px;
+    top:4px;
     right: 0px;
     color: white;
     font-weight: bold;
-    font-size: small;
+    font-size: x-small;
 }
  
 .main-primary{
@@ -120,6 +120,20 @@ body{
  
   
 }
+
+.welcome-background-container{
+    width: 100%;
+ 
+    max-height: max-content;
+}
+
+.background-image{
+  
+    width: 100%;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+   
+}
  
 .welcome-container {
     font-size: 22px;
@@ -127,9 +141,12 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 10px;
- 
+    margin-bottom: 0px;
+    background-color: black;
     font-weight: 500;
+    padding-top: 12px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
     
    
 }
@@ -150,7 +167,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 5px;
     color: black;
 
 }
@@ -195,6 +212,7 @@ body{
     background-color: yellow;
     padding: 4px 8px;
     border-radius: 18px;
+    width: max-content;
 
 }
 
@@ -335,10 +353,99 @@ border-radius: 10px;
 
 @media(max-width:350px) {
     
- 
+ .welcome-container{
+    font-size: 18px;
+ }
+
+ .goodhope-text{
+    font-size: 15px;
+ }
 
 }
 
+
+@media(max-width:300px) {
+    
+    .welcome-container{
+       font-size: 16px;
+    }
+
+    .menu-icon-container,
+    .search-icon-container,
+    .shopping-bag-container{
+       height: 23px;
+    }
+    
+   }
+
+   @media(max-width:270px) {
+    
+    .welcome-container{
+       font-size: 16px;
+    }
+    .goodhope-text
+    {
+        font-size: 13px;
+     }
+     .food-truck-text{
+        font-size: 10px;
+     }
+
+     .menu-icon-container,
+     .search-icon-container,
+     .shopping-bag-container{
+        height: 20px;
+     }
+
+     .image-container{
+        max-height: 100px;
+      }
+  
+      .product-container{
+          font-size: small;
+      }
+      .add-to-cart-button{
+          font-size: smaller;
+      }
+   }
+   
+   @media(max-width:250px) {
+    
+    .welcome-container{
+       font-size: 16px;
+    }
+    .goodhope-text
+    {
+        font-size: 10px;
+     }
+     .food-truck-text{
+        font-size: 8px;
+     }
+     .middle{
+        margin: 0;
+     }
+
+     .welcome-links div{
+        background-color: yellow;
+        padding: 4px 4px;
+        cursor: pointer;
+        border: 1px solid gray;
+        border-radius: 4px;
+        font-size: small;
+    }
+
+    .image-container{
+      max-height: 60px;
+    }
+
+    .product-container{
+        font-size: small;
+    }
+    .add-to-cart-button{
+        font-size: smaller;
+    }
+   }
+   
 .view-all-products-container{
   margin-top: 30px;
     color: red;
