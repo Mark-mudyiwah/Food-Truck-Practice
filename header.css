@@ -17,7 +17,7 @@ body{
     justify-content: space-between;
     background-color:black;
     color: white;
-    padding: 4px 4px;
+    padding: 8px 4px;
     align-items: center;
     height: 50px;
     position: fixed;
@@ -65,7 +65,7 @@ body{
     align-items: center;
 }
 .food-truck-text{
-    background-color: rgb(235, 183, 15);
+    background-color: yellow;
     color: black;
     padding-left:12px;
     padding-top: 2px;
