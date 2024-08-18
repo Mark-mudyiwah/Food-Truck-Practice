@@ -475,7 +475,7 @@ h3{
     color: black;
     display: flex;
     justify-content: center;
-    margin-top: 12px;
+    margin-top: 25px;
     font-size: 22px;
     text-decoration: underline;
 }
@@ -484,7 +484,8 @@ h3{
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-  padding: 10px;
+  padding: 6px;
+ 
 }
 
 .blog-image-container{
@@ -504,7 +505,7 @@ h3{
     color: black;
     position: absolute;
     top: 40px;
-    background-color: aliceblue;
+    background-color: rgb(82, 159, 226);
     width: 70%;
     height: 60%;
     display: flex;
@@ -525,16 +526,17 @@ h3{
     font-size: 20px;
     margin-top: -2px;
     padding-top: 36px;
-    background-color: aliceblue;
+   font-family: abril fatface;
    
 }
 
 .request-message{
     font-family: roboto;
-    font-size: small;
-    margin-top: 5px;
+    font-size: medium;
+    margin-top: 0;
     font-weight: 500;
-    color: rgb(6, 153, 153);
+    font-size: 14px;
+    color :rgb(102, 17, 17);
    
 }
 
@@ -561,7 +563,7 @@ h3{
  
 .email-input::placeholder{
     color: rgb(78, 78, 78);
-    padding-left: 10px;
+   
  
 }
 
@@ -576,10 +578,58 @@ h3{
 }
  
 .footer{
-    margin-top: 10px;
+    margin-top: 60px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     height: 200px;
-    background-image: url('images/header-images/istockphoto-1165399909-612x612.jpg');
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 8px 2px;
+    border-radius: 6px;
+  background-image: url('images/header-images/istockphoto-1165399909-612x612.jpg');
 }
+
+.about-us{
+    width: max-content;
+}
+.about-us-heading,
+.follow-us-heading{
+    font-size: 18px;
+}
+
+.about-details{
+    margin-left: 5px;
+    margin-top: 6px;
+    color: rgb(129, 182, 228);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:40px ;
+}
+
+.about-details div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+ .media-platforms{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(129, 182, 228);
+    width: 100px;
+    margin-top: 10px;
+ }
+
+.email-icon,
+.whatsapp-icon
+{
+    height: 20px;
+}
+.location-icon{
+    height: 22px;
+}
+ .icon{
+    height: 30px;
+ }
