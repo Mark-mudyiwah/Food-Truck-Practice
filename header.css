@@ -228,9 +228,7 @@ body{
 .intro-span{
   font-weight: 700;
   color:black;
- 
   padding: 4px 6px;
-   
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 
@@ -243,10 +241,17 @@ body{
     color:black;
     padding: 10px 8px;
     font-size: small;
-    border: 1px solid black;
-    border-radius: 8px;
+    border: 1px solid white;
+  color: white;
     line-height: 18px;
     margin-top: 5px;
+    box-shadow: 5px 0px 10px 0px gray;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-image: url('images/header-images/images\ -\ 2024-08-18T171011.551.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
  
     
 }
@@ -282,7 +287,7 @@ body{
 
 .image-container{
    
-     height: 150px;
+     height: 180px;
      display: flex;
     justify-content:center;
     max-width: 250px;
@@ -311,10 +316,19 @@ border-radius: 10px;
     width: max-content;
     padding: 6px 4px;
     color: red;
-    font-weight: bold;
+   
     font-size: large;
     display: flex;
     justify-content: center;
+    font-family: Abril Fatface;
+ 
+}
+
+h3{
+    margin: 0;
+    font-weight:500;
+    font-family: Abril Fatface;
+ 
 }
 
 .add-to-cart-button{
@@ -461,6 +475,9 @@ border-radius: 10px;
     color: black;
     display: flex;
     justify-content: center;
+    margin-top: 12px;
+    font-size: 22px;
+    text-decoration: underline;
 }
 
 .blog-posts-container{
@@ -497,5 +514,72 @@ border-radius: 10px;
     display: none;
   
 }
+
+.sign-in-request-container{
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-weight: Bold;
+    font-size: 20px;
+    margin-top: -2px;
+    padding-top: 36px;
+    background-color: aliceblue;
+   
+}
+
+.request-message{
+    font-family: roboto;
+    font-size: small;
+    margin-top: 5px;
+    font-weight: 500;
+    color: rgb(6, 153, 153);
+   
+}
+
+.email-input-container{
+    height: 30px;
+    border: 1px solid rgb(0, 153, 255);
+    background-color: white;
+    margin-top: 5px;
+    width: 60%;
+}
+
+.email-input{
+    height:80%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+   text-align: center; /* Centers the placeholder horizontally */
+   padding: 0; /* Remove default padding */
+   line-height: 80%; /* Same as height to center vertically */
+   box-sizing: border-box;
+   
+}
  
+.email-input::placeholder{
+    color: rgb(78, 78, 78);
+    padding-left: 10px;
  
+}
+
+.subscribe-button{
+
+    padding: 6px 18px;
+    margin-top: 6px;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    width: 50%;
+}
+ 
+.footer{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 200px;
+    background-image: url('images/header-images/istockphoto-1165399909-612x612.jpg');
+}
