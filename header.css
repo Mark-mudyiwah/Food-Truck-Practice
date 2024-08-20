@@ -523,11 +523,16 @@ h3{
     flex-direction: column;
     align-items: center;
     font-weight: Bold;
-    font-size: 20px;
+  
     margin-top: -2px;
     padding-top: 36px;
    font-family: abril fatface;
    
+}
+
+.sign-in-request-container div{
+    color:black;
+    font-size: 25px;
 }
 
 .request-message{
@@ -546,23 +551,26 @@ h3{
     background-color: white;
     margin-top: 5px;
     width: 60%;
+ 
 }
 
 .email-input{
-    height:80%;
-    border: none;
-    background-color: transparent;
+    height:30px;
+    border: 1px solid rgb(0, 153, 255);
+    background-color: rgb(0, 109, 109);
     outline: none;
-    width: 100%;
+    width: 60%;
    text-align: center; /* Centers the placeholder horizontally */
    padding: 0; /* Remove default padding */
-   line-height: 80%; /* Same as height to center vertically */
+   line-height: 100%; /* Same as height to center vertically */
    box-sizing: border-box;
+   overflow: hidden;
+
    
 }
  
 .email-input::placeholder{
-    color: rgb(78, 78, 78);
+    color: rgb(233, 230, 230);
    
  
 }
@@ -598,28 +606,15 @@ h3{
     font-size: 18px;
 }
 
-.about-details{
-    margin-left: 5px;
-    margin-top: 6px;
-    color: rgb(129, 182, 228);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height:40px ;
-}
 
-.about-details div{
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-}
+
  .media-platforms{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: rgb(129, 182, 228);
     width: 100px;
     margin-top: 10px;
+
  }
 
 .email-icon,
@@ -633,3 +628,42 @@ h3{
  .icon{
     height: 30px;
  }
+
+ .about-us-info{
+    position: relative;
+ }
+.contact-us-platforms{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    flex-direction: column;
+    left: 90px;
+    top: 36px;
+    width: max-content;
+    
+}
+
+.contact-us-platforms div{
+  padding: 2px 5px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  color: rgb(0, 255, 149);
+ 
+ 
+
+}
+.contact-us-platforms div:hover{
+    background-color: rgb(5, 70, 70);
+}
+
+.contact-us-container{
+   margin-top: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 80%;
+   width: max-content;
+   color: aqua;
+
+}
