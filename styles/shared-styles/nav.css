@@ -1,0 +1,85 @@
+.footer{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 200px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 8px 2px;
+    border-radius: 6px;
+    background-color:rgb(1, 22, 22);
+   /*background-image: url('images/header-images/istockphoto-1165399909-612x612.jpg');*/
+}
+
+.about-us{
+    width: max-content;
+}
+.about-us-heading,
+.follow-us-heading{
+    font-size: 18px;
+}
+
+
+
+ .media-platforms{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    margin-top: 10px;
+
+ }
+
+.email-icon,
+.whatsapp-icon
+{
+    height: 20px;
+}
+.location-icon{
+    height: 22px;
+}
+ .icon{
+    height: 30px;
+ }
+
+ .about-us-info{
+    position: relative;
+ }
+.contact-us-platforms{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    flex-direction: column;
+    left: 90px;
+    top: 36px;
+    width: max-content;
+    
+}
+
+
+.contact-us-platforms div{
+  padding: 4px 10px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  color: rgb(0, 255, 149);
+  transition:1s ease-in ;
+  background-color: rgb(2, 34, 34);
+ 
+}
+.contact-us-platforms div:hover{
+    background-color: rgb(5, 70, 70);
+    display: flex;
+}
+
+.contact-us-container{
+   margin-top: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 80%;
+   width: max-content;
+   color: aqua;
+
+}

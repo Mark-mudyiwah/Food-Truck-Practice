@@ -1,0 +1,343 @@
+body{
+    font-family: roboto,arial;
+    background-size: cover;
+    background-position: center top;
+    padding-top: 40px ;
+    margin: 0;
+    color: white;
+    background-color:white;
+   
+  
+    
+}
+
+
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color:black;
+    color: white;
+    padding: 8px 4px;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+   
+}
+
+.menu-icon-container{
+    height: 26px;
+    cursor: pointer;
+}
+
+.menu-icon{
+    height: 100%;
+}
+
+ 
+
+
+
+.middle{
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+}
+.goodhope-text{
+    font-family:Abril Fatface;
+    font-weight:bold ;
+    font-size: large;
+    color: red;
+}
+
+
+.truck-container{
+    height: 35px;
+}
+
+.truck-icon{
+    height: 100%;
+}
+
+
+.right-side{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.food-truck-text{
+    background-color: yellow;
+    color: black;
+    padding-left:12px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 15px;
+    font-size: small;
+    font-weight: bold;
+    font-family: roboto;
+}
+
+
+.shopping-bag-container,
+.search-icon-container{
+    height: 28px;
+    cursor: pointer;
+    margin-right: 4px;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.shopping-bag-icon,
+.search-icon{
+    height: 100%;
+}
+
+
+.search-icon-container{
+    margin-right: 15px;
+}
+
+.cart-quantity-container{
+    position: absolute;
+    background-color:rgb(179, 24, 24);
+    padding:2px 2px;
+    
+    width: 13px;
+    height: 12px;
+    border-radius: 15px;
+    top:4px;
+    right: 0px;
+    color: white;
+    font-weight: bold;
+    font-size: x-small;
+}
+ 
+.main-primary{
+   display: flex;
+    justify-content: center;
+    padding: 40px 4px;
+ 
+  
+}
+
+.welcome-background-container{
+    width: 100%;
+ 
+    max-height: max-content;
+}
+
+.background-image{
+  
+    width: 100%;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+   
+}
+ 
+.welcome-container {
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0px;
+    background-color: black;
+    font-weight: 500;
+    padding-top: 12px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    
+   
+}
+
+.motto-container{
+ 
+    justify-content: center;
+    margin-bottom: 18px;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+  
+   
+}
+
+.welcome-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    color: black;
+
+}
+
+.welcome-links div{
+    background-color: yellow;
+    padding: 8px 8px;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.welcome-links div button{
+    background-color: yellow;
+    border: none;
+    font-family: roboto;
+    font-weight: bold;
+    font-size: medium;
+
+}
+
+.visit-butcher-text{
+    margin-right: 15px;
+}
+
+.welcome-to-text{
+    font-family: Abril Fatface ;
+    background-color:black;
+    padding: 4px 8px;
+    border-radius: 18px;
+
+}
+.goodhope-meats-text{
+    font-family: Abril Fatface ;
+    color: red;
+
+}
+
+.food-truck-text-second{
+    font-family: Abril Fatface ;
+    color:black;
+    background-color: yellow;
+    padding: 4px 8px;
+    border-radius: 18px;
+    width: max-content;
+
+}
+
+.intro-container{
+
+ margin-top: 50px;
+ 
+ 
+}
+
+.intro-span{
+  font-weight: 700;
+  color:black;
+  padding: 4px 6px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
+ 
+
+}
+
+.actual-intro{
+   
+  
+    padding: 10px 8px;
+    font-size: small;
+    border: 1px solid white;
+    color: white;
+    line-height: 18px;
+    margin-top: 5px;
+    box-shadow: 5px 0px 10px 0px gray;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-image: url('../../images/header-images/images\ -\ 2024-08-18T171011.551.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+    
+}
+
+
+
+@media(max-width:400px) {
+    
+
+}
+
+@media(max-width:350px) {
+    
+ .welcome-container{
+    font-size: 18px;
+ }
+
+ .goodhope-text{
+    font-size: 15px;
+ }
+
+}
+
+
+@media(max-width:300px) {
+    
+    .welcome-container{
+       font-size: 16px;
+    }
+
+    .menu-icon-container,
+    .search-icon-container,
+    .shopping-bag-container{
+       height: 23px;
+    }
+    
+   }
+
+   @media(max-width:270px) {
+    
+    .welcome-container{
+       font-size: 16px;
+    }
+    .goodhope-text
+    {
+        font-size: 13px;
+     }
+     .food-truck-text{
+        font-size: 10px;
+     }
+
+     .menu-icon-container,
+     .search-icon-container,
+     .shopping-bag-container{
+        height: 20px;
+     }
+
+     .image-container{
+        max-height: 100px;
+      }
+  
+      .product-container{
+          font-size: small;
+      }
+      .add-to-cart-button{
+          font-size: smaller;
+      }
+   }
+   
+   @media(max-width:250px) {
+    
+    .welcome-container{
+       font-size: 16px;
+    }
+    .goodhope-text
+    {
+        font-size: 10px;
+     }
+     .food-truck-text{
+        font-size: 8px;
+     }
+     .middle{
+        margin: 0;
+     }
+
+   }

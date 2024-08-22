@@ -1,0 +1,102 @@
+
+.sidebar{
+    color: black;
+    position: absolute;
+    top: 30px;
+    background-color: aliceblue;
+    width: 75%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    padding:40px 6px 10px 6px;
+    z-index: 0;
+    font-size: 18px;
+    display: none;
+  
+   
+}
+
+.close-sidebar-span{
+position: absolute;
+top:0;
+left: 2px;
+height: 32px;
+ 
+}
+
+.login-register-container-primary,
+.media-container-primary,
+.contact-container-primary,
+.menu-container-primary,
+.shop-container-primary{
+    margin-bottom: 5px;
+    height:max-content;
+    padding-bottom: 10px; 
+}
+
+
+.shop-categories-container,
+.contact-methods-container,
+.sign-in-categories-container
+{
+    
+    display: flex;
+    margin-top: 0;
+    padding: 2px 6px;
+    flex-direction: column;
+    justify-content: space-between;
+     height: 90%;
+    width: max-content;
+    margin-left: 0px;
+    
+ 
+  
+}
+.shop-categories-container span,
+.contact-methods-container span{
+    padding: 3px 5px;
+    
+    
+
+}
+
+.shop-categories-container span:hover,
+.contact-methods-container span:hover{
+    background-color: aqua;
+ 
+}
+.follow-us-text{
+    font-family: Abril fatface;
+    font-weight: 500;
+}
+
+
+.media-platforms-container{
+    padding-top: 8px;
+}
+
+.shop-text,
+.contact-text,
+.login-register-container,
+.media-container-primary,
+.login-register-container,
+.menu-container-primary{
+    font-weight: 600;
+}
+
+.shop-container,
+.contact-container,
+.login-register-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px auto;
+    
+
+  
+}
+.icon-span{
+    height: 20px;
+}
+.add-icon{
+    height: 100%;
+}

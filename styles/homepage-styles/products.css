@@ -1,0 +1,304 @@
+
+
+.welcome-links div{
+    background-color: yellow;
+    padding: 4px 4px;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 4px;
+    font-size: small;
+}
+
+
+.featured-products-container{
+    display: flex;
+    padding: 4px 4px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.product-container{
+    border:  2px solid whitesmoke;
+   width: max-content;
+   border-radius: 8px;
+   flex: 0 0 auto; 
+    margin-right: 10px;
+    padding-bottom: 15px;
+}
+
+.product-infomation{
+    display: flex;
+   justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+ 
+}
+
+.product-infomation div{
+    margin-bottom:6px ;
+}
+
+.image-container{
+   
+     height: 180px;
+     display: flex;
+    justify-content:center;
+    max-width: 240px;
+    
+}
+
+.product-image{
+width: 100%;
+border-radius: 10px;
+
+}
+
+.product-name{
+    margin-top: 10px;
+    color:black;
+    font-weight: bold;
+}
+.product-price{
+    color: brown;
+    font-weight: bold;
+}
+
+.featured-products-heading{
+    width: max-content;
+    padding: 6px 4px;
+    color: red;
+   
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    font-family: Abril Fatface;
+ 
+}
+
+h3{
+    margin: 0;
+    font-weight:500;
+    font-family: Abril Fatface;
+ 
+}
+
+.add-to-cart-button{
+    padding: 8px 10px;
+     background-color :rgb(245, 211, 16);
+      
+    border: none;
+     border-radius: 8px;
+     width: 80%;
+     font-family: roboto;
+     font-weight: bold;
+     font-size: medium;
+}
+
+.add-to-cart-container{
+   
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.more-product-info{
+    width: 100%;
+
+}
+
+.see-info-span{
+    color: blue;
+    font-size: small;
+    margin-left: 5px;
+    cursor: pointer;
+
+}
+
+.image-container{
+  max-height: 150px;
+}
+
+.product-container{
+    font-size: small;
+}
+.add-to-cart-button{
+    font-size: smaller;
+}
+
+.view-all-products-container{
+margin-top: 30px;
+color: red;
+display: flex;
+justify-content: center;
+font-weight: 300;
+}
+
+
+.blog-posts-heading{
+color: black;
+display: flex;
+justify-content: center;
+margin-top: 25px;
+font-size: 22px;
+text-decoration: underline;
+}
+
+.blog-posts-container{
+display: flex;
+overflow-x: auto;
+white-space: nowrap;
+padding: 6px;
+
+}
+
+.blog-image-container{
+flex: 0 0 auto; /* Prevents containers from shrinking or growing */
+width: 60%;
+margin-right: 10px;
+
+}
+
+.blog-image{
+height: 100%;
+width: 100%;
+
+}
+
+
+.sign-in-request-container{
+color: black;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+font-weight: Bold;
+
+margin-top: -2px;
+padding-top: 36px;
+font-family: abril fatface;
+
+}
+
+.sign-in-request-container div{
+color:black;
+font-size: 25px;
+}
+
+.request-message{
+font-family: roboto;
+font-size: medium;
+margin-top: 0;
+font-weight: 500;
+font-size: 14px;
+color :rgb(102, 17, 17);
+
+}
+
+.email-input-container{
+height: 30px;
+border: 1px solid rgb(0, 153, 255);
+background-color: white;
+margin-top: 5px;
+width: 60%;
+
+}
+
+.email-input{
+height:30px;
+border: 1px solid rgb(0, 153, 255);
+background-color: rgb(0, 109, 109);
+outline: none;
+width: 60%;
+text-align: center; /* Centers the placeholder horizontally */
+padding: 0; /* Remove default padding */
+line-height: 100%; /* Same as height to center vertically */
+box-sizing: border-box;
+overflow: hidden;
+
+
+}
+
+.email-input::placeholder{
+color: rgb(233, 230, 230);
+
+
+}
+
+.subscribe-button{
+
+padding: 6px 18px;
+margin-top: 6px;
+background-color: black;
+border: 1px solid black;
+color: white;
+width: 50%;
+}
+
+
+@media(max-width:300px) {
+    
+    .welcome-container{
+       font-size: 16px;
+    }
+
+    .menu-icon-container,
+    .search-icon-container,
+    .shopping-bag-container{
+       height: 23px;
+    }
+    .image-container{
+        max-height: 150px;
+      }
+    
+   }
+
+   @media(max-width:270px) {
+    
+    .welcome-container{
+       font-size: 16px;
+    }
+    .goodhope-text
+    {
+        font-size: 13px;
+     }
+     .food-truck-text{
+        font-size: 10px;
+     }
+
+     .menu-icon-container,
+     .search-icon-container,
+     .shopping-bag-container{
+        height: 20px;
+     }
+
+     .image-container{
+        max-height: 100px;
+      }
+  
+      .product-container{
+          font-size: small;
+      }
+      .add-to-cart-button{
+          font-size: smaller;
+      }
+   }
+   
+   @media(max-width:250px) {
+    
+    .welcome-container{
+       font-size: 16px;
+    }
+    .goodhope-text
+    {
+        font-size: 10px;
+     }
+     .food-truck-text{
+        font-size: 8px;
+     }
+     .middle{
+        margin: 0;
+     }
+
+   }
+
+
