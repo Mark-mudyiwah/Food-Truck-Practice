@@ -1,8 +1,15 @@
 body{
     font-family: roboto;
-    padding-top: 80px;
+    padding-top: 70px;
     color: black;
    
+}
+
+h4{
+    display: flex;
+    justify-content: center;
+    margin: 8px 0;
+
 }
 
 
@@ -68,9 +75,10 @@ body{
   
 }
 
-@media (max-width:450px) {
+@media (max-width:460px) {
     .products-grid{
         grid-template-columns: repeat(3,1fr);
+   
     }
 
     .item-image-container{
@@ -90,6 +98,20 @@ body{
 
 }
 
+@media (max-width:340px) {
+    .item-image-container{
+        height: 90px;
+    }
+
+}
+
+
+@media (max-width:275px) {
+    .item-image-container{
+        height: 70px;
+    }
+
+}
   
 
 @media (max-width:250px) {

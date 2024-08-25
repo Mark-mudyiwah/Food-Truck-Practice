@@ -117,11 +117,51 @@ body{
     font-weight: bold;
     font-size: x-small;
 }
+
+.search-input-container-primary{
+    position: absolute;
+    top: 55px;
+    right: 2px; ;
+    left:2px ;
+    display: flex;
+    justify-content: center;
+    padding: 15px 6px;
+    background-image: linear-gradient(45deg,rgb(27, 26, 26),rgb(21, 21, 97),rgb(27, 26, 26));
+    border-radius: 10px;
+    opacity: 0;
+  
+}
+.search-input-container{
+    color: red; 
+    border: 1px solid  yellow;
+   
+    height: 30px;
+    padding: 2px 2px;
+    width: 96%;
+    border-radius: 6px;
+   
+
+}
+
+.search-input{
+    width: 98%;
+    height: 98%;
+    overflow: hidden;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: yellow;
+}
+
+.search-input::placeholder{
+    color:  yellow;
+}
  
 .main-primary{
    display: flex;
     justify-content: center;
     padding: 40px 4px;
+  
  
   
 }

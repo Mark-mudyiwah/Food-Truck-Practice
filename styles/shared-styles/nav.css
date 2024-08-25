@@ -29,6 +29,7 @@
     width: 100px;
     margin-top: 10px;
 
+
  }
 
 .email-icon,
@@ -54,6 +55,7 @@
     left: 90px;
     top: 36px;
     width: max-content;
+    opacity: 0;
     
 }
 
