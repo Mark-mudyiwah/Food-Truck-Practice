@@ -1,27 +1,37 @@
 
+
+
+
 .sidebar{
     color: black;
     position: absolute;
-    top: 30px;
-    left: 4px;
+    top: 60px;
+    left: 1px;
     background-color: aliceblue;
     width: 75%;
     height: max-content;
     display: flex;
+    animation: slideDown 0.5s ease-out forwards;
     flex-direction: column;
     padding:40px 6px 10px 6px;
     z-index: 0;
     font-size: 16px;
-    opacity: 0;
+    display: none;
+   
    
 }
+
+.sidebar .close{
+    animation: slideUp 0.5s ease-out forwards;
+}
+
 
 .close-sidebar-span{
 position: absolute;
 top:0;
 left: 2px;
 height: 32px;
- 
+ cursor: pointer;
 }
 
 .login-register-container-primary,
@@ -31,9 +41,8 @@ height: 32px;
 .shop-container-primary{
     margin-bottom: 5px;
     height:max-content;
-    padding-bottom: 10px; 
+    padding-bottom: 14px; 
 }
-
 
 .shop-categories-container,
 .contact-methods-container,
@@ -46,12 +55,16 @@ height: 32px;
     flex-direction: column;
     justify-content: space-between;
      height: 90%;
+     animation: slideDown 0.5s ease-out forwards;
     width: max-content;
     margin-left: 0px;
+    display: none;
     
  
   
 }
+
+
 .shop-categories-container span,
 .contact-methods-container span{
     padding: 3px 5px;
@@ -65,6 +78,14 @@ height: 32px;
     background-color: aqua;
  
 }
+
+.show{
+    display: flex;
+}
+
+.hide{
+    display: none;
+}
 .follow-us-text{
     font-family: Abril fatface;
     font-weight: 500;
@@ -73,6 +94,7 @@ height: 32px;
 
 .media-platforms-container{
     padding-top: 8px;
+
 }
 
 .shop-text,
@@ -100,3 +122,43 @@ height: 32px;
 .add-icon{
     height: 100%;
 }
+
+
+@keyframes slideDown {
+    from {
+      transform: translateY(-20%); /* Start above the viewport */
+      opacity: 0; /* Start invisible */
+    }
+    to {
+      transform: translateY(0); /* End at its original position */
+      opacity: 1; /* End fully visible */
+    }
+  }
+
+  @keyframes slideRight{
+    from {
+        transform: translateX(-20%); /* Start above the viewport */
+        opacity: 0; /* Start invisible */
+      }
+      to {
+        transform: translateX(0); /* End at its original position */
+        opacity: 1; /* End fully visible */
+      }
+  }
+  @keyframes slideUp{
+    from {
+        transform: translateY(0); /* Start above the viewport */
+        opacity: 0; /* Start invisible */
+      }
+      to {
+        transform: translateY(-20%); /* End at its original position */
+        opacity: 1; /* End fully visible */
+      }
+  }
+  
+
+  .close{
+    animation: slideUp 0.5s ease-out forwards;
+}
+ 
+

@@ -26,6 +26,7 @@ body{
     right: 0;
     left: 0;
     top: 0;
+  
    
 }
 
@@ -123,12 +124,14 @@ body{
     top: 55px;
     right: 2px; ;
     left:2px ;
+    animation: slideDown 0.5s ease-out forwards;
     display: flex;
     justify-content: center;
     padding: 15px 6px;
     background-image: linear-gradient(45deg,rgb(27, 26, 26),rgb(21, 21, 97),rgb(27, 26, 26));
     border-radius: 10px;
-    opacity: 0;
+    display: none;
+
   
 }
 .search-input-container{
@@ -157,6 +160,15 @@ body{
     color:  yellow;
 }
  
+
+.close-searchbar{
+    position: absolute;
+    right: 0px;
+    top: -2px;
+    font-size: 18px;
+    color: red;
+    font-weight: bolder;
+}
 .main-primary{
    display: flex;
     justify-content: center;

@@ -63,6 +63,10 @@ h4{
     font-weight: 600;
 }
 
+.show{
+    opacity: 1;
+}
+
 .item-price{
     font-weight: 500;
     color:darkred;

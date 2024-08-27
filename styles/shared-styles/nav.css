@@ -52,10 +52,11 @@
     position: absolute;
     justify-content: center;
     flex-direction: column;
+    animation: slideRight 0.5s ease-out forwards;
     left: 90px;
     top: 36px;
     width: max-content;
-    opacity: 0;
+    display: none;
     
 }
 
