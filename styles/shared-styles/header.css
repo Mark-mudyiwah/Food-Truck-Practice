@@ -120,7 +120,7 @@ body{
 }
 
 .search-input-container-primary{
-    position: absolute;
+    position: fixed;
     top: 55px;
     right: 2px; ;
     left:2px ;

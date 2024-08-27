@@ -69,11 +69,12 @@
   color: rgb(0, 255, 149);
   transition:1s ease-in ;
   background-color: rgb(2, 34, 34);
- 
+  cursor: pointer;
 }
 .contact-us-platforms div:hover{
     background-color: rgb(5, 70, 70);
     display: flex;
+  
 }
 
 .contact-us-container{
@@ -84,5 +85,14 @@
    height: 80%;
    width: max-content;
    color: aqua;
+  
 
 }
+
+.contact-us-container span{
+    cursor: pointer;
+}
+
+.contact-us-platforms div span{
+    cursor: pointer;
+} 

@@ -131,8 +131,13 @@ color: red;
 display: flex;
 justify-content: center;
 font-weight: 300;
+cursor: pointer;
 }
-
+.view-all-products-container a{
+    text-decoration: none;
+    font-weight: 200;
+    color: red;
+}
 
 .blog-posts-heading{
 color: black;
@@ -219,7 +224,7 @@ overflow: hidden;
 }
 
 .email-input::placeholder{
-color: rgb(233, 230, 230);
+color: rgb(173, 171, 171);
 
 
 }

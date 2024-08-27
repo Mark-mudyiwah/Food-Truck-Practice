@@ -8,8 +8,6 @@ function toggleVisibility(selector,action,state){
  }else{
   element.classList.add(action)
   state[selector]= true;
-
-  
  
  
  }
@@ -75,6 +73,8 @@ document.querySelector('.login-register-container').addEventListener('click', ()
 document.querySelector('.contact-us-span').addEventListener('click', () => {
   toggleVisibility('.contact-us-platforms', 'show', visibilityState);
 });
+
+
 
 
 
