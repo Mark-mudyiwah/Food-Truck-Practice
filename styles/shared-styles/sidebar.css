@@ -1,170 +1,152 @@
-
-
-
-
-.sidebar{
+.sidebar {
     color: black;
     position: fixed;
     top: 55px;
     left: 1px;
-    background-color: aliceblue;
     width: 75%;
     height: max-content;
     display: flex;
-    animation: slideRight 0.5s ease-out forwards;
+    animation: slideInRight 0.5s ease-out forwards;
     flex-direction: column;
-    padding:40px 6px 10px 6px;
+    padding: 40px 6px 10px 6px;
     z-index: 0;
     font-size: 16px;
-    display: none;
-   
-   
+    
+  
 }
 
-.sidebar .close{
+.sidebar-close {
     animation: slideUp 0.5s ease-out forwards;
 }
 
+.close-sidebar-span {
+    position: absolute;
+    top:0;
+    left: 2px;
+    height: 32px;
+    cursor: pointer;
 
-.close-sidebar-span{
-position: absolute;
-top:0;
-left: 2px;
-height: 32px;
- cursor: pointer;
 }
 
-.login-register-container-primary,
-.media-container-primary,
-.contact-container-primary,
-.menu-container-primary,
-.shop-container-primary{
+.shop-section,
+.menu-section,
+.contact-section,
+.auth-section,
+.social-media-section {
     margin-bottom: 5px;
-    height:max-content;
-    padding-bottom: 14px; 
-   
+    height: max-content;
+    padding-bottom: 14px;
 }
 
-.shop-categories-container,
-.contact-methods-container,
-.sign-in-categories-container
-{
-    
+.shop-content,
+.contact-content,
+.auth-content {
     display: flex;
     margin-top: 0;
     padding: 2px 6px;
     flex-direction: column;
     justify-content: space-between;
-     height: 90%;
-     animation: slideDown 0.5s ease-out forwards;
+    height: 90%;
+    animation: slideInDown 0.5s ease-out forwards;
     width: max-content;
     margin-left: 0px;
-    display: none;
-    
- 
-  
 }
 
-
-.shop-categories-container span,
-.contact-methods-container span{
+.shop-content span,
+.contact-content span {
     padding: 3px 5px;
     cursor: pointer;
-    
-
 }
 
-.shop-categories-container span:hover,
-.contact-methods-container span:hover{
+.shop-content span:hover,
+.contact-content span:hover {
     background-color: aqua;
- 
 }
 
-.menu-container-primary{
+.menu-section {
     cursor: pointer;
 }
 
-.show{
+.show {
     display: flex;
 }
 
-.hide{
+.hide {
     display: none;
 }
-.follow-us-text{
-    font-family: Abril fatface;
+
+.follow-us-title {
+    font-family: 'Abril Fatface';
     font-weight: 500;
 }
 
-
-.media-platforms-container{
+.social-media-icons {
     padding-top: 8px;
-
 }
 
-.shop-text,
-.contact-text,
-.login-register-container,
-.media-container-primary,
-.login-register-container,
-.menu-container-primary{
+.shop-title,
+.contact-title,
+.auth-header,
+.social-media-section,
+.menu-section {
     font-weight: 600;
 }
 
-.shop-container,
-.contact-container,
-.login-register-container{
+.shop-header,
+.contact-header,
+.auth-header {
     display: flex;
     justify-content: space-between;
     padding: 10px auto;
     cursor: pointer;
-    
-
-  
 }
-.icon-span{
+
+.icon-container {
     height: 20px;
 }
-.add-icon{
+
+.toggle-icon {
     height: 100%;
+    animation: slideInDown 0.5s ease-out forwards;
 }
 
-
-@keyframes slideDown {
+@keyframes slideInDown {
     from {
-      transform: translateY(-20%); /* Start above the viewport */
-      opacity: 0; /* Start invisible */
+        transform: translateY(-20%);
+        opacity: 0;
     }
     to {
-      transform: translateY(0); /* End at its original position */
-      opacity: 1; /* End fully visible */
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
-
-  @keyframes slideRight{
-    from {
-        transform: translateX(-20%); /* Start above the viewport */
-        opacity: 0; /* Start invisible */
-      }
-      to {
-        transform: translateX(0); /* End at its original position */
-        opacity: 1; /* End fully visible */
-      }
-  }
-  @keyframes slideUp{
-    from {
-        transform: translateY(0); /* Start above the viewport */
-        opacity: 0; /* Start invisible */
-      }
-      to {
-        transform: translateY(-20%); /* End at its original position */
-        opacity: 1; /* End fully visible */
-      }
-  }
-  
-
-  .close{
-    animation: slideUp 0.5s ease-out forwards;
 }
- 
 
+@keyframes slideInRight {
+    from {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+}
+
+.b-color{
+    background-color: aliceblue;
+}
+
+.open-anime{
+    animation: slideInDown 0.5s ease-out forwards;;
+}

@@ -1,80 +1,139 @@
-
-
-function toggleVisibility(selector,action,state){
- const element = document.querySelector(selector)
- if (state[selector]){
-  element.classList.remove(action)
-  state[selector] = false;
- }else{
-  element.classList.add(action)
-  state[selector]= true;
  
- 
- }
 
-}
-
-function updateIcon(selector,imageUrl,state){
-
- const element = document.querySelector(selector)
- if(state[selector]){
- element.innerHTML =`<img class ="add-icon" src = "images/header-images/plus-icon.png">`;
- state[selector]= false
- console.log(element)
-}else{
-  element.innerHTML = `<img class ="add-icon" src = "${imageUrl}">`
- state[selector]= true;
-}
-}
-
-const visibilityState = {
-  '.shop-icon-span': false,
-  '.contact-icon-span': false,
-  '.sign-in-icon-span': false,
-  '.contact-us-platforms':false
+function toggleContentVisibility(containerSelector, contentHtml, iconSelector, newIconSrc) {
+  const containerElement = document.querySelector(containerSelector);
+  const iconElement = document.querySelector(iconSelector);
+   
+  // Update the content
+  containerElement.innerHTML = contentHtml;
+   //animate the element
+   if(containerElement){
+   containerElement.classList.add('open-anime')
+   }
+  // Update the icon
+  if (iconElement && newIconSrc) {
+      iconElement.src = newIconSrc;
+  }
 }
 
 
-const iconState = {
-  '.shop-icon-span': false,
-  '.contact-icon-span': false,
-  '.sign-in-icon-span': false
-};
-
-// Event listeners
-document.querySelector('.search-icon-container').addEventListener('click', () => {
-  toggleVisibility('.search-input-container-primary', 'show', visibilityState);
-});
+let displayingSideBar;
 
 document.querySelector('.menu-icon-container').addEventListener('click', () => {
-  toggleVisibility('.sidebar', 'show', visibilityState);
+  const sidebarElement = document.querySelector('.sidebar');
+  if(!displayingSideBar){
+  sidebarElement.classList.add('b-color');
+  sidebarElement.innerHTML = `
+      <span class="close-sidebar-span">
+          <img class="close-icon" src="images/header-images/exit-icon-red.png">
+      </span>
+
+      <div class="shop-section">
+          <div class="shop-header">
+              <span class="shop-title">SHOP</span>
+              <span class="icon-container shop-icon-container">
+                  <img class="toggle-icon shop-icon" src="images/header-images/plus-icon.png">
+              </span>
+          </div>
+          <div class="shop-content"></div>
+      </div>
+
+      <div class="menu-section"> MENU</div>
+
+      <div class="contact-section">
+          <div class="contact-header">
+              <span class="contact-title">CONTACT US</span>
+              <span class="icon-container contact-icon-container">
+                  <img class="toggle-icon contact-icon" src="images/header-images/plus-icon.png">
+              </span>
+          </div>
+          <div class="contact-content"></div>
+      </div>
+
+      <div class="auth-section">
+          <div class="auth-header">
+              <span class="auth-title">Sign-Up/Log In</span>
+              <span class="icon-container auth-icon-container">
+                  <img class="toggle-icon auth-icon" src="images/header-images/plus-icon.png">
+              </span>
+          </div>
+          <div class="auth-content"></div>
+      </div>
+
+      <div class="social-media-section">
+          <span class="social-media-title">FOLLOW US</span>
+          <div class="social-media-icons">
+              <span class="media-icon">
+                  <img class="icon" src="images/header-images/facebook-icon.png">
+              </span>
+              <span class="media-icon">
+                  <img class="icon" src="images/header-images/icon-twitter.png">
+              </span>
+              <span class="media-icon">
+                  <img class="icon" src="images/header-images/icon-instagram.png">
+              </span>
+          </div>
+      </div>
+  `;
+
+  document.querySelector('.shop-header').addEventListener('click', () => {
+      toggleContentVisibility(
+          '.shop-content',
+          contentHtml.shopCategories,
+          '.shop-icon',
+          'images/header-images/exit-icon.png')
+  });
+
+  document.querySelector('.contact-header').addEventListener('click', () => {
+      toggleContentVisibility(
+          '.contact-content',
+          contentHtml.contactMethods,
+          '.contact-icon',
+          'images/header-images/exit-icon.png' 
+      );
+  });
+
+  document.querySelector('.auth-header').addEventListener('click', () => {
+      toggleContentVisibility(
+          '.auth-content',
+          contentHtml.authOptions,
+          '.auth-icon',
+          'images/header-images/exit-icon.png'  )
+  });
+  displayingSideBar = true
+}
+else{
+  sidebarElement.classList.remove('b-color')
+  sidebarElement.innerHTML=''
+ displayingSideBar= false
+
+}
 });
 
-document.querySelector('.close-sidebar-span').addEventListener('click', () => {
-  toggleVisibility('.sidebar', 'show', visibilityState);
-});
+let contentHtml = {
+  shopCategories: `
+      <span>All Products</span>
+      <span>Burgers</span>
+      <span>Sausage Rolls</span>
+      <span>Coffee</span>
+      <span>Cold Drinks</span>
+  `,
+  contactMethods: `
+      <span>Whatsapp</span>
+      <span>Messenger</span>
+      <span>Email</span>
+      <span>Phonecall</span>
+  `,
+  authOptions: `
+      <span>Sign-up</span>
+      <span>Log In</span>
+  `
+};
 
-document.querySelector('.shop-container').addEventListener('click', () => {
-  toggleVisibility('.shop-categories-container', 'show', visibilityState);
-  updateIcon('.shop-icon-span', 'images/header-images/exit-icon.png', iconState);
+
+
+
  
-});
-
-document.querySelector('.contact-container').addEventListener('click', () => {
-  toggleVisibility('.contact-methods-container', 'show', visibilityState);
-  updateIcon('.contact-icon-span', 'images/header-images/exit-icon.png', iconState);
-});
-
-document.querySelector('.login-register-container').addEventListener('click', () => {
-  toggleVisibility('.sign-in-categories-container', 'show', visibilityState);
-  updateIcon('.sign-in-icon-span', 'images/header-images/exit-icon.png', iconState);
-});
-
-document.querySelector('.contact-us-span').addEventListener('click', () => {
-  toggleVisibility('.contact-us-platforms', 'show', visibilityState);
-});
-
-
 
 
 
