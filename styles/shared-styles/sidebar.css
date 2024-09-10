@@ -3,7 +3,7 @@
     position: fixed;
     top: 55px;
     left: 1px;
-    width: 75%;
+    width: 1px;
     height: max-content;
     display: flex;
     animation: slideInRight 0.5s ease-out forwards;
@@ -11,8 +11,13 @@
     padding: 40px 6px 10px 6px;
     z-index: 0;
     font-size: 16px;
+
     
   
+}
+
+.change-width{
+    width: 75%;
 }
 
 .sidebar-close {

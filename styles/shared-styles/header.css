@@ -128,11 +128,14 @@ body{
     display: flex;
     justify-content: center;
     padding: 15px 6px;
-    background-image: linear-gradient(45deg,rgb(27, 26, 26),rgb(21, 21, 97),rgb(27, 26, 26));
     border-radius: 10px;
-    display: none;
+ 
 
   
+}
+
+.search-color{
+    background-image: linear-gradient(45deg,rgb(27, 26, 26),rgb(21, 21, 97),rgb(27, 26, 26));
 }
 .search-input-container{
     color: red; 
@@ -153,11 +156,11 @@ body{
     border: none;
     background-color: transparent;
     outline: none;
-    color: yellow;
+    color:white;
 }
 
 .search-input::placeholder{
-    color:  yellow;
+    color:  rgb(187, 182, 182);
 }
  
 
@@ -392,4 +395,11 @@ body{
         margin: 0;
      }
 
+   }
+
+ .show{
+    display: initial;
+   }
+   .hide{
+    display: none;
    }
