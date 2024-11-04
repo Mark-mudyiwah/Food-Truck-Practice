@@ -60,8 +60,36 @@ export const products = [
         info: "Savor the flavors of our Chicken Mayo Toastie, featuring tender chicken chunks mixed with creamy mayo, layered with fresh lettuce and tomatoes. Grilled until golden brown, this toastie is perfect for a quick lunch or a cozy dinner."
     },
     {
+        id: '3jkl-u78g-bn9b',
+        image: "images/product-images/side-fries.jpg",
+        name: 'Side Fries',
+        price: 59.99,
+        info: "Enjoy our classic Burger, made with a juicy beef patty, fresh lettuce, and ripe tomatoes. Served on a soft bun with your choice of toppings, it's a timeless meal that's always a crowd-pleaser."
+    },
+    {
+        id: '5hgf-ty67-dv9a',
+        image: "images/product-images/burger.jpg",
+        name: 'Goodhope Burger',
+        price: 54.99,
+        info: "This Burger is crafted with high-quality ingredients for maximum flavor. Whether you prefer it with cheese, bacon, or a veggie option, it's sure to satisfy your hunger."
+    },
+    {
+        id: '8ijk-l56m-xv5d',
+        image: "images/product-images/smash-burger.jpg",
+        name: 'Smash Burger',
+        price: 39.99,
+        info: "A deliciously crafted Burger featuring a perfectly grilled patty, crisp lettuce, and your choice of toppings. It's a classic meal that can be enjoyed any time of day."
+    },
+    {
+        id: '2gfd-e34d-ca7f',
+        image: "images/product-images/energade-drink.jpg",
+        name: 'Energade Drink',
+        price: 16.99,
+        info: "Experience the simplicity of our Burger, made with the freshest ingredients. Customize it with your favorite sauces and toppings for a personalized touch."
+    },
+    {
         id: '1klm-d84v-yu7f',
-        image: "images/product-images/milkshakes.jpg",
+        image: "images/product-images/milk-shakes.jpg",
         name: 'Milk Shakes',
         price: 35,
         info: "Treat yourself to our rich and creamy Milk Shakes, available in a variety of delicious flavors. Made with real ice cream and topped with whipped cream, they’re the perfect way to cool off and indulge your sweet tooth."
@@ -87,32 +115,5 @@ export const products = [
         price: 14.99,
         info: "Double 'O' is a unique energy drink with a bold flavor and double the kick. It's formulated to provide sustained energy and refreshment, making it the perfect companion for workouts or long days."
     },
-    {
-        id: '3jkl-u78g-bn9b',
-        image: "images/product-images/",
-        name: 'Burger',
-        price: 59,
-        info: "Enjoy our classic Burger, made with a juicy beef patty, fresh lettuce, and ripe tomatoes. Served on a soft bun with your choice of toppings, it's a timeless meal that's always a crowd-pleaser."
-    },
-    {
-        id: '5hgf-ty67-dv9a',
-        image: "images/product-images/",
-        name: 'Burger',
-        price: 59,
-        info: "This Burger is crafted with high-quality ingredients for maximum flavor. Whether you prefer it with cheese, bacon, or a veggie option, it's sure to satisfy your hunger."
-    },
-    {
-        id: '8ijk-l56m-xv5d',
-        image: "images/product-images/",
-        name: 'Burger',
-        price: 59,
-        info: "A deliciously crafted Burger featuring a perfectly grilled patty, crisp lettuce, and your choice of toppings. It's a classic meal that can be enjoyed any time of day."
-    },
-    {
-        id: '2gfd-e34d-ca7f',
-        image: "images/product-images/",
-        name: 'Burger',
-        price: 59,
-        info: "Experience the simplicity of our Burger, made with the freshest ingredients. Customize it with your favorite sauces and toppings for a personalized touch."
-    },
+   
 ];
