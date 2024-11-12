@@ -1,6 +1,6 @@
 
 import { products } from "./products.js";
-
+import { addToCart } from "./cart.js";
 console.log(products)
 
 
@@ -232,7 +232,7 @@ let productsHtml =''
 products.forEach((product)=>{
   let html =
   `
-  <div class="product-container">
+  <div class="product-container" >
         <div class="item-image-container">
             <img class="item-image" src="${product.image}">
 
@@ -246,7 +246,7 @@ products.forEach((product)=>{
 
             </span>
             <div class="add-to-cart-div">
-                <button class="add-to-cart-button">
+                <button class="add-to-cart-button" data-product-id = "${product.id}">
                     Add to cart
                 </button>
 
@@ -259,11 +259,17 @@ products.forEach((product)=>{
   
   
   `
-  console.log(html)
+  //console.log(html)
   productsHtml += html
 })
 
 document.querySelector('.products-grid').innerHTML = productsHtml
 
 
-
+ 
+ document.querySelectorAll('.add-to-cart-button').forEach((button)=>{
+  button.addEventListener('click', ()=>{
+  const productId = button.dataset.productId
+  addToCart(productId)
+  })
+ })

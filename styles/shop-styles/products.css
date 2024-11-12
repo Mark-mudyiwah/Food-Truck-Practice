@@ -72,14 +72,24 @@ h4{
 .item-price{
     font-weight: 500;
     color:darkred;
+    font-family: Oleo Script;
 }
 
 .add-to-cart-button{
     padding: 4px 10px;
     background-color: yellow;
     border: 1px solid black;
+    transition: 0.5s ease-in-out;
+    
   
 }
+
+.add-to-cart-button:hover{
+    transform: scale(1.1);
+    background-color:yellowgreen;
+    transition: 0.5s ease-in-out;
+}
+
 
 
 

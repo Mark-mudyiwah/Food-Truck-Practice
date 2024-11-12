@@ -187,6 +187,7 @@ font-family: abril fatface;
 .sign-in-request-container div{
 color:black;
 font-size: 25px;
+font-family: Oleo Script;
 }
 
 .request-message{
@@ -220,12 +221,18 @@ padding: 0; /* Remove default padding */
 line-height: 100%; /* Same as height to center vertically */
 box-sizing: border-box;
 overflow: hidden;
+font-family: Oleo Script;
+font-size: 15px;
+color: black;
+
 
 
 }
 
 .email-input::placeholder{
-color: rgb(173, 171, 171);
+color: rgb(29, 27, 27);
+font-family: Oleo Script;
+font-size: 15px;
 
 
 }
