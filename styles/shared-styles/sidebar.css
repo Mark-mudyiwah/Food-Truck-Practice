@@ -1,10 +1,10 @@
 .sidebar {
     color: black;
     position: fixed;
-    top: 55px;
+    top: 20px;
     left: 1px;
     width: 1px;
-    height: max-content;
+    height: 60%;
     display: flex;
     animation: slideInRight 0.5s ease-out forwards;
     flex-direction: column;
@@ -38,7 +38,7 @@
 .contact-section,
 .auth-section,
 .social-media-section {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     height: max-content;
     padding-bottom: 14px;
 }
@@ -95,6 +95,7 @@
 .social-media-section,
 .menu-section {
     font-weight: 600;
+    font-size: 18px;
 }
 
 .shop-header,

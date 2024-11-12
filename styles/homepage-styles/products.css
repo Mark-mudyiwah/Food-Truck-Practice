@@ -194,8 +194,8 @@ font-family: roboto;
 font-size: medium;
 margin-top: 0;
 font-weight: 500;
-font-size: 14px;
-color :rgb(102, 17, 17);
+font-size: 16px;
+color :rgb(139, 42, 30);
 
 }
 
@@ -209,9 +209,10 @@ width: 60%;
 }
 
 .email-input{
-height:30px;
+margin-top: 6px;
+height:40px;
 border: 1px solid rgb(0, 153, 255);
-background-color: rgb(0, 109, 109);
+background-color: white;
 outline: none;
 width: 60%;
 text-align: center; /* Centers the placeholder horizontally */
@@ -231,12 +232,14 @@ color: rgb(173, 171, 171);
 
 .subscribe-button{
 
-padding: 6px 18px;
+padding: 8px 18px;
 margin-top: 6px;
-background-color: black;
+background-color:rgb(157, 255, 0);
 border: 1px solid black;
-color: white;
-width: 50%;
+color: black;
+width: 40%;
+font-size: 16px;
+font-weight: 600;
 }
 
 
