@@ -85,23 +85,8 @@ h4{
 
 
 
+
 @media (max-width:460px) {
-    .products-grid{
-        grid-template-columns: repeat(3,1fr);
-   
-    }
-
-    
-
-    .item-image-container{
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        width:130px;
-    }
-}
-
-@media (max-width:380px) {
     .products-grid{
         grid-template-columns: repeat(2,1fr);
 
