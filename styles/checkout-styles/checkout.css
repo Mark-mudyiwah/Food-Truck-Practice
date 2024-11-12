@@ -1,0 +1,32 @@
+body{
+    font-family: roboto;
+    color: black;
+    padding-top: 80px;
+}
+.checkout-heading{
+    font-size: 20px;
+    color: darkblue;
+    margin-bottom: 40px;
+}
+
+
+
+.product-container{
+    border: 1px black solid;
+    width: max-content;
+     
+}
+
+
+.item-image-container{
+    width: 130px;
+    height: 100px;
+    border: 1px black solid;
+}
+.item-image{
+    width: 100%;
+}
+
+
+
+

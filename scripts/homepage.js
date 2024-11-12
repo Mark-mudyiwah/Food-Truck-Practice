@@ -216,8 +216,21 @@ if(!displayingSearchbar){
    searchbar.classList.add('search-color')
 searchbar.innerHTML = `
 <div class="search-input-container">
-    <input class="search-input" placeholder="Search Products">
-</div>
+    <input class="search-input" list ="search-suggestions" autocomplete = "on" placeholder="Search Products">
+<datalist  class="data-list" id ="search-suggestions">
+<option value="Burger">
+<option value="Hot dog">
+<option value="Energy drink">
+<option value="Sausage Rolls">
+<option value="Breakfast toastie">
+<option value="Chip roll">
+<option value="Fries">
+<option value="score">
+<option value="Double 'O'">
+<option value="Milk Shakes">
+</datalist>
+    </div>
+
 `
 displayingSearchbar = true
 }

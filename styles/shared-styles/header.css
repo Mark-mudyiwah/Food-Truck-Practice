@@ -164,6 +164,10 @@ body{
 }
  
 
+.search-suggestions{
+ color: blue;
+}
+
 .close-searchbar{
     position: absolute;
     right: 0px;
