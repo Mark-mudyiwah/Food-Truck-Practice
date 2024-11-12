@@ -26,7 +26,7 @@ export const products = [
     },
     {
         id: '9mno-p45h-qe3b',
-        image: "images/product-images/Hot-dog.jpg",
+        image: "images/product-images/hot-dog.jpg",
         name: 'Hot Dog',
         price: 59,
         info: "Enjoy a classic Hot Dog, featuring a juicy sausage nestled in a soft bun. Topped with mustard, ketchup, and your choice of relish, it's the ultimate comfort food. Ideal for a quick lunch or a fun snack during a game day!"

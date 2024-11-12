@@ -91,15 +91,13 @@ h4{
    
     }
 
-    .item-image-container{
-        height: 90px;
-    }
+    
 
     .item-image-container{
         height: 100px;
         display: flex;
         justify-content: center;
-        width:135px;
+        width:130px;
     }
 }
 
