@@ -2,28 +2,32 @@ body{
     font-family: roboto;
     color: black;
     padding-top: 80px;
+    padding-bottom: 100px;
 }
+
+
 .shopping-cart-heading{
     font-size: 20px;
     color:orangered;
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
-    font-family: Oleo Script;
+    font-family: roboto;
     text-decoration: underline;
+    font-weight: 900;
 }
 
 
 .products-grid{
     display: grid ;
     border-bottom: 1px solid gray;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 
 }
 
 
 .product-container{
-  border-top: 1px solid gray;
+  border-top: 1px solid rgb(216, 216, 216);
  
   width: 95%;
   margin-left: 5px;
@@ -63,32 +67,34 @@ body{
 .item-name-container{
    
     width: 75px;
-    font-family: Oleo Script;
+    font-family: roboto;
+    font-weight: 500;
     font-size: 18px;
     margin-left: 10px;
 }
 .item-quantity-container{
   
     display: flex;
-    margin: 5px 15px;
+    margin: 5px 2px;
  
 }
 
  
 
 .item-quantity-container div{
-    width: 30px;
-    height: 25px;
+    width: 40px;
+    height: 30px;
     border: 1px solid  gray;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
  
 }
 
 .quantity-container{
-    background-color: gray;
+    background-color: rgb(214, 208, 208);
     color: rgb(29, 4, 53);
 }
 
@@ -104,10 +110,19 @@ body{
     cursor: pointer;
     color:blue;
 
+
 }
+
+ .plus-container:hover,
+ .minus-container:hover{
+    background-color:rgb(128, 128, 128);
+    transition: 0.5s ease-in-out;
+}
+
+ 
 .quantity-span{
     font-family: Oleo Script;
-    background-color: gray;
+   
     
 }
  
@@ -123,3 +138,91 @@ body{
     color: darkred;
 }
 
+.loyalty-question-span{
+    margin-top: 35px;
+    font-family: Oleo Script;
+    font-size: 18px;
+    color: rgb(7, 53, 53);
+    margin-left: 10px;
+}
+
+.no-container,
+.yes-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+   
+    margin-top: 5px;
+    width: max-content;
+    margin-left: 10px;
+}
+
+.customer-comment-container{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    margin-top:30px  ;
+}
+.customer-instruction-span{
+    font-family: Oleo Script;
+    margin-bottom: 3px;
+    font-size:18px;
+    color:rgb(4, 44, 44)
+}
+.instructions-text-area{
+    width: 90%;
+    height: 100px;
+    outline: none;
+    border: 1px solid gray;
+}
+
+
+.bottom-links{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+.sub-total-container{
+display: flex;
+align-items: center;
+
+}
+.sub-total-span{
+    font-family: roboto;
+    margin-right: 15px;
+    font-weight: 700;
+}
+.sub-total-amount-span{
+font-family: oleo script;
+color: darkred;
+}
+
+.shipping-tax-text{
+font-family: oleo script;
+ 
+
+}
+
+.update-cart-link{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    background-color:orangered;
+    color: white;
+    padding: 10px 0;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+.proceed-to-checkout-link{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    background-color: green;
+    color: white;
+    padding: 10px 0;
+    cursor: pointer;
+}

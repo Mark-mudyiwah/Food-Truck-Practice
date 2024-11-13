@@ -30,6 +30,10 @@ body{
    
 }
 
+.header a{
+    text-decoration: none;
+}
+
 .menu-icon-container{
     height: 26px;
     cursor: pointer;
