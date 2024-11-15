@@ -3,97 +3,67 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    height: 200px;
-    margin-left: 2px;
-    margin-right: 2px;
-    padding: 15px 2px;
+    height: max-content;
+    padding: 12px 6px;
     border-radius: 3px;
-    background-color:rgb(1, 22, 22);
+    background-color:rgb(0, 0, 0);
     color: white;
+    position: relative;
    /*background-image: url('images/header-images/istockphoto-1165399909-612x612.jpg');*/
 }
 
-.about-us{
-    width: max-content;
-}
-.about-us-heading,
-.follow-us-heading{
-    font-size: 18px;
-}
-
-
-
- .media-platforms{
+.footer div{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    width: 100px;
+    height: 130px;
+
+}
+
+.footer span{
+    color: rgb(255, 251, 0);
+   
+    font-size: 18px;
+    font-weight: 700;
     margin-top: 10px;
 
-
- }
-
-.email-icon,
-.whatsapp-icon
-{
-    height: 20px;
 }
-.location-icon{
-    height: 22px;
-}
- .icon{
-    height: 30px;
- }
-
- .about-us-info{
-    position: relative;
- }
-.contact-us-platforms{
+.nav-images-container{
+    background-color:black;
     display: flex;
-    position: absolute;
+    flex-direction: row;
     justify-content: center;
-    flex-direction: column;
-    animation: slideRight 0.5s ease-out forwards;
-    left: 90px;
-    top: 36px;
+
+}
+
+.nav-image{
+    width: 120px;
+    border-radius: 100px;
+    margin-left: 10px;
+
+}
+
+.footer div div{
+    cursor: pointer;
+    padding: 4px;
     width: max-content;
-   
-    
 }
 
-
-.contact-us-platforms div{
-  padding: 4px 10px;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  color: rgb(0, 255, 149);
-  transition:1s ease-in ;
-  background-color: rgb(2, 34, 34);
-  cursor: pointer;
+.footer div div:hover{
+    background-color: rgb(6, 54, 54);
+    padding: 4px 8px;
 }
-.contact-us-platforms div:hover{
-    background-color: rgb(5, 70, 70);
-    display: flex;
+
+p{
+    position: absolute;
+    bottom: -8px;
+    font-size: 12px;
+    right: 5px;
+    cursor: pointer;
   
 }
 
-.contact-us-container{
-   margin-top: 10px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   height: 80%;
-   width: max-content;
-   color: aqua;
-  
-
+p a{
+    text-decoration:none;
+    color: rgb(56, 56, 56);
 }
-
-.contact-us-container span{
-    cursor: pointer;
-}
-
-.contact-us-platforms div span{
-    cursor: pointer;
-} 

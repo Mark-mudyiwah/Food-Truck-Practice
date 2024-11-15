@@ -4,6 +4,16 @@ import { addToCart } from "./cart.js";
 console.log(products)
 
 
+
+
+ 
+ document.querySelectorAll('.add-to-cart-button').forEach((button)=>{
+  button.addEventListener('click', ()=>{
+  const productId = button.dataset.productId
+  addToCart(productId)
+  })
+ })
+/*
 let visibilityStates = {
     shop: false,
     contact: false,
@@ -80,13 +90,13 @@ let visibilityStates = {
             <span class="social-media-title">FOLLOW US</span>
             <div class="social-media-icons">
                 <span class="media-icon">
-                    <img class="icon" src="images/header-images/facebook-icon.png">
+                     
                 </span>
                 <span class="media-icon">
-                    <img class="icon" src="images/header-images/icon-twitter.png">
+                   
                 </span>
                 <span class="media-icon">
-                    <img class="icon" src="images/header-images/icon-instagram.png">
+                    
                 </span>
             </div>
         </div>
@@ -241,48 +251,4 @@ else{
 }
 })
 
-let productsHtml =''
-products.forEach((product)=>{
-  let html =
-  `
-  <div class="product-container" >
-        <div class="item-image-container">
-            <img class="item-image" src="${product.image}">
-
-        </div>
-        <div class="information-container">
-            <span class="item-name">
-                ${product.name}
-            </span>
-            <span class="item-price">
-             R${product.price}
-
-            </span>
-            <div class="add-to-cart-div">
-                <button class="add-to-cart-button" data-product-id = "${product.id}">
-                    Add to cart
-                </button>
-
-            </div>
-        </div>
-
-    </div>
-  
-  
-  
-  
-  `
-  //console.log(html)
-  productsHtml += html
-})
-
-document.querySelector('.products-grid').innerHTML = productsHtml
-
-
- 
- document.querySelectorAll('.add-to-cart-button').forEach((button)=>{
-  button.addEventListener('click', ()=>{
-  const productId = button.dataset.productId
-  addToCart(productId)
-  })
- })
+*/
