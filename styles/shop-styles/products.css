@@ -77,16 +77,17 @@ h4{
 
 .add-to-cart-button{
     padding: 4px 10px;
-    background-color: yellow;
+    background-color:rgb(235, 205, 34);
     border: 1px solid black;
     transition: 0.5s ease-in-out;
+    cursor: pointer;
     
   
 }
 
 .add-to-cart-button:hover{
     transform: scale(1.1);
-    background-color:yellowgreen;
+    background-color:yellow;
     transition: 0.5s ease-in-out;
 }
 
