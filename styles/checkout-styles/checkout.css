@@ -31,9 +31,10 @@ body{
     align-items: end;
     position: relative;
     z-index: 10;
-    border-top: 1px solid rgb(228, 226, 226);
+    border-top: 1px solid rgb(194, 192, 192);
     padding-top: 10px;
-    padding-bottom: 8px;
+    padding: 12px 2px;
+ 
 }
  
  
