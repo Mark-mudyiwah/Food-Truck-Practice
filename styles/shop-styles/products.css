@@ -1,7 +1,7 @@
 body{
     font-family: roboto;
     padding-top: 70px;
-    color: black;
+     
    
 }
 
@@ -63,6 +63,7 @@ h4{
 
 .item-name{
     font-weight: 600;
+    color: rgb(5, 5, 5);
 }
 
 .show{

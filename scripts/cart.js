@@ -1,3 +1,8 @@
+import { headerDisplay } from "./homepage.js";
+
+
+headerDisplay()
+
 const cart = [
     
 ]
@@ -27,4 +32,5 @@ export function addToCart(productId){
    localStorage.setItem('cart',JSON.stringify(cart))
    console.log(localStorage)
    }
+
    

@@ -1,6 +1,6 @@
 body{
     font-family: roboto;
-    color: black;
+   
     padding-top: 80px;
  
 }
@@ -34,6 +34,7 @@ body{
     border-top: 1px solid rgb(194, 192, 192);
     padding-top: 10px;
     padding: 12px 2px;
+    color: black;
  
 }
  
@@ -112,6 +113,7 @@ body{
     margin-top: 35px;
     font-size: 18px;
     margin-left: 10px;
+    color: black;
 }
 
 .no-container,
@@ -119,6 +121,7 @@ body{
     display: flex;
     justify-content: start;
     align-items: center;
+    color: black;
    
     margin-top: 5px;
     width: max-content;
@@ -131,10 +134,12 @@ body{
     justify-content:center ;
     align-items: center;
     margin-top:30px  ;
+    color: black;
 }
 .customer-instruction-span{
     margin-bottom: 3px;
     font-size:15px;
+    color: black;
  
 }
 .instructions-text-area{
@@ -155,6 +160,7 @@ align-items: center;
 .sub-total-container{
 display: flex;
 align-items: center;
+color: black;
 
 }
 .sub-total-span{

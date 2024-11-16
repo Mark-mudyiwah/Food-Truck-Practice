@@ -126,27 +126,27 @@ body{
 
 .search-input-container-primary{
     position: fixed;
-    top: 55px;
-    right: 2px; ;
-    left:2px ;
+    top: 50px;
+    right: 0px; ;
+    left:0px ;
     animation: slideDown 0.5s ease-out forwards;
     display: flex;
     justify-content: center;
     padding: 15px 6px;
     border-radius: 10px;
- 
-
+    z-index: 101;
+    display: none;
   
 }
 
-.search-color{
+.search-input-container{
     background-image: linear-gradient(45deg,rgb(27, 26, 26),rgb(21, 21, 97),rgb(27, 26, 26));
 }
 .search-input-container{
-    color: red; 
+    color: rgb(247, 245, 245); 
     border: 1px solid  yellow;
    
-    height: 30px;
+    height: 35px;
     padding: 2px 2px;
     width: 96%;
     border-radius: 6px;
@@ -173,14 +173,8 @@ body{
  color: blue;
 }
 
-.close-searchbar{
-    position: absolute;
-    right: 0px;
-    top: -2px;
-    font-size: 18px;
-    color: red;
-    font-weight: bolder;
-}
+
+
 .main-primary{
    display: flex;
     justify-content: center;

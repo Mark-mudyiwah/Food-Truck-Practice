@@ -1,158 +1,129 @@
-.sidebar {
-    color: black;
+
+.sidebar{
+    background-color:rgb(10, 10, 10);
+    width: 70%;
+    height: 65%;
+    top: 50px;
     position: fixed;
-    top: 20px;
-    left: 1px;
-    width: 1px;
-    height: 60%;
     display: flex;
-    animation: slideInRight 0.5s ease-out forwards;
-    flex-direction: column;
-    padding: 40px 6px 10px 6px;
-    
-    font-size: 16px;
-
-    
-  
-}
-
-.change-width{
-    width: 75%;
-}
-
-.sidebar-close {
-    animation: slideUp 0.5s ease-out forwards;
-}
-
-.close-sidebar-span {
-    position: absolute;
-    top:0;
-    left: 2px;
-    height: 32px;
-    cursor: pointer;
-
-}
-
-.shop-section,
-.menu-section,
-.contact-section,
-.auth-section,
-.social-media-section {
-    margin-bottom: 15px;
-    height: max-content;
-    padding-bottom: 14px;
-}
-
-.shop-content,
-.contact-content,
-.auth-content {
-    display: flex;
-    margin-top: 0;
-    padding: 2px 6px;
     flex-direction: column;
     justify-content: space-between;
-    height: 90%;
-    animation: slideInDown 0.5s ease-out forwards;
-    width: max-content;
-    margin-left: 0px;
+    z-index: 102;
+    padding: 30px 15px;
+    animation-name: slideInLeft;
+    animation-duration: 0.7s;
+    display: none;
+} 
+
+
+
+
+.follow-us,
+.privacy-policy,
+.contact-us,
+.menu,
+.shop-span-primary,
+.sign-in{
+ color:white;
+ font-weight: 500;
+ font-size: 17px;
+ cursor: pointer;
 }
 
-.shop-content span,
-.contact-content span {
-    padding: 3px 5px;
-    cursor: pointer;
-}
-
-.shop-content span:hover,
-.contact-content span:hover {
-    background-color: aqua;
-}
-
-.menu-section {
-    cursor: pointer;
-}
-
-.show {
+.shop-span-primary{
+    
     display: flex;
+    justify-content: space-between;
 }
-
-.hide {
+.shop-categories-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 4px 2px;
     display: none;
 }
 
-.follow-us-title {
-    font-family: 'Abril Fatface';
-    font-weight: 500;
-}
-
-.social-media-icons {
-    padding-top: 8px;
-}
-
-.shop-title,
-.contact-title,
-.auth-header,
-.social-media-section,
-.menu-section {
-    font-weight: 600;
-    font-size: 18px;
-}
-
-.shop-header,
-.contact-header,
-.auth-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px auto;
+.shop-categories-container span{
+    width: max-content;
+    padding: 2px 6px;
+    margin-top: 10px;
     cursor: pointer;
 }
 
-.icon-container {
-    height: 20px;
+.shop-categories-container span:hover{
+background-color: yellow;
+color: black;
 }
 
-.toggle-icon {
-    height: 100%;
-    animation: slideInDown 0.5s ease-out forwards;
+.media-icon{
+    height: 35px;
+}
+.media-links-container{
+    margin-top: 10px;
+    display: flex;
 }
 
-@keyframes slideInDown {
-    from {
-        transform: translateY(-20%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+.show{
+    display: flex;
+    animation-name: slideInLeft;
+    animation-duration: 0.7s;
 }
 
-@keyframes slideInRight {
-    from {
-        transform: translateX(-20%);
-        opacity: 0;
+ 
+.animate{
+    display: flex;
+    animation-name: slideOutLeft;
+    animation-duration: 0.5s;
+}
+.open{
+
+    display: flex;
+    animation-name: slideDown;
+    animation-duration: 0.5s;
+}
+.close{
+    display: flex;
+    animation-name: slideUp;
+    animation-duration: 0.5s;
+}
+
+@keyframes slideInLeft{
+    from{
+        transform: translateX(-100px);
     }
-    to {
+    to{
         transform: translateX(0);
-        opacity: 1;
     }
 }
 
-@keyframes slideUp {
-    from {
+@keyframes slideOutLeft{
+    from{
+        transform: translateX(0);
+    }
+   
+    to{
+        transform: translateX(-300px);
+    }
+  
+}
+
+@keyframes slideDown{
+    from{
+        transform: translateY(-20px);
+    }
+    to{
         transform: translateY(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateY(-20%);
-        opacity: 0;
     }
 }
 
-.b-color{
-    background-color: aliceblue;
-}
 
-.open-anime{
-    animation: slideInDown 0.5s ease-out forwards;;
+@keyframes slideUp{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-30px);
+    }
+  
 }
