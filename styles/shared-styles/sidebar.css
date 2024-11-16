@@ -2,7 +2,7 @@
 .sidebar{
     background-color:rgb(10, 10, 10);
     width: 70%;
-    height: 65%;
+    height: 85%;
     top: 50px;
     position: fixed;
     display: flex;
@@ -57,7 +57,7 @@ color: black;
 }
 
 .media-icon{
-    height: 35px;
+    height: 45px;
 }
 .media-links-container{
     margin-top: 10px;

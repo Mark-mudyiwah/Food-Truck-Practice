@@ -40,7 +40,7 @@ body{
  
  
 .item-image-container{
-    width: 180px;
+    width: 160px;
     
  
     /*box-shadow: 0px 0px 10px 3px gray;*/
@@ -70,10 +70,10 @@ body{
     font-weight: 600;
 }
  .item-name{
-    font-weight: bold;
+    font-weight: 500;
  }
 .item-quantity{
-    font-weight: 500;
+    
 }
  .update-button{
     width: 110px;
@@ -96,14 +96,14 @@ body{
 
  .delete-item-container{
     position: absolute;
-    top: 0;
+    top: 8px;
     right: 4px;
     cursor: pointer;
  }
  
 
  .delete-icon{
-    width: 25px;
+    width: 20px;
  }
  .delete-item-container:hover{
     background-color:rgb(219, 217, 217);
