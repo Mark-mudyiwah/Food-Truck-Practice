@@ -47,5 +47,13 @@ document.querySelectorAll('.add-to-cart-button').forEach((button)=>{
     button.addEventListener('click', ()=>{
     const productId = button.dataset.productId
     addToCart(productId)
+    button.classList.add('green')
+    button.innerHTML = `Added Success &#10004;`
+    setTimeout(()=>{
+        button.innerHTML = `Add to Cart`
+        button.classList.remove('green')
+    },900)
     })
+
+
    })

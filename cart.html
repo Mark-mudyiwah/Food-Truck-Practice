@@ -128,23 +128,73 @@
        
     </div>
 
-    <!-- Loyalty Question -->
-    <span class="loyalty-question-span">Are you a <b>Good Hope</b> loyalty member?</span>
+    <!-- Delivery Options-->
+    <span class="delivery-option-span">Choose your Delivery Option</span>
 
-    <div class="loyalty-selection-container">
+    <div class="delivery-selection-container">
         <div class="yes-container">
             <span>
-                <input type="radio" name="loyalty" value="yes">
+                <input class="radio-input" type="radio" name="loyalty" value="yes" checked>
+            </span>
+
+            <span class="delivery-type-span">
+                <span>24hr pickup from store</span>
+                <span class="delivery-charge-span">Free of charge</span>
             </span>
            
-            <span>Yes</span>
+    
         </div>
-        <div class="no-container">
+        <div class="yes-container">
             <span>
-                <input type="radio" name="loyalty" value="no">
+                <input class="radio-input" type="radio" name="loyalty" value="yes">
             </span>
-            <span>No</span>
+
+            <span class="delivery-type-span">
+                <span>Within 2 days</span>
+                <span class="delivery-charge-span">R50 - charge</span>
+            </span>
+           
+    
         </div>
+        <div class="yes-container">
+            <span>
+                <input class="radio-input" type="radio" name="loyalty" value="yes">
+            </span>
+
+            <span class="delivery-type-span">
+                <span>3 day delivery</span>
+                <span class="delivery-charge-span">R30 - charge</span>
+            </span>
+           
+    
+        </div>
+    </div>
+
+
+    <div class="payment-summary-container">
+        <span class="order-summary-text">Order Summary</span>
+        <div>
+            <span>Items(4)</span>
+            <span>180.00</span>
+        </div>
+        <div>
+            <span>Delivery Charge:</span>
+            <span>30.00</span>
+
+        </div>
+        <div>
+            <span>Total Before tax:</span>
+            <span class="total-before-tax">R 210.00</span>
+        </div>
+        <div>
+            <span>Estimated Tax(5%):</span>
+            <span> 10.50</span>
+        </div>
+        <div class="order-total-container">
+            <span>Order Total:</span>
+            <span>R 220.50</span>
+        </div>
+
     </div>
 
     <!-- Customer Comment Section -->
@@ -157,10 +207,9 @@
     <div class="bottom-links">
         <div class="sub-total-container">
             <span class="sub-total-span">SUBTOTAL</span>
-            <span class="sub-total-amount-span">R 230.90</span>
+            <span class="sub-total-amount-span">R 220.50</span>
         </div>
-        <div class="shipping-tax-text">Shipping & taxes are calculated at checkout</div>
-        <div class="update-cart-link">&#8592; Continue Shopping</div>
+        <div class="update-cart-link"><a href="shop.html">&#8592; Continue Shopping</a></div>
         <div class="proceed-to-checkout-link">
             <span>Proceed to CheckOut &#8594;</span>
         </div>

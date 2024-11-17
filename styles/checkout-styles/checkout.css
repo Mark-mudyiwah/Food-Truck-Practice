@@ -1,6 +1,6 @@
 body{
     font-family: roboto;
-   
+   color: black;
     padding-top: 80px;
  
 }
@@ -20,7 +20,7 @@ body{
 .products-grid{
    
     border-bottom: 1px solid rgb(219, 219, 219);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
 }
  
@@ -35,6 +35,7 @@ body{
     padding-top: 10px;
     padding: 12px 2px;
     color: black;
+    background-color: rgb(247, 251, 255);
  
 }
  
@@ -86,11 +87,11 @@ body{
  }
 
  .update-button{
-    background-color: green;
+    background-color:rgb(25, 47, 88);
  }
 
  .update-button:hover{
-    background-color: rgb(2, 83, 2);
+    background-color:  rgb(12, 21, 37);
  }
 
  .delete-item-container{ 
@@ -108,11 +109,79 @@ body{
     background-color:rgb(219, 217, 217);
  }
 
-.loyalty-question-span{
-    margin-top: 35px;
+
+ .delivery-option-span{
     font-size: 18px;
-    margin-left: 10px;
-    color: black;
+    margin-left: 6px;
+    color: blue;
+    font-weight: 500;
+ }
+ .delivery-selection-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    height: 130px;
+    margin-bottom: 20px;
+   
+ }
+
+ 
+.delivery-type-span{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-left: 2px;
+  
+}
+.delivery-charge-span{
+    color: red;
+    font-size: 15px;
+    margin-left: 3px;
+
+   
+
+}
+.order-summary-text{
+    font-size: 19px;
+    margin-top: 4px;
+    color: rgb(29, 29, 54);
+    font-weight: 600;
+}
+.payment-summary-container{
+border: 1px solid black;
+height: 200px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+background-color: aliceblue;
+margin-left: 2px;
+margin-right: 1px;
+
+
+}
+
+.payment-summary-container div{
+  display: flex;    
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 4px;
+  margin-right: 8px;
+}
+
+.total-before-tax{
+    border-top: 1px dotted black;
+    color: darkblue;
+    font-weight: 500;
+}
+
+.order-total-container{
+    border-top: 1px dotted black;
+    padding-bottom: 6px;
+    padding-top: 10px;
+    color: darkred;
+    font-weight: 600;
 }
 
 .no-container,
@@ -188,6 +257,12 @@ font-family: oleo script;
     margin-bottom: 12px;
     margin-top: 12px;
     cursor: pointer;
+    
+}
+
+.update-cart-link a{
+    text-decoration: none;
+    color: white;
 }
 .proceed-to-checkout-link{
     display: flex;

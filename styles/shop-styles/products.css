@@ -3,6 +3,8 @@ body{
     padding-top: 80px;
 }
 
+
+
 h4{
     display: flex;
     justify-content: center;
@@ -111,12 +113,14 @@ option{
   
 }
 
-.add-to-cart-button:hover{
-    transform: scale(1.1);
-    background-color:yellow;
+
+
+ 
+.green{
+    background-color: green;
+    color: white;
     transition: 0.5s ease-in-out;
 }
-
 
 
 
