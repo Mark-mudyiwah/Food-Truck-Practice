@@ -115,14 +115,20 @@ body{
     margin-left: 6px;
     color: blue;
     font-weight: 500;
+    display: flex;
+    justify-content: end;
+    margin-right: 6px;
+  
  }
  .delivery-selection-container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: start;
+    align-items: end;
     height: 130px;
     margin-bottom: 20px;
+    margin-right: 5px;
+  
    
  }
 
@@ -151,7 +157,7 @@ body{
 }
 .payment-summary-container{
 border: 1px solid black;
-height: 200px;
+height: 250px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
