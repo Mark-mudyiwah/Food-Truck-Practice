@@ -111,15 +111,13 @@ body{
 
 .cart-quantity-container{
     position: absolute;
-    background-color:rgb(179, 24, 24);
     padding:2px 2px;
-    
+    color: rgb(240, 56, 0);
     width: 13px;
     height: 12px;
     border-radius: 15px;
-    top:4px;
-    right: 0px;
-    color: white;
+    top:8px;
+    right: 2px;
     font-weight: bold;
     font-size: x-small;
 }
@@ -146,7 +144,7 @@ body{
     color: rgb(247, 245, 245); 
     border: 1px solid  yellow;
    
-    height: 35px;
+    height: 38px;
     padding: 2px 2px;
     width: 96%;
     border-radius: 6px;
@@ -211,6 +209,7 @@ body{
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     
+    
    
 }
 
@@ -232,6 +231,7 @@ body{
     align-items: center;
     margin-top: 5px;
     color: black;
+    cursor: pointer;
 
 }
 
@@ -249,6 +249,7 @@ body{
     font-family: roboto;
     font-weight: bold;
     font-size: medium;
+    cursor: pointer;
 
 }
 

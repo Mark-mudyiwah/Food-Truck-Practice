@@ -36,7 +36,6 @@ products.forEach((product)=>{
   
   
   `
-  //console.log(html)
   productsHtml += html
 })
 

@@ -61,8 +61,8 @@
         <div class="shopping-bag-container">
             <a href="cart.html">
             <img class="shopping-bag-icon" src="images/header-images/shopping-bag.png">
-            <div class="cart-quantity-container">
-                10
+            <div class="cart-quantity-container js-cart-quantity-container">
+                
             </div>
         </a>
         </div>
@@ -131,8 +131,16 @@
 
 </div>
  
-
-<h4>All Products</h4>
+<form>
+    <label for="choice">Sort By:</label>
+    <select id="choices" name="choices" class="product-choice-select">
+      <option value="all-products" selected>All Products</option>
+      <option value="best-selling">Best Selling</option>
+      <option value="new-items">New Items</option>
+      <option value="specials">Special Offer</option>
+    </select>
+ 
+  </form>
 
 <div class="products-grid">
 </div>
