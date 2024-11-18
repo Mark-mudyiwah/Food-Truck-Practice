@@ -79,7 +79,7 @@ export function addToCart(productId){
        
      document.querySelector('.js-products-grid').innerHTML =cartSummaryHTML
      }) 
-
+ 
 }
  export function renderCartQuantity(){
   let totalCartQuantity = 0
@@ -90,6 +90,59 @@ export function addToCart(productId){
   
 }
  renderCartQuantity()
+
+ export function renderOrderSummary(){
+
+  let totalCartQuantity = 0
+  let totalCost = 0
+
+  cart.forEach((cartItem)=>{
+    const productId = cartItem.productId
+    const matchingProduct = getProduct(productId)
+   totalCartQuantity += cartItem.quantity
+   const itemCost = matchingProduct.price
+   totalCost += itemCost
+   //console.log(itemCost)
+  
+  
+  })
+
+  const totalBeforeTax = totalCost + 30
+  const tax = 0.05*totalBeforeTax
+  const orderTotal = totalBeforeTax + tax
+
+  let orderSummaryhtml = `
+   <span class="order-summary-text">Order Summary</span>
+        <div>
+            <span>Items(${totalCartQuantity})</span>
+            <span>${totalCost.toFixed(2)}</span>
+        </div>
+        <div>
+            <span>Delivery Charge:</span>
+            <span>30.00</span>
+
+        </div>
+        <div>
+            <span>Total Before tax:</span>
+            <span class="total-before-tax">R  ${totalBeforeTax.toFixed(2)}</span>
+        </div>
+        <div>
+            <span>Estimated Tax(5%):</span>
+            <span>${tax.toFixed(2)}</span>
+        </div>
+        <div class="order-total-container">
+            <span>Order Total:</span>
+            <span>R ${orderTotal.toFixed(2)}</span>
+        </div>
+
+  `
+  document.querySelector('.js-payment-summary').innerHTML = orderSummaryhtml
+
+  document.querySelector('.js-subtotal-amount-span').innerHTML =  orderTotal.toFixed(2)
+
+  document.querySelector('.js-cart-item-count').innerHTML = totalCartQuantity
+  document.querySelector('.js-subtotal-amount-span').innerHTML =  `R ${orderTotal.toFixed(2)}`
+ }
 
   
  

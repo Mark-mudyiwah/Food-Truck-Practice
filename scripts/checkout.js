@@ -1,3 +1,4 @@
-import {renderCartItemsHTML} from "./cart.js";
+import {renderCartItemsHTML,renderOrderSummary} from "./cart.js";
 
 renderCartItemsHTML()
+renderOrderSummary()

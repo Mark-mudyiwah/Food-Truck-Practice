@@ -8,14 +8,19 @@ body{
 
 .shopping-cart-heading{
     font-size: 20px;
-    color:black;
+    color:rgb(0, 3, 32);
     margin-bottom: 40px;
     display: flex;
-    justify-content: center;
-    font-family: roboto;
+    justify-content: space-between;
+    font-family: OLEO SCRIPT;
     font-weight: 900;
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
+.cart-item-count{
+    color: orangered;
+}
 
 .products-grid{
    
@@ -116,7 +121,7 @@ body{
     color: blue;
     font-weight: 500;
     display: flex;
-    justify-content: end;
+    justify-content: start;
     margin-right: 6px;
   
  }
@@ -124,7 +129,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: end;
+    align-items:start;
     height: 130px;
     margin-bottom: 20px;
     margin-right: 5px;
@@ -157,13 +162,13 @@ body{
 }
 .payment-summary-container{
 border: 1px solid black;
-height: 250px;
+height: 280px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 background-color: aliceblue;
-margin-left: 2px;
-margin-right: 1px;
+margin-left: 3px;
+margin-right: 3px;
 
 
 }
@@ -184,7 +189,7 @@ margin-right: 1px;
 
 .order-total-container{
     border-top: 1px dotted black;
-    padding-bottom: 6px;
+    padding-bottom: 10px;
     padding-top: 10px;
     color: darkred;
     font-weight: 600;
