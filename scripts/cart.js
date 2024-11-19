@@ -9,12 +9,9 @@ headerDisplay()
  ||[
     {
       productId:'5hgf-ty67-dv4c',
-      quantity:2
+      quantity:1
     },
-    {
-      productId:'3jkl-u78g-bn9a',
-      quantity:2
-    },
+   
 
 ]
 
