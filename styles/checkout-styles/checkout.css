@@ -155,9 +155,9 @@ body{
 
 }
 .order-summary-text{
-    font-size: 19px;
+    font-size: 20px;
     margin-top: 4px;
-    color: rgb(29, 29, 54);
+    color: green;
     font-weight: 600;
 }
 .payment-summary-container{
@@ -183,7 +183,6 @@ margin-right: 3px;
 
 .total-before-tax{
     border-top: 1px dotted black;
-    color: darkblue;
     font-weight: 500;
 }
 
@@ -195,8 +194,9 @@ margin-right: 3px;
     font-weight: 600;
 }
 
-.no-container,
-.yes-container{
+.first-delivery-option,
+.second-delivery-option,
+.third-delivery-option{
     display: flex;
     justify-content: start;
     align-items: center;
@@ -205,6 +205,10 @@ margin-right: 3px;
     margin-top: 5px;
     width: max-content;
     margin-left: 10px;
+}
+
+.delivery-time-text{
+    color: rgb(25, 132, 219);
 }
 
 .customer-comment-container{
