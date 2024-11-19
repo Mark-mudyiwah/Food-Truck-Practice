@@ -1,6 +1,6 @@
 import { headerDisplay } from "./homepage.js";
 import { getProduct } from "./products.js";
-import { getDeliveryOption } from "./delivery-options.js";
+import { getDeliveryOption,deliveryOptions } from "./delivery-options.js";
 
 headerDisplay()
 
@@ -91,60 +91,32 @@ export function addToCart(productId){
 
  export function renderDeliveryOptions(){
 
+let deliveryOptionsHTML = ``
+ deliveryOptions.forEach((deliveryOption)=>{
 
-
-  //const matchingDeliveryOption = getDeliveryOption(deliveryOptionId)
-
-  let html = `
-    <div class="first-delivery-option js-option-selector"  data-delivery-option-id ="1" >
+    deliveryOptionsHTML += `
+    <div class="first-delivery-option js-option-selector"  data-delivery-option-id =${deliveryOption.id} >
             <span>
                 <input class="radio-input  " type="radio" name="deliveryOption" checked>
             </span>
 
             <span class="delivery-type-span">
-                <span class="delivery-time-text">24hr pickup from store</span>
-                <span class="delivery-charge-span">Free of charge</span>
+                <span class="delivery-time-text">${deliveryOption.name}</span>
+                <span class="delivery-charge-span">${deliveryOption.price > 0?`R${deliveryOption.price}-charge` :`Free of charge`}</span>
             </span>
            
     
         </div>
-        <div class="second-delivery-option js-option-selector" data-delivery-option-id = "2">
-            <span>
-                <input class="radio-input" type="radio" name ="deliveryOption" >
-            </span>
-
-            <span class="delivery-type-span">
-                <span class="delivery-time-text" >Within 2 days</span>
-                <span class="delivery-charge-span">R50 - charge</span>
-            </span>
-           
     
-        </div>
-        <div class="third-delivery-option js-option-selector" data-delivery-option-id = "3">
-            <span>
-                <input class="radio-input" type="radio" name="deliveryOption">
-            </span>
+    `
+})
 
-            <span class="delivery-type-span">
-                <span class="delivery-time-text">3 day delivery</span>
-                <span class="delivery-charge-span">R30 - charge</span>
-            </span>
-           
-        </div>
-  
    
-  `
+  document.querySelector('.js-delivery-selection-container').innerHTML = deliveryOptionsHTML
 
-  document.querySelector('.js-delivery-selection-container').innerHTML = html
+ 
 
-  const optionSelector = document.querySelectorAll('.js-option-selector')
-
-  optionSelector.forEach((option) =>{
-    const deliveryOptionId = option.dataset.deliveryOptionId
-    const matchingDeliveryOption = getDeliveryOption(deliveryOptionId)
-    console.log(matchingDeliveryOption)
-  })
-
+  
 
  }
 
