@@ -122,8 +122,6 @@ let deliveryOptionsHTML = ``
 
 
 
- renderDeliveryOptions()
-
  export function renderOrderSummary(){
 
   let totalCartQuantity = 0

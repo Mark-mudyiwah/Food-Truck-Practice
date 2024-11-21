@@ -201,6 +201,7 @@ margin-right: 3px;
     justify-content: start;
     align-items: center;
     color: black;
+    cursor: pointer;
    
     margin-top: 5px;
     width: max-content;
