@@ -5,6 +5,9 @@ body{
  
 }
 
+input[type ="radio"]{
+cursor: pointer;
+}
 
 .shopping-cart-heading{
     font-size: 20px;
@@ -93,10 +96,36 @@ body{
 
  .update-button{
     background-color:rgb(25, 47, 88);
+    
  }
 
  .update-button:hover{
     background-color:  rgb(12, 21, 37);
+ }
+
+ .quantity-update-input {
+    height: 20px;
+    width: 40px;
+    outline: none;
+    border-color:blue;
+    display: none;
+ }
+ .save-quantity-button{
+    padding: 4px 5px;
+    border: 1px solid grey;
+    font-family: roboto;
+    background-color: aqua;
+    margin-left: 4px;
+    width: 80px;
+    display: none;
+ }
+
+ .save-quantity-button:hover{
+    background-color: rgb(11, 110, 156);
+    transition: 0.5s ease-in;
+    cursor: pointer;
+    color: aliceblue;
+
  }
 
  .delete-item-container{ 
@@ -289,3 +318,13 @@ font-family: oleo script;
     padding: 10px 0;
     cursor: pointer;
 }
+
+.openIt{
+    display: initial;
+}
+
+.closeIt{
+    display: none;
+}
+
+ 

@@ -19,7 +19,7 @@ products.forEach((product)=>{
                 ${product.name}
             </span>
             <span class="item-price">
-             R${product.price}
+             R${(product.price).toFixed(2)}
 
             </span>
             <div class="add-to-cart-div">

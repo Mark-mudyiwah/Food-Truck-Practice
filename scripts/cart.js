@@ -56,11 +56,12 @@ export function addToCart(productId){
               </div>
               <div class="item-info-container">
                   <div class="item-name">${matchingProduct.name}</div>
-                  <div class="item-price">R${matchingProduct.price}</div>
+                  <div class="item-price">R${(matchingProduct.price).toFixed(2)}</div>
                   <div class="item-quantity">Quantity : ${cartItem.quantity}</div>
                   <div class="update-quantity-buttons">
-                      <button class="update-button">Update Quantity</button>
-                     
+                      <button class="update-button js-update-button" data-product-id = "${productId}">Update Quantity</button>
+                      <input class = "quantity-update-input js-quantity-update-input" type = "number" min = "1" max ="100" data-product-id = "${productId}">
+                      <button class ="save-quantity-button" data-product-id ="${productId}">Update</button>                
                   </div>
   
               </div>
@@ -76,9 +77,68 @@ export function addToCart(productId){
       `
        
      document.querySelector('.js-products-grid').innerHTML =cartSummaryHTML
-     }) 
+   
+    });
+
+     function showQuantityInput(productId,elementClass){
+        document.querySelectorAll(elementClass).forEach((element)=>{
+            const elementId = element.dataset.productId
+           if(productId === elementId){
+            element.classList.add('openIt')
+
+           }
+
+          
+         })
+        
+     }
+
+     function hideQuantityInput(productId,elementClass){
+
+        document.querySelectorAll(elementClass)
+        .forEach((element)=>{
+            const elementId =element.dataset.productId
+            if(elementId === productId){
+                element.classList.remove('openIt')
+
+            }
+
+        })
+
+     }
  
+
+     document.querySelectorAll('.js-update-button')
+     .forEach((button)=>{
+        button.addEventListener('click',()=>{
+
+         const productId = button.dataset.productId
+         button.classList.add('closeIt')
+         showQuantityInput(productId,'.js-quantity-update-input ,.save-quantity-button')
+
+        });
+     });
+
+     document.querySelectorAll('.save-quantity-button')
+     .forEach((button)=>{
+        button.addEventListener('click',()=>{
+            const productId = button.dataset.productId
+             hideQuantityInput(productId,'.js-quantity-update-input,.save-quantity-button')
+             document.querySelectorAll('.js-update-button').forEach((button)=>{
+              const  elementId = button.dataset.productId
+                if(elementId === productId){
+                    button.classList.remove('closeIt')
+                }
+             })
+
+      
+
+        })
+       
+     })
 }
+
+
  export function renderCartQuantity(){
   let totalCartQuantity = 0
   cart.forEach((cartItem)=>{
