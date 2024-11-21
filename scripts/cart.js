@@ -139,6 +139,59 @@ export function addToCart(productId){
 }
 
 
+/* // Utility to toggle class for elements matching a condition
+function toggleClassForElements(selector, condition, className, action) {
+    document.querySelectorAll(selector).forEach((element) => {
+        if (condition(element)) {
+            element.classList[action](className);
+        }
+    });
+}
+
+// Show quantity input by adding a class
+function showQuantityInput(productId, elementSelector) {
+    toggleClassForElements(
+        elementSelector,
+        (element) => element.dataset.productId === productId,
+        'openIt',
+        'add'
+    );
+}
+
+// Hide quantity input by removing a class
+function hideQuantityInput(productId, elementSelector) {
+    toggleClassForElements(
+        elementSelector,
+        (element) => element.dataset.productId === productId,
+        'openIt',
+        'remove'
+    );
+}
+
+// Set up event listeners for update buttons
+document.querySelectorAll('.js-update-button').forEach((button) => {
+    button.addEventListener('click', () => {
+        const productId = button.dataset.productId;
+        button.classList.add('closeIt');
+        showQuantityInput(productId, '.js-quantity-update-input, .save-quantity-button');
+    });
+});
+
+// Set up event listeners for save buttons
+document.querySelectorAll('.save-quantity-button').forEach((button) => {
+    button.addEventListener('click', () => {
+        const productId = button.dataset.productId;
+        hideQuantityInput(productId, '.js-quantity-update-input, .save-quantity-button');
+        toggleClassForElements(
+            '.js-update-button',
+            (btn) => btn.dataset.productId === productId,
+            'closeIt',
+            'remove'
+        );
+    });
+});
+ */
+
  export function renderCartQuantity(){
   let totalCartQuantity = 0
   cart.forEach((cartItem)=>{
