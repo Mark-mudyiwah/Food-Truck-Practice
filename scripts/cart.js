@@ -60,7 +60,7 @@ export function addToCart(productId){
                   <div class="item-quantity">Quantity : ${cartItem.quantity}</div>
                   <div class="update-quantity-buttons">
                       <button class="update-button js-update-button" data-product-id = "${productId}">Update Quantity</button>
-                      <input class = "quantity-update-input js-quantity-update-input" type = "number" min = "1" max ="100" data-product-id = "${productId}">
+                      <input class = "quantity-update-input js-quantity-update-input js-quantity-${productId}" type = "number" min = "1" max ="100" data-product-id = "${productId}">
                       <button class ="save-quantity-button" data-product-id ="${productId}">Update</button>                
                   </div>
   
@@ -124,6 +124,7 @@ export function addToCart(productId){
         button.addEventListener('click',()=>{
             const productId = button.dataset.productId
              hideQuantityInput(productId,'.js-quantity-update-input,.save-quantity-button')
+             updateCartQuantity(productId)
              document.querySelectorAll('.js-update-button').forEach((button)=>{
               const  elementId = button.dataset.productId
                 if(elementId === productId){
@@ -136,6 +137,26 @@ export function addToCart(productId){
         })
        
      })
+}
+
+
+
+function updateCartQuantity(productId){
+ const inputElement =  document.querySelector(`.js-quantity-${productId}`)
+ let quantity = inputElement.value 
+ quantity = parseInt(quantity.replace(/,/g,''),10)|| 0;
+  cart.forEach((cartItem)=>{
+     if(cartItem.productId=== productId){
+        cartItem.quantity = quantity
+        
+   localStorage.setItem('cart',JSON.stringify(cart))
+
+     }
+
+     renderCartItemsHTML()
+     renderOrderSummary()
+  })
+
 }
 
 
