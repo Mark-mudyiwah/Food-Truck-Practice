@@ -155,6 +155,7 @@ function updateCartQuantity(productId){
 
      renderCartItemsHTML()
      renderOrderSummary()
+     renderCartQuantity()
   })
 
 }

@@ -48,7 +48,7 @@ document.querySelectorAll('.add-to-cart-button').forEach((button)=>{
     const productId = button.dataset.productId
     addToCart(productId)
     button.classList.add('green')
-    button.innerHTML = `Added Success &#10004;`
+    button.innerHTML = `Added Successfully &#10004;`
     setTimeout(()=>{
         button.innerHTML = `Add to Cart`
         button.classList.remove('green')
