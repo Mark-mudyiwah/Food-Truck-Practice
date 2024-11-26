@@ -7,27 +7,27 @@
     },
     {
         id:2,
-        price:50,
-        name:`Within 2 days`
+        price:70,
+        name:` 24hr delivery`
 
     },
     {
         id:3,
-        price:30,
-        name:`3 day delivery`
+        price:50,
+        name:`Within 48 hrs`
 
     }
 ]
 
-export function getDeliveryOption(deliveryOptionId){
- let matchingDeliveryOption;
-
- deliveryOptions.forEach((deliveryOption)=>{
- const deliveryOptionId = deliveryOption.id
- if(deliveryOptionId === deliveryOptionId){
-
-    matchingDeliveryOption = deliveryOption
- }
-})
- return matchingDeliveryOption
-}
+export function getDeliveryOption(deliveryOptionId) {
+    let matchingDeliveryOption = null;
+  
+    deliveryOptions.forEach((deliveryOption) => {
+      if (deliveryOption.id === deliveryOptionId) {
+        matchingDeliveryOption = deliveryOption;
+      }
+    });
+  
+    return matchingDeliveryOption;
+  }
+  

@@ -224,92 +224,121 @@ document.querySelectorAll('.save-quantity-button').forEach((button) => {
 }
  renderCartQuantity()
 
- export function renderDeliveryOptions(){
-
-let deliveryOptionsHTML = ``
- deliveryOptions.forEach((deliveryOption)=>{
-
-    deliveryOptionsHTML += `
-    <div class="first-delivery-option js-option-selector"  data-delivery-option-id =${deliveryOption.id} >
-            <span>
-                <input class="radio-input  " type="radio" name="deliveryOption" checked>
-            </span>
-
-            <span class="delivery-type-span">
-                <span class="delivery-time-text">${deliveryOption.name}</span>
-                <span class="delivery-charge-span">${deliveryOption.price > 0?`R${deliveryOption.price}-charge` :`Free of charge`}</span>
-            </span>
-           
-    
+ export function renderDeliveryOptions() {
+    // Fetch the selected ID from localStorage
+    const selectedId = JSON.parse(localStorage.getItem('deliveryOption'));
+  
+    let deliveryOptionsHTML = ``;
+  
+    // Generate HTML for delivery options
+    deliveryOptions.forEach((deliveryOption) => {
+      const deliveryOptionId = deliveryOption.id;
+  
+      deliveryOptionsHTML += `
+        <div class="first-delivery-option js-option-selector" data-delivery-option-id="${deliveryOption.id}">
+          <span>
+            <input class="radio-input" id="delivery-${deliveryOptionId}" type="radio" name="deliveryOption">
+          </span>
+  
+          <span class="delivery-type-span">
+            <span class="delivery-time-text">${deliveryOption.name}</span>
+            <span class="delivery-charge-span">${deliveryOption.price > 0 ? `R${deliveryOption.price} &#183 shipping` : `No Shipping`}</span>
+          </span>
         </div>
-    
-    `
-})
+      `;
+    });
+  
+    // Inject the generated HTML into the delivery selection container
+    document.querySelector('.js-delivery-selection-container').innerHTML = deliveryOptionsHTML;
+  
+    // Add click event listeners to each delivery option
+    document.querySelectorAll('.js-option-selector').forEach((element) => {
+      element.addEventListener('click', () => {
+        const selectedId = element.dataset.deliveryOptionId;
+        // Save the selected ID to localStorage
+        localStorage.setItem('deliveryOption', JSON.stringify(selectedId));
+        // Re-render the delivery options to sync the checked state
+        renderDeliveryOptions();
+        renderOrderSummary()
+      });
+    });
+  
+    // Find the corresponding radio input and check it
+    const input = document.querySelector(`#delivery-${selectedId}`);
+    //console.log('Selected ID:', selectedId);
+  
+    if (input) {
+      input.checked = true;
+    } else {
+      console.error(`No input found for delivery-${selectedId}`);
+    }
+    return selectedId
+  }
+  
 
-   
-  document.querySelector('.js-delivery-selection-container').innerHTML = deliveryOptionsHTML
 
  
 
+
+  export function renderOrderSummary() {
+    let totalCartQuantity = 0;
+    let totalCost = 0;
   
-
- }
-
-
-
- export function renderOrderSummary(){
-
-  let totalCartQuantity = 0
-  let totalCost = 0
-
-  cart.forEach((cartItem)=>{
-    const productId = cartItem.productId
-    const matchingProduct = getProduct(productId)
-   totalCartQuantity += cartItem.quantity
-   const itemCost = matchingProduct.price*cartItem.quantity
-   totalCost += itemCost
-   //console.log(itemCost)
+    // Fetch the selected ID from localStorage
+    const selectedId = JSON.parse(localStorage.getItem('deliveryOption'));
+    const selectedDeliveryOption = getDeliveryOption(parseInt(selectedId, 10)); // Ensure `selectedId` is a number
   
+    const deliveryCharge = selectedDeliveryOption ? selectedDeliveryOption.price : 0;
   
-  })
-
-  const totalBeforeTax = totalCost + 30
-  const tax = 0.05*totalBeforeTax
-  const orderTotal = totalBeforeTax + tax
-
-  let orderSummaryhtml = `
-   <span class="order-summary-text">Order Summary</span>
-        <div>
-            <span>Items(${totalCartQuantity})</span>
-            <span>R ${totalCost.toFixed(2)}</span>
-        </div>
-        <div>
-            <span>Delivery Charge:</span>
-            <span>30.00</span>
-
-        </div>
-        <div>
-            <span>Total Before tax:</span>
-            <span class="total-before-tax">R  ${totalBeforeTax.toFixed(2)}</span>
-        </div>
-        <div>
-            <span>Estimated Tax(5%):</span>
-            <span>${tax.toFixed(2)}</span>
-        </div>
-        <div class="order-total-container">
-            <span>Order Total:</span>
-            <span>R ${orderTotal.toFixed(2)}</span>
-        </div>
-
-  `
-  document.querySelector('.js-payment-summary').innerHTML = orderSummaryhtml
-
-  document.querySelector('.js-subtotal-amount-span').innerHTML =  orderTotal.toFixed(2)
-
-  document.querySelector('.js-cart-item-count').innerHTML = totalCartQuantity
-  document.querySelector('.js-subtotal-amount-span').innerHTML =  `R ${orderTotal.toFixed(2)}`
- }
-
+   // console.log('Selected Delivery Option:', selectedDeliveryOption);
+  
+    // Calculate totals for cart items
+    cart.forEach((cartItem) => {
+      const productId = cartItem.productId;
+      const matchingProduct = getProduct(productId);
+  
+      totalCartQuantity += cartItem.quantity;
+      const itemCost = matchingProduct.price * cartItem.quantity;
+      totalCost += itemCost;
+    });
+  
+    const totalBeforeTax = totalCost + deliveryCharge;
+    const tax = 0.05 * totalBeforeTax;
+    const orderTotal = totalBeforeTax + tax;
+  
+    // Generate the order summary HTML
+    let orderSummaryHtml = `
+      <span class="order-summary-text">Order Summary</span>
+      <div>
+        <span>Items (${totalCartQuantity})</span>
+        <span>R ${totalCost.toFixed(2)}</span>
+      </div>
+      <div>
+        <span>Delivery Charge:</span>
+        <span>R ${deliveryCharge.toFixed(2)}</span>
+      </div>
+      <div>
+        <span>Total Before Tax:</span>
+        <span class="total-before-tax">R ${totalBeforeTax.toFixed(2)}</span>
+      </div>
+      <div>
+        <span>Estimated Tax (5%):</span>
+        <span>R ${tax.toFixed(2)}</span>
+      </div>
+      <div class="order-total-container">
+        <span>Order Total:</span>
+        <span>R ${orderTotal.toFixed(2)}</span>
+      </div>
+    `;
+  
+    // Update the DOM with the order summary
+    document.querySelector('.js-payment-summary').innerHTML = orderSummaryHtml;
+  
+    // Update the order total and cart item count in other elements
+    document.querySelector('.js-subtotal-amount-span').innerHTML = `R ${orderTotal.toFixed(2)}`;
+    document.querySelector('.js-cart-item-count').innerHTML = totalCartQuantity;
+  }
+  
   
  
 

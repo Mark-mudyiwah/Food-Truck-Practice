@@ -15,7 +15,7 @@ cursor: pointer;
     margin-bottom: 40px;
     display: flex;
     justify-content: space-between;
-    font-family: OLEO SCRIPT;
+    font-family: roboto;
     font-weight: 900;
     margin-right: 40px;
     margin-left: 40px;
@@ -176,9 +176,10 @@ cursor: pointer;
   
 }
 .delivery-charge-span{
-    color: red;
-    font-size: 15px;
+    color: rgb(224, 81, 81);
+    font-size: 14px;
     margin-left: 3px;
+    font-weight: 400;
 
    
 
