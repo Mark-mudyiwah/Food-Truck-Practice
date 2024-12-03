@@ -93,8 +93,9 @@ export function addToCart(productId){
         
      }
 
-     function hideQuantityInput(productId,elementClass){
+     function hideQuantityInput(productId,elementClass,quantity){
 
+      
         document.querySelectorAll(elementClass)
         .forEach((element)=>{
             const elementId =element.dataset.productId
@@ -122,8 +123,10 @@ export function addToCart(productId){
      document.querySelectorAll('.save-quantity-button')
      .forEach((button)=>{
         button.addEventListener('click',()=>{
-            const productId = button.dataset.productId
-             hideQuantityInput(productId,'.js-quantity-update-input,.save-quantity-button')
+
+          const productId = button.dataset.productId
+          
+
              updateCartQuantity(productId)
              document.querySelectorAll('.js-update-button').forEach((button)=>{
               const  elementId = button.dataset.productId
@@ -144,7 +147,7 @@ export function addToCart(productId){
 function updateCartQuantity(productId){
  const inputElement =  document.querySelector(`.js-quantity-${productId}`)
  let quantity = inputElement.value 
- quantity = parseInt(quantity.replace(/,/g,''),10)|| 0;
+ quantity = parseInt(quantity.replace(/,/g,''),10)|| 1;
   cart.forEach((cartItem)=>{
      if(cartItem.productId=== productId){
         cartItem.quantity = quantity
@@ -157,7 +160,7 @@ function updateCartQuantity(productId){
      renderOrderSummary()
      renderCartQuantity()
   })
-
+return quantity
 }
 
 
