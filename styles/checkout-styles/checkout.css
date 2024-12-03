@@ -1,331 +1,56 @@
-body{
-    font-family: roboto;
-   color: black;
+ 
+ body{
+    background-color: white  ;
+    color: black;
     padding-top: 80px;
+ }
+
  
-}
-
-input[type ="radio"]{
-cursor: pointer;
-}
-
-.shopping-cart-heading{
-    font-size: 20px;
-    color:rgb(0, 3, 32);
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
-    font-family: roboto;
-    font-weight: 900;
-    margin-right: 40px;
-    margin-left: 40px;
-}
-
-.cart-item-count{
-    color: orangered;
-}
-
-.products-grid{
-   
-    border-bottom: 1px solid rgb(219, 219, 219);
-    margin-bottom: 20px;
-
-}
- 
-
-.product-container{
-    display: flex;
-    margin-left: 10px;
-    align-items: end;
+ .email-input-container {
     position: relative;
-    z-index: 10;
-    border-top: 1px solid rgb(194, 192, 192);
-    padding-top: 10px;
-    padding: 12px 2px;
-    color: black;
-    background-color: rgb(247, 251, 255);
- 
+    width: 300px;
 }
- 
- 
-.item-image-container{
-    width: 160px;
-    
-    
- 
-    /*box-shadow: 0px 0px 10px 3px gray;*/
-  
 
+  /* Turn red only after user interaction and invalid input */
+  input[type="email"]:invalid:not(:placeholder-shown) {
+    border-color: red;
 }
-.item-image{
+
+/* Valid input styling */
+input[type="email"]:valid {
+    border-color: green;
+}
+
+
+input[type="email"] {
     width: 100%;
-    height: 100%;
-    border-radius: 6px;
-}
-
-.item-info-container{
- display: flex;
- flex-direction: column;
- justify-content: space-between;
- padding-bottom: 5px;
- padding-top: 4px;
- margin-left: 15px;
- 
-}
-.item-info-container div{
-    margin-top: 5px;
-}
-.item-price{
-    color: orangered;
-    font-weight: 600;
-}
- .item-name{
-    font-weight: 500;
- }
- 
- .update-button{
-    width: 110px;
-    border: 1px solid grey;
-    font-family: roboto;
-    padding: 5px 4px;
-    cursor: pointer;
-    color: white;
-    border-radius: 3px;
-    font-size: 14px;
- }
-
- .update-button{
-    background-color:rgb(25, 47, 88);
-    
- }
-
- .update-button:hover{
-    background-color:  rgb(12, 21, 37);
- }
-
- .quantity-update-input {
-    height: 20px;
-    width: 40px;
-    outline: none;
-    border-color:blue;
-    display: none;
- }
- .save-quantity-button{
-    padding: 4px 5px;
-    border: 1px solid grey;
-    font-family: roboto;
-    background-color: aqua;
-    margin-left: 4px;
-    width: 80px;
-    display: none;
- }
-
- .save-quantity-button:hover{
-    background-color: rgb(11, 110, 156);
-    transition: 0.5s ease-in;
-    cursor: pointer;
-    color: aliceblue;
-
- }
-
- .delete-item-container{ 
-    position: absolute;
-    top: 8px;
-    right: 4px;
-    cursor: pointer;
- }
- 
-
- .delete-icon{
-    width: 20px;
- }
- .delete-item-container:hover{
-    background-color:rgb(219, 217, 217);
- }
-
-
- .delivery-option-span{
-    font-size: 18px;
-    margin-left: 6px;
-    color: blue;
-    font-weight: 500;
-    display: flex;
-    justify-content: start;
-    margin-right: 6px;
-  
- }
- .delivery-selection-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items:start;
-    height: 130px;
-    margin-bottom: 20px;
-    margin-right: 5px;
-  
-   
- }
-
- 
-.delivery-type-span{
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  margin-left: 2px;
-  
-}
-.delivery-charge-span{
-    color: rgb(224, 81, 81);
-    font-size: 14px;
-    margin-left: 3px;
-    font-weight: 400;
-
-   
-
-}
-.order-summary-text{
-    font-size: 20px;
-    margin-top: 4px;
-    color: green;
-    font-weight: 600;
-}
-.payment-summary-container{
-border: 1px solid black;
-height: 280px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-background-color: aliceblue;
-margin-left: 3px;
-margin-right: 3px;
-
-
-}
-
-.payment-summary-container div{
-  display: flex;    
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 4px;
-  margin-right: 8px;
-}
-
-.total-before-tax{
-    border-top: 1px dotted black;
-    font-weight: 500;
-}
-
-.order-total-container{
-    border-top: 1px dotted black;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    color: darkred;
-    font-weight: 600;
-}
-
-.first-delivery-option,
-.second-delivery-option,
-.third-delivery-option{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    color: black;
-    cursor: pointer;
-   
-    margin-top: 5px;
-    width: max-content;
-    margin-left: 10px;
-}
-
-.delivery-time-text{
-    color: rgb(25, 132, 219);
-}
-
-.customer-comment-container{
-    display: flex;
-    flex-direction: column;
-    justify-content:center ;
-    align-items: center;
-    margin-top:30px  ;
-    color: black;
-}
-.customer-instruction-span{
-    margin-bottom: 3px;
-    font-size:15px;
-    color: black;
- 
-}
-.instructions-text-area{
-    width: 90%;
-    height: 100px;
-    outline: none;
+    padding: 10px 10px 10px 10px;
+    font-size: 16px;
     border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
 }
 
 
-.bottom-links{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
 
-}
-.sub-total-container{
-display: flex;
-align-items: center;
-color: black;
-
-}
-.sub-total-span{
-    font-family: roboto;
-    margin-right: 15px;
-    font-weight: 700;
-}
-.sub-total-amount-span{
-font-family: oleo script;
-color: darkred;
+label {
+    position: absolute;
+    top: 40%;
+    left: 10px;
+    transform: translateY(-20%);
+    background: white;
+    padding: 0 5px;
+    color: #aaa;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
 }
 
-.shipping-tax-text{
-font-family: oleo script;
- 
-
+input[type="email"]:focus + label,
+input[type="email"]:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 13px;
+    color:black;
 }
-
-.update-cart-link{
-    display: flex;
-    justify-content: center;
-    width: 60%;
-    background-color:orangered;
-    color: white;
-    padding: 10px 0;
-    margin-bottom: 12px;
-    margin-top: 12px;
-    cursor: pointer;
-    
-}
-
-.update-cart-link a{
-    text-decoration: none;
-    color: white;
-}
-.proceed-to-checkout-link{
-    display: flex;
-    justify-content: center;
-    width: 60%;
-    background-color: green;
-    color: white;
-    padding: 10px 0;
-    cursor: pointer;
-}
-
-.openIt{
-    display: initial;
-}
-
-.closeIt{
-    display: none;
-}
-
- 
