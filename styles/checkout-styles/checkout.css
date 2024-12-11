@@ -1,30 +1,161 @@
- 
- body{
-    background-color: white  ;
+body {
+    background-color: white;
     color: black;
-    padding-top: 80px;
- }
+    padding-top: 90px;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    margin: 0;
+    padding-bottom: 80px;
+}
+
+.checkout-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 80%; /* Consistent width for alignment */
+    text-align: center;
+    color: orangered;
+}
+
+.checkout-text {
+    font-size: 25px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.lock-icon {
+    height: 25px;
+}
+
+.order-summary-text-container {
+    width: 80%; /* Matches input and other centered elements */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Add spacing below */
+}
+
+.order-summary-text {
+    margin-bottom: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    color:  rgb(1, 66, 66);
+}
+
+.order-summary-container {
+    width: 100%; /* Matches the input width */
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    color: black;
+}
+
+.item-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    margin-bottom: 10px;
+    position: relative;
+  
+}
+
+.item-img {
+    height: 60px;
+    border-radius: 5px;
+   
+}
+
+.s-item-quantity{
+    position: absolute;
+    background-color: rgb(12, 1, 1);
+    width: 20px;
+    height: 20px;
+  
+    color:aqua;
+    display: flex;
+    justify-content: center;
+    font-family: oleo script;
+ 
+    
+}
+
+.s-item-price{
+    color: darkblue;
+    font-weight: 600;
+    
+}
+
+.s-item-name{
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden;          /* Hide the overflowing text */
+    text-overflow: ellipsis;   /* Add the ellipsis (...) */
+   
+}
+
+.contact-details-container,
+.delivery-details-container{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin-left: 14px;
+    margin-bottom: 6px;
+    align-items: center;
+}
+
+.delivery-details-container{
+margin-top: 16px;
+}
+
+.contact-text{
+    font-weight: 700;
+    font-size: 19px;
+    margin-left: 6px;
+    color: orangered;
+    margin-bottom: 12px;
+}
+
+.email-me-container,
+.save-info-container{
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -8px;
+    
+
+}
+
+.save-info-container{
+    margin-bottom: 14px;
+}
+.log-in-link{
+    color: blue;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.input-container,
+.country-selector
+{
+    width: 80%; /* Matches other elements' width */
+    position: relative;
+    margin-bottom: 20px;
+}
+
 
  
- .email-input-container {
-    position: relative;
-    width: 300px;
-}
-
-  /* Turn red only after user interaction and invalid input */
-  input[type="email"]:invalid:not(:placeholder-shown) {
-    border-color: red;
-}
-
-/* Valid input styling */
-input[type="email"]:valid {
-    border-color: green;
-}
 
 
-input[type="email"] {
+input[type="email"],
+input[type ="text"],
+input[type="number"] {
     width: 100%;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     font-size: 16px;
     border: 1px solid gray;
     border-radius: 5px;
@@ -32,8 +163,46 @@ input[type="email"] {
     transition: border-color 0.3s;
 }
 
+input:focus {
+    border-color: blue;
+}
+select:focus{
+    border-color: blue;
+}
+select{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+
+}
+input[type="email"]:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+
+input[type="email"]:valid {
+    border-color: green;
+}
+
+input[type="text"]:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+
+input[type="text"]:valid {
+    border-color: green;
+}
+
+input[type="number"]:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
 
 
+input[type="number"]:valid {
+    border-color: green;
+}
 label {
     position: absolute;
     top: 40%;
@@ -41,10 +210,11 @@ label {
     transform: translateY(-20%);
     background: white;
     padding: 0 5px;
-    color: #aaa;
-    font-size: 16px;
+    color:rgb(75, 74, 74);
+    font-size: 15px;
     pointer-events: none;
     transition: all 0.3s ease;
+  
 }
 
 input[type="email"]:focus + label,
@@ -52,5 +222,21 @@ input[type="email"]:not(:placeholder-shown) + label {
     top: -10px;
     left: 10px;
     font-size: 13px;
-    color:black;
+    color:orangered;
+}
+
+input[type="text"]:focus + label,
+input[type="text"]:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 13px;
+    color:orangered;
+}
+
+input[type="number"]:focus + label,
+input[type="number"]:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 13px;
+    color: orangered;
 }

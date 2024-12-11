@@ -7,17 +7,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <link rel="stylesheet" href="styles/checkout-styles/checkout.css">
-
     
+    <link rel="stylesheet" href="styles/shared-styles/header.css">
+    <link rel="stylesheet" href="styles/checkout-styles/checkout.css">
+    
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
        
 
 </head>
 <body>
-    <div class="email-input-container">
+
+    <header class="header">
+        <a href="cart.html">
+        <div class="right-side">
+             
+            <div class="shopping-bag-container">
+                <img class="shopping-bag-icon" src="images/header-images/shopping-bag.png">
+                <div class="cart-quantity-container js-cart-quantity-container"></div>
+            </div>
+        </div>
+    </a>
+        
+        
+        <a href="index.html">
+            <div class="middle">
+                <div class="logo-container">
+                    <div class="goodhope-text">GOOD HOPE</div>
+                    <div class="food-truck-text">FOOD TRUCK</div>
+                </div>
+                <div class="truck-container-primary">
+                    <div class="truck-container">
+                        <img class="truck-icon" src="images/header-images/truck-icon-white.png">
+                    </div>
+                </div>
+            </div>
+        </a>
+
+      
+    </header>
+
+    <div class="checkout-heading">
+        <span class="checkout-text">Checkout</span>
+        <span class="secure-lock-img"><img class="lock-icon" alt="secured-image" src="images/header-images/icon-lock.png"></span>
+    </div>
+
+    
+    <details class="order-summary-text-container">
+        <summary class="order-summary-text">Show Order Summary</summary>
+        <div class="order-summary-container">
+            <div class="item-summary">
+
+                <span class="s-item-image">
+                    <span class="s-item-quantity">
+                       1
+                    </span>
+                    <img class="item-img" src="images/product-images/Everyday-burger.jpg" >
+
+                </span>
+                <span class="s-item-name">
+                    Everyday Burger
+
+                </span>
+                <span class="s-item-price">
+                    R45
+                    
+                </span>
+
+            </div>
+
+             
+          </div>
+ 
+
+    </details>
+  
+ 
+ <div class="contact-details-container">
+    <span class="contact-text">Contact</span>
+    <span class="log-in-link">Log In</span>
+
+ </div>  
+      
+    <div class=" input-container">
         <input type="email" placeholder=" " required>
         <label>Email</label>
     </div>
+    <div class="email-me-container">
+        <span>
+            <input type="checkbox">
+        </span>
+        <span class="email-me-text">
+            Email me with news and offers
+        </span>
+    </div>
+
+    <div class="delivery-details-container">
+        <span class="contact-text">Delivery </span>
+        <span class="log-in-link"></span>
+    
+     </div>
+
+     <select class="country-selector" required>
+        <option value="" disabled selected>Country or Region</option>
+        <option value="south-africa">South Africa</option>
+     
+    </select>
+
+
+    <div class=" input-container">
+        <input type="text" placeholder=" " required minlength="4" maxlength="14">
+        <label>First Name</label>
+    </div>
+    <div class=" input-container">
+        <input type="text" placeholder=" " required minlength="4" maxlength="14">
+        <label>Last Name</label>
+    </div>
+    <div class=" input-container">
+        <input type="text" placeholder=" " required>
+        <label>Company(optional)</label>
+    </div>
+
+    <div class=" input-container">
+        <input type="text" placeholder=" " required minlength="4" maxlength="14">
+        <label>Address</label>
+    </div>
+    <div class=" input-container">
+        <input type="text" placeholder=" " required minlength="4" maxlength="14">
+        <label>Apartment,suite,etc(optional)</label>
+    </div>
+    <div class=" input-container">
+        <input type="text" placeholder=" " required>
+        <label>City</label>
+    </div>
+
+    <select class="country-selector" required>
+        <option value="" disabled selected>Province</option>
+        <option value="south-africa">Western Cape </option>
+        <option value="south-africa">KwaZulu-Natal</option>
+        <option value="south-africa">Earstern Cape</option>
+     
+    </select>
+
+    <div class=" input-container">
+        <input type="number" placeholder=" " required min="1000" max="9999">
+        <label>Postal Code</label>
+    </div>
+
+    <div class="input-container">
+        <input type="number" placeholder=" " required min="10000000000" max="99999999999">
+        <label>Phone e.g 27699....</label>
+    </div>
+
+
+    <div class="save-info-container">
+        <span>
+            <input type="checkbox">
+        </span>
+        <span class="save-info-text">
+          Save this informaton for next time
+        </span>
+    </div>
+
+    <div class="contact-details-container">
+        <span class="contact-text">Payment</span>
+        <span class="log-in-link"></span>
+
+    
+     </div>  
+     <p>Working on it please wait !!....</p>
+
+
+   
 </body>
 </html>
-
+ 

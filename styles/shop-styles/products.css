@@ -91,6 +91,9 @@ option{
 .item-name{
     font-weight: 600;
     color: rgb(5, 5, 5);
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden;          /* Hide the overflowing text */
+    text-overflow: ellipsis;   /* Add the ellipsis (...) */
 }
 
 .show{
