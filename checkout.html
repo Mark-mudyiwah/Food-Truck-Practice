@@ -19,9 +19,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-       
-
 </head>
 <body>
 
@@ -61,10 +58,9 @@
 
     
     <details class="order-summary-text-container">
-        <summary class="order-summary-text">Show Order Summary</summary>
+        <summary class="order-summary-text"> Order Summary(R45)</summary>
         <div class="order-summary-container">
             <div class="item-summary">
-
                 <span class="s-item-image">
                     <span class="s-item-quantity">
                        1
@@ -78,6 +74,44 @@
                 </span>
                 <span class="s-item-price">
                     R45
+                    
+                </span>
+
+            </div>
+
+            <div class="item-summary">
+                <span class="s-item-image">
+                    <span class="s-item-quantity">
+                       1
+                    </span>
+                    <img class="item-img" src="images/product-images/side-fries-2.jpg" >
+
+                </span>
+                <span class="s-item-name">
+                     Side Fries
+
+                </span>
+                <span class="s-item-price">
+                    R19.99
+                    
+                </span>
+
+            </div>
+
+            <div class="item-summary">
+                <span class="s-item-image">
+                    <span class="s-item-quantity">
+                       1
+                    </span>
+                    <img class="item-img" src="images/product-images/bashews.jpg" >
+
+                </span>
+                <span class="s-item-name">
+                    Bashew Drinks
+
+                </span>
+                <span class="s-item-price">
+                    R7.99
                     
                 </span>
 
@@ -99,6 +133,7 @@
     <div class=" input-container">
         <input type="email" placeholder=" " required>
         <label>Email</label>
+        <span class="caution-span">Please provide a valid email !</span>
     </div>
     <div class="email-me-container">
         <span>
@@ -125,10 +160,12 @@
     <div class=" input-container">
         <input type="text" placeholder=" " required minlength="4" maxlength="14">
         <label>First Name</label>
+        <span class="caution-span">Please provide a valid email !</span>
     </div>
     <div class=" input-container">
         <input type="text" placeholder=" " required minlength="4" maxlength="14">
         <label>Last Name</label>
+        <span class="caution-span">Please provide a valid email !</span>
     </div>
     <div class=" input-container">
         <input type="text" placeholder=" " required>
@@ -137,6 +174,7 @@
 
     <div class=" input-container">
         <input type="text" placeholder=" " required minlength="4" maxlength="14">
+        <span class="caution-span">Please provide a valid Address !</span>
         <label>Address</label>
     </div>
     <div class=" input-container">
@@ -146,6 +184,7 @@
     <div class=" input-container">
         <input type="text" placeholder=" " required>
         <label>City</label>
+        <span class="caution-span">Please provide a valid city !</span>
     </div>
 
     <select class="country-selector" required>
@@ -159,11 +198,13 @@
     <div class=" input-container">
         <input type="number" placeholder=" " required min="1000" max="9999">
         <label>Postal Code</label>
+        <span class="caution-span">Please provide a valid postal code !</span>
     </div>
 
     <div class="input-container">
         <input type="number" placeholder=" " required min="10000000000" max="99999999999">
         <label>Phone e.g 27699....</label>
+        <span class="caution-span">Please provide a valid phone number !</span>
     </div>
 
 
@@ -182,8 +223,7 @@
 
     
      </div>  
-     <p>Working on it please wait !!....</p>
-
+   
 
    
 </body>
