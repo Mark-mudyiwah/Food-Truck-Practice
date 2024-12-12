@@ -254,3 +254,27 @@ input[type="number"]:not(:placeholder-shown) + label {
     font-size: 13px;
     color: orangered;
 }
+
+.pay-now-button{
+    background-color: rgb(255, 208, 0);
+    padding: 7px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-family: roboto;
+    font-size: 16px;
+}
+
+.payfast-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    padding: 15px;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 16px;
+}
+
+.payfast-img{
+    width: 100%;
+}

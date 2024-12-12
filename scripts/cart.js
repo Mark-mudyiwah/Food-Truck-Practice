@@ -2,8 +2,7 @@ import { headerDisplay } from "./homepage.js";
 import { getProduct } from "./products.js";
 import { getDeliveryOption,deliveryOptions } from "./delivery-options.js";
 
-headerDisplay()
-
+ 
 
  export const cart = JSON.parse(localStorage.getItem('cart'))
  ||[
@@ -11,6 +10,15 @@ headerDisplay()
       productId:'5hgf-ty67-dv4c',
       quantity:1
     },
+    {
+      productId:'3jkl-u78g-bn9b',
+      quantity:1
+    },
+  {
+    productId:'9abc-l56d-hg3f',
+    quantity:2
+
+  }
    
 
 ]
@@ -333,6 +341,8 @@ document.querySelectorAll('.save-quantity-button').forEach((button) => {
         <span>R ${orderTotal.toFixed(2)}</span>
       </div>
     `;
+
+    
   
     // Update the DOM with the order summary
     document.querySelector('.js-payment-summary').innerHTML = orderSummaryHtml;
@@ -340,7 +350,12 @@ document.querySelectorAll('.save-quantity-button').forEach((button) => {
     // Update the order total and cart item count in other elements
     document.querySelector('.js-subtotal-amount-span').innerHTML = `R ${orderTotal.toFixed(2)}`;
     document.querySelector('.js-cart-item-count').innerHTML = totalCartQuantity;
+   
+    localStorage.setItem('orderTotal',JSON.stringify(orderTotal))
+  
   }
+
+  console.log(localStorage)
   
   
  

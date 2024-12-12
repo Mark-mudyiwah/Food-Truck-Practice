@@ -3,3 +3,6 @@ import {renderCartItemsHTML,renderOrderSummary,renderDeliveryOptions} from "./ca
 renderCartItemsHTML()
 renderOrderSummary()
 renderDeliveryOptions()
+
+
+

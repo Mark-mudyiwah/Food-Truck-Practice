@@ -78,7 +78,7 @@ export const products = [
         id: '3jkl-u78g-bn9b',
         image: "images/product-images/side-fries.jpg",
         name: 'Side Fries',
-        price: 59.99,
+        price: 29.99,
         info: "Enjoy our classic Burger, made with a juicy beef patty, fresh lettuce, and ripe tomatoes. Served on a soft bun with your choice of toppings, it's a timeless meal that's always a crowd-pleaser."
     },
     {
