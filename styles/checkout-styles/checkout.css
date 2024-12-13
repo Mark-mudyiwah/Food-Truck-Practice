@@ -3,12 +3,16 @@ body {
     color: black;
     padding-top: 90px;
     font-family: "Roboto", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers content horizontally */
-    margin: 0;
+   
+    
     padding-bottom: 80px;
 }
+
+.main{
+
+    margin-left: 20px;
+}
+ 
 
 .checkout-heading {
     display: flex;
@@ -46,7 +50,7 @@ body {
 }
 
 .order-summary-container {
-    width: 100%; /* Matches the input width */
+    width: 105%; /* Matches the input width */
      
     background-color: rgb(233, 230, 230);
     border-radius: 5px;
@@ -108,6 +112,7 @@ body {
     margin-bottom: 6px;
     align-items: center;
     margin-bottom: 12px;
+     
 }
 
 .delivery-details-container{
@@ -127,7 +132,6 @@ margin-top: 16px;
 .save-info-container{
     font-size: 14px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-top: -8px;
     
@@ -255,6 +259,12 @@ input[type="number"]:not(:placeholder-shown) + label {
     color: orangered;
 }
 
+
+.order-total-span{
+font-weight: bold;
+font-family: oleo script;
+color: rgb(255, 0, 0);
+}
 .pay-now-button{
     background-color: rgb(255, 208, 0);
     padding: 7px 15px;

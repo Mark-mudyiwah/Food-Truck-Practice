@@ -10,6 +10,8 @@
     
     <link rel="stylesheet" href="styles/shared-styles/header.css">
     <link rel="stylesheet" href="styles/checkout-styles/checkout.css">
+    <link rel="stylesheet" href="styles/shared-styles/sidebar.css">
+  
     
     
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,34 +24,122 @@
 </head>
 <body>
 
-    <header class="header">
-        <a href="cart.html">
-        <div class="right-side">
-             
-            <div class="shopping-bag-container">
-                <img class="shopping-bag-icon" src="images/header-images/shopping-bag.png">
-                <div class="cart-quantity-container js-cart-quantity-container"></div>
+   
+ <header class="header">
+    <div class="left-side">
+        <div class="menu-icon-container">
+            <img class="menu-icon" src="images/header-images/menu-icon.png">
+ 
+        </div>
+
+    </div>
+   <a href="index.html">
+     <div class="middle">
+       
+        <div class="logo-container">
+            <div class="goodhope-text">
+                GOOD HOPE
+            </div>
+            <div class="food-truck-text">
+               
+                FOOD TRUCK
+            </div>
+            
+        </div>
+ 
+
+        <div class="truck-container-primary">
+
+            <div class="truck-container">
+                <img class="truck-icon" src="images/header-images/truck-icon-white.png">
+
             </div>
         </div>
+   
+   
+     </div>
     </a>
-        
-        
-        <a href="index.html">
-            <div class="middle">
-                <div class="logo-container">
-                    <div class="goodhope-text">GOOD HOPE</div>
-                    <div class="food-truck-text">FOOD TRUCK</div>
-                </div>
-                <div class="truck-container-primary">
-                    <div class="truck-container">
-                        <img class="truck-icon" src="images/header-images/truck-icon-white.png">
-                    </div>
-                </div>
-            </div>
-        </a>
+    
+    <div class="right-side">
+        <div class="search-icon-container">
+            <img class="search-icon" src="images/header-images/search-icon-white.png">
+        </div>
 
-      
-    </header>
+        <div class="shopping-bag-container" >
+            <a href="cart.html">
+                <img class="shopping-bag-icon" src="images/header-images/shopping-bag.png">
+            <div class="cart-quantity-container js-cart-quantity-container">
+                
+            </div>
+            </a>
+            
+        </div>
+    </div>
+</header>
+
+<div  class="search-input-container-primary">
+    <div class="search-input-container">
+        <input class="search-input" list ="search-suggestions" autocomplete = "on" placeholder="Search Products">
+    <datalist  class="data-list" id ="search-suggestions">
+    <option value="Burger">
+    <option value="Hot dog">
+    <option value="Energy drink">
+    <option value="Sausage Rolls">
+    <option value="Breakfast toastie">
+    <option value="Chip roll">
+    <option value="Fries">
+    <option value="score">
+    <option value="Double 'O'">
+    <option value="Milk Shakes">
+    </datalist>
+        </div>
+</div>
+
+<div class="sidebar">
+ 
+    <div>
+        <span class="sign-in">SIGN IN &#128100</span>
+
+    </div>
+
+   
+    <div>
+            <div class="shop-span-primary">
+                <span>SHOP </span>
+                <span>&#128722</span>
+
+            </div>
+       
+        <div class="shop-categories-container">
+            <span>All Products</span>
+            <span>Best Selling</span>
+            <span>Special Offer</span>
+            <span>New Items</span>
+        </div>
+    </div>
+    <div class="menu">MENU</div>
+    <div class="contact-us">CONTACT US</div>
+    <div class="privacy-policy">PRIVACY POLICY</div>
+    <div>
+         MY ORDERS
+    </div>
+    <div class="follow-us-container">
+        <span class="follow-us">FOLLOW US</span>
+        <div class="media-links-container">
+            <span>
+                <img class="media-icon" src="images/header-images/facebook-icon.png">
+
+            </span>
+            <span> <img class="media-icon" src="images/header-images/icon-twitter.png"></span>
+            <span> <img class="media-icon" src="images/header-images/icon-instagram.png"></span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="main">
 
     <div class="checkout-heading">
         <span class="checkout-text">Checkout</span>
@@ -58,65 +148,10 @@
 
     
     <details class="order-summary-text-container">
-        <summary class="order-summary-text"> Order Summary(R101.82)</summary>
-        <div class="order-summary-container">
-            <div class="item-summary">
-                <span class="s-item-image">
-                    <span class="s-item-quantity">
-                       1
-                    </span>
-                    <img class="item-img" src="images/product-images/Everyday-burger.jpg" >
-
-                </span>
-                <span class="s-item-name">
-                    Everyday Burger
-
-                </span>
-                <span class="s-item-price">
-                    R45.00
-                    
-                </span>
-
-            </div>
-
-            <div class="item-summary">
-                <span class="s-item-image">
-                    <span class="s-item-quantity">
-                       1
-                    </span>
-                    <img class="item-img" src="images/product-images/side-fries.jpg" >
-
-                </span>
-                <span class="s-item-name">
-                     Side Fries
-
-                </span>
-                <span class="s-item-price">
-                    R29.99
-                    
-                </span>
-
-            </div>
-
-            <div class="item-summary">
-                <span class="s-item-image">
-                    <span class="s-item-quantity">
-                       2
-                    </span>
-                    <img class="item-img" src="images/product-images/score-drink.jpg" >
-
-                </span>
-                <span class="s-item-name">
-                Score Energy
-
-                </span>
-                <span class="s-item-price">
-                    R41.98
-                    
-                </span>
-
-            </div>
-
+        <summary class="order-summary-text"> Order Summary</summary>
+        <div class="order-summary-container js-summary-container">
+          
+        
              
           </div>
  
@@ -219,7 +254,7 @@
 
     <div class="contact-details-container">
         <span class="contact-text">Order Total</span>
-        <span class="log-in-link">R101.82</span>
+        <span class=" order-total-span js-order-total-span"> </span>
 
     
      </div>  
@@ -230,9 +265,12 @@
 
      </div>
  
+
+</div>
+
        
    
-<script type="module" src="./scripts/payment.js">
+<script type="module" src="./scripts/payment.js ">
 
 </script>
    
