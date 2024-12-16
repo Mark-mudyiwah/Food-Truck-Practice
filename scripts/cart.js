@@ -1,4 +1,4 @@
-import { headerDisplay } from "./homepage.js";
+ 
 import { getProduct } from "./products.js";
 import { getDeliveryOption,deliveryOptions } from "./delivery-options.js";
 
@@ -355,7 +355,7 @@ document.querySelectorAll('.save-quantity-button').forEach((button) => {
   
   }
 
-  console.log(localStorage)
+ 
   
   
  

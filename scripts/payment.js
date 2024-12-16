@@ -3,10 +3,13 @@
  
  
  
-const orderTotal = cart.reduce((total, item) => {
+   const orderTotal = JSON.parse(localStorage.getItem('orderTotal'))
+
+
+/*cart.reduce((total, item) => {
   const matchingItem = getProduct(item.productId);
   return total + matchingItem.price * item.quantity;
-}, 0);
+}, 0);*/
 
 function renderCheckoutSummary() {
   let html = "";
@@ -33,20 +36,22 @@ function renderCheckoutSummary() {
 
   document.querySelector('.js-summary-container').innerHTML = html;
   document.querySelector('.js-order-total-span').innerHTML = `R ${orderTotal.toFixed(2)}`;
+
+return html
 }
 
 renderCheckoutSummary();
 
-function submitPayment(dynamicOrderTotal) {
+function submitPayment(dynamicOrderTotal,summary) {
   const form = document.createElement("form");
   form.action = "https://sandbox.payfast.co.za/eng/process";
   form.method = "POST";
 
   const fields = {
-    merchant_id: "10036325", // Replace with your Sandbox Merchant ID
-    merchant_key: "7964rxbhvgz9b", // Replace with your Sandbox Merchant Key
-    amount: dynamicOrderTotal.toFixed(2), // Pass the dynamic order total
-    item_name: "Order Summary", // Dynamic item name
+    merchant_id: "10036325",  
+    merchant_key: "7964rxbhvgz9b",  
+    amount: dynamicOrderTotal.toFixed(2),  
+    item_name: "Summary",  
     return_url: "https://your-website.com/success",
     cancel_url: "https://your-website.com/cancel",
     notify_url: "https://your-website.com/notify",
@@ -67,4 +72,30 @@ function submitPayment(dynamicOrderTotal) {
 // Add event listener to the submit button
 document.querySelector('.js-submit').addEventListener('click', () => {
   submitPayment(orderTotal);
+
 });
+
+document.querySelector('.js-place-order').addEventListener('click',()=>{
+ 
+  const emailInput = document.querySelector('.js-email-input')
+
+  const email = emailInput.value
+  
+  const validEmail = email.includes('@gmail.com')
+  if(!validEmail){
+    document.querySelector('.js-email-caution-span').innerHTML = `
+    Please provide a valid Email!
+    `
+    emailInput.value = ''
+  }
+  
+
+  const nameInput = document.querySelector('.js-name-input')
+
+  const name = nameInput.value
+
+ 
+  console.log(name)
+ 
+
+})

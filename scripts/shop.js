@@ -1,9 +1,9 @@
 import { products } from "./products.js"
 import { addToCart } from "./cart.js"
-import { headerDisplay } from "./homepage.js"
-
+import { headerDisplay } from "./utils/header.js"
 
 headerDisplay()
+
 
 let productsHtml =''
 products.forEach((product)=>{

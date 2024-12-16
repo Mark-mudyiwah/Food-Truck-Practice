@@ -19,9 +19,10 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-    width: 80%; /* Consistent width for alignment */
+    width: 100%; /* Consistent width for alignment */
     text-align: center;
     color: orangered;
+   
 }
 
 .checkout-text {
@@ -35,10 +36,11 @@ body {
 }
 
 .order-summary-text-container {
-    width: 80%; /* Matches input and other centered elements */
+    width: 100%; /* Matches input and other centered elements */
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px; /* Add spacing below */
+    margin-bottom: 20px;  
+ 
 }
 
 .order-summary-text {
@@ -47,15 +49,23 @@ body {
     cursor: pointer;
     text-align: center;
     color:  rgb(1, 66, 66);
+
 }
 
+ 
 .order-summary-container {
-    width: 105%; /* Matches the input width */
-     
-    background-color: rgb(233, 230, 230);
+    width: 95%;  
+    background-color: rgba(153, 14, 14, 0.068);
     border-radius: 5px;
     color: black;
     padding: 0 10px 0 10px;
+    margin-left: -12px;
+  
+  
+  
+
+ 
+ 
 }
 
 .item-summary {
@@ -193,7 +203,7 @@ select{
     font-size: 13px;
     margin-left:4px;
     word-wrap: nowrap;
-    display: none;
+     
   
 }
 input[type="email"]:invalid:not(:placeholder-shown) {
@@ -260,6 +270,27 @@ input[type="number"]:not(:placeholder-shown) + label {
 }
 
 
+.place-order-button-container{
+    display:flex;
+    justify-content: center;
+}
+
+.place-order-button{
+ padding:10px 14px;
+ width: 60%;
+ margin-top: 20px;
+ border: 1px solid red;
+ background-color: yellow;
+ color: black;
+ font-weight: 600;
+ transition: .5s ease;
+}
+
+.place-order-button:hover{
+background: linear-gradient(yellow,orange);
+transform: scale(1.05);
+transition: .5s ease;
+}
 .order-total-span{
 font-weight: bold;
 font-family: oleo script;
@@ -273,18 +304,28 @@ color: rgb(255, 0, 0);
     border-radius: 6px;
     font-family: roboto;
     font-size: 16px;
+    transition: .3s ease-in;
+   
 }
 
+.pay-now-button:hover{
+    background-color: orangered;
+    transform: scale(1.05);
+    transition: .3s ease-in;
+}
 .payfast-container{
-    display: flex;
+    display: none;
     flex-direction: column;
     border: 1px solid grey;
     padding: 15px;
     border-radius: 10px;
     width: 80%;
     margin-left: 16px;
+    
 }
 
 .payfast-img{
     width: 100%;
 }
+
+ 

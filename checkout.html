@@ -25,119 +25,54 @@
 <body>
 
    
- <header class="header">
-    <div class="left-side">
-        <div class="menu-icon-container">
-            <img class="menu-icon" src="images/header-images/menu-icon.png">
- 
-        </div>
+    <header class="header">
 
-    </div>
-   <a href="index.html">
-     <div class="middle">
        
-        <div class="logo-container">
-            <div class="goodhope-text">
-                GOOD HOPE
-            </div>
-            <div class="food-truck-text">
-               
-                FOOD TRUCK
-            </div>
-            
-        </div>
- 
-
-        <div class="truck-container-primary">
-
-            <div class="truck-container">
-                <img class="truck-icon" src="images/header-images/truck-icon-white.png">
-
-            </div>
-        </div>
    
-   
-     </div>
-    </a>
-    
-    <div class="right-side">
-        <div class="search-icon-container">
-            <img class="search-icon" src="images/header-images/search-icon-white.png">
-        </div>
-
-        <div class="shopping-bag-container" >
-            <a href="cart.html">
-                <img class="shopping-bag-icon" src="images/header-images/shopping-bag.png">
-            <div class="cart-quantity-container js-cart-quantity-container">
+       <a href="index.html">
+         <div class="middle">
+           
+            <div class="logo-container">
+                <div class="goodhope-text">
+                    GOOD HOPE
+                </div>
+                <div class="food-truck-text">
+                   
+                    FOOD TRUCK
+                </div>
                 
             </div>
-            </a>
-            
-        </div>
-    </div>
-</header>
-
-<div  class="search-input-container-primary">
-    <div class="search-input-container">
-        <input class="search-input" list ="search-suggestions" autocomplete = "on" placeholder="Search Products">
-    <datalist  class="data-list" id ="search-suggestions">
-    <option value="Burger">
-    <option value="Hot dog">
-    <option value="Energy drink">
-    <option value="Sausage Rolls">
-    <option value="Breakfast toastie">
-    <option value="Chip roll">
-    <option value="Fries">
-    <option value="score">
-    <option value="Double 'O'">
-    <option value="Milk Shakes">
-    </datalist>
-        </div>
-</div>
-
-<div class="sidebar">
- 
-    <div>
-        <span class="sign-in">SIGN IN &#128100</span>
-
-    </div>
-
-   
-    <div>
-            <div class="shop-span-primary">
-                <span>SHOP </span>
-                <span>&#128722</span>
-
+     
+    
+            <div class="truck-container-primary">
+    
+                <div class="truck-container">
+                    <img class="truck-icon" src="images/header-images/truck-icon-white.png">
+    
+                </div>
             </div>
        
-        <div class="shop-categories-container">
-            <span>All Products</span>
-            <span>Best Selling</span>
-            <span>Special Offer</span>
-            <span>New Items</span>
-        </div>
-    </div>
-    <div class="menu">MENU</div>
-    <div class="contact-us">CONTACT US</div>
-    <div class="privacy-policy">PRIVACY POLICY</div>
-    <div>
-         MY ORDERS
-    </div>
-    <div class="follow-us-container">
-        <span class="follow-us">FOLLOW US</span>
-        <div class="media-links-container">
-            <span>
-                <img class="media-icon" src="images/header-images/facebook-icon.png">
+       
+         </div>
+        </a>
 
-            </span>
-            <span> <img class="media-icon" src="images/header-images/icon-twitter.png"></span>
-            <span> <img class="media-icon" src="images/header-images/icon-instagram.png"></span>
-
+        
+        <div class="left-side">
+            <div class="shopping-bag-container" >
+                <a href="cart.html">
+                    <img class="shopping-bag-icon" src="images/header-images/shopping-bag.png">
+                <div class="cart-quantity-container js-cart-quantity-container">
+                    
+                </div>
+                </a>
+                
+            </div>
         </div>
 
-    </div>
-
-</div>
+        
+      
+    </header>
+ 
 
 <div class="main">
 
@@ -166,9 +101,9 @@
  </div>  
       
     <div class=" input-container">
-        <input type="email" placeholder=" " required>
+        <input class="js-email-input" type="email" placeholder=" " required>
         <label>Email</label>
-        <span class="caution-span">Please provide a valid email !</span>
+        <span class="caution-span js-email-caution-span"></span>
     </div>
     <div class="email-me-container">
         <span>
@@ -195,12 +130,12 @@
     <div class=" input-container">
         <input type="text" placeholder=" " required minlength="4" maxlength="14">
         <label>First Name</label>
-        <span class="caution-span">Please provide a valid email !</span>
+        <span class="caution-span js-name-caution-span"></span>
     </div>
     <div class=" input-container">
-        <input type="text" placeholder=" " required minlength="4" maxlength="14">
+        <input class="js-name-input" type="text" placeholder=" " required minlength="4" maxlength="14">
         <label>Last Name</label>
-        <span class="caution-span">Please provide a valid email !</span>
+        <span class="caution-span"> </span>
     </div>
     <div class=" input-container">
         <input type="text" placeholder=" " required>
@@ -209,8 +144,8 @@
 
     <div class=" input-container">
         <input type="text" placeholder=" " required minlength="4" maxlength="14">
-        <span class="caution-span">Please provide a valid Address !</span>
         <label>Address</label>
+        <span class="caution-span"> </span>
     </div>
     <div class=" input-container">
         <input type="text" placeholder=" " required minlength="4" maxlength="14">
@@ -219,7 +154,7 @@
     <div class=" input-container">
         <input type="text" placeholder=" " required>
         <label>City</label>
-        <span class="caution-span">Please provide a valid city !</span>
+        <span class="caution-span"> </span>
     </div>
 
     <select class="country-selector" required>
@@ -233,13 +168,13 @@
     <div class=" input-container">
         <input type="number" placeholder=" " required min="1000" max="9999">
         <label>Postal Code</label>
-        <span class="caution-span">Please provide a valid postal code !</span>
+        <span class="caution-span"> </span>
     </div>
 
     <div class="input-container">
         <input type="number" placeholder=" " required min="10000000000" max="99999999999">
         <label>Phone e.g 27699....</label>
-        <span class="caution-span">Please provide a valid phone number !</span>
+        <span class="caution-span"></span>
     </div>
 
 
@@ -251,13 +186,21 @@
           Save this informaton for next time
         </span>
     </div>
+   
+    
 
     <div class="contact-details-container">
         <span class="contact-text">Order Total</span>
         <span class=" order-total-span js-order-total-span"> </span>
 
     
-     </div>  
+     </div> 
+     
+     <div class="place-order-button-container js-place-order">
+        <button class="place-order-button">
+            Place Order
+        </button>
+    </div>
      <div class="payfast-container">
         <img class="payfast-img" src="images/header-images/payfast-image.png">
         
