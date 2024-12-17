@@ -88,11 +88,11 @@ body {
 
 .s-item-quantity{
     position: absolute;
-    background-color: rgb(12, 1, 1);
+    background-color: rgb(2, 20, 20);
     width: 20px;
     height: 20px;
   
-    color:aqua;
+    color:white;
     display: flex;
     justify-content: center;
     font-family: oleo script;
@@ -206,27 +206,12 @@ select{
      
   
 }
-input[type="email"]:invalid:not(:placeholder-shown) {
-    border-color: red;
-}
 
-input[type="email"]:valid {
+
+input[type="number"]:valid {
     border-color: green;
 }
-
-input[type="text"]:invalid:not(:placeholder-shown) {
-    border-color: red;
-}
-
-input[type="text"]:valid {
-    border-color: green;
-}
-
-input[type="number"]:invalid:not(:placeholder-shown) {
-    border-color: red;
-}
-
-
+ 
 input[type="number"]:valid {
     border-color: green;
 }
@@ -280,16 +265,18 @@ input[type="number"]:not(:placeholder-shown) + label {
  width: 60%;
  margin-top: 20px;
  border: 1px solid red;
- background-color: yellow;
+ background-color: orangered;
  color: black;
  font-weight: 600;
  transition: .5s ease;
+ opacity: 0;
 }
 
 .place-order-button:hover{
-background: linear-gradient(yellow,orange);
+ 
 transform: scale(1.05);
 transition: .5s ease;
+
 }
 .order-total-span{
 font-weight: bold;
@@ -305,6 +292,9 @@ color: rgb(255, 0, 0);
     font-family: roboto;
     font-size: 16px;
     transition: .3s ease-in;
+    opacity: 0.6;
+
+  
    
 }
 
@@ -314,7 +304,7 @@ color: rgb(255, 0, 0);
     transition: .3s ease-in;
 }
 .payfast-container{
-    display: none;
+    display: flex;
     flex-direction: column;
     border: 1px solid grey;
     padding: 15px;

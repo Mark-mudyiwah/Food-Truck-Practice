@@ -101,7 +101,7 @@
  </div>  
       
     <div class=" input-container">
-        <input class="js-email-input" type="email" placeholder=" " required>
+        <input  class="js-email-input" type="email" placeholder=" " required>
         <label>Email</label>
         <span class="caution-span js-email-caution-span"></span>
     </div>
@@ -122,20 +122,20 @@
 
      <select class="country-selector" required>
         <option value="" disabled selected>Country or Region</option>
-        <option value="south-africa">South Africa</option>
+        <option value="south-africa" selected>South Africa</option>
      
     </select>
 
 
     <div class=" input-container">
-        <input type="text" placeholder=" " required minlength="4" maxlength="14">
+        <input class="js-name-input" type="text" placeholder=" " required minlength="4" maxlength="14">
         <label>First Name</label>
         <span class="caution-span js-name-caution-span"></span>
     </div>
     <div class=" input-container">
-        <input class="js-name-input" type="text" placeholder=" " required minlength="4" maxlength="14">
+        <input class="js-last-name-input" type="text" placeholder=" " required minlength="4" maxlength="14">
         <label>Last Name</label>
-        <span class="caution-span"> </span>
+        <span class="caution-span js-last-name-caution-span"> </span>
     </div>
     <div class=" input-container">
         <input type="text" placeholder=" " required>
@@ -143,18 +143,18 @@
     </div>
 
     <div class=" input-container">
-        <input type="text" placeholder=" " required minlength="4" maxlength="14">
+        <input class="js-address-input" type="text" placeholder=" " required minlength="14" maxlength="34">
         <label>Address</label>
-        <span class="caution-span"> </span>
+        <span class="caution-span js-address-caution-span"> </span>
     </div>
     <div class=" input-container">
         <input type="text" placeholder=" " required minlength="4" maxlength="14">
         <label>Apartment,suite,etc(optional)</label>
     </div>
-    <div class=" input-container">
-        <input type="text" placeholder=" " required>
+    <div class=" input-container ">
+        <input type="text" class="js-city-input" placeholder=" " required>
         <label>City</label>
-        <span class="caution-span"> </span>
+        <span class="caution-span js-city-caution-span"> </span>
     </div>
 
     <select class="country-selector" required>
@@ -166,15 +166,15 @@
     </select>
 
     <div class=" input-container">
-        <input type="number" placeholder=" " required min="1000" max="9999">
+        <input class = "js-postal-code-input" type ="number" placeholder=" " required min="1000" max="9999">
         <label>Postal Code</label>
-        <span class="caution-span"> </span>
+        <span class="caution-span js-postal-code-caution-span"> </span>
     </div>
 
     <div class="input-container">
-        <input type="number" placeholder=" " required min="10000000000" max="99999999999">
-        <label>Phone e.g 27699....</label>
-        <span class="caution-span"></span>
+        <input class= "js-cell-number-input" type ="number" placeholder=" " required min="10000000000" max="99999999999">
+        <label>Phone e.g 0699....</label>
+        <span class="caution-span js-cell-number-caution-span"></span>
     </div>
 
 
@@ -201,6 +201,7 @@
             Place Order
         </button>
     </div>
+    
      <div class="payfast-container">
         <img class="payfast-img" src="images/header-images/payfast-image.png">
         
