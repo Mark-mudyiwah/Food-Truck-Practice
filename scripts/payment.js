@@ -69,6 +69,19 @@ function submitPayment(dynamicOrderTotal,summary) {
   form.submit();
 }
 
+ 
+
+let validName;
+let validSurname;
+let validEmail;
+let validAddress;
+let validCity;
+let validNumber;
+let validPostalCode;
+
+
+
+
 // Add event listener to the submit button
 document.querySelector('.js-submit').addEventListener('click', () => {
   submitPayment(orderTotal);
@@ -77,6 +90,7 @@ document.querySelector('.js-submit').addEventListener('click', () => {
 
 
 function validateEmail(){
+  let emailValid;
   const emailInput = document.querySelector('.js-email-input');
   const email = emailInput.value.trim();
 
@@ -93,15 +107,16 @@ function validateEmail(){
     document.querySelector('.js-email-caution-span').innerHTML = ''; // Clear the caution span
     console.log("Email submitted successfully:", email);
     emailInput.style.borderColor = "green"
+    emailValid = true
   }
+
+  return emailValid;
   };
 
-  document.querySelector('.js-email-input').addEventListener('input',(event)=>{
-    validateEmail()
-  })
-
+ 
 
   function validateName(elementClass, errorSpan) {
+    let nameValid;
     // Get the input element using the provided class name
     const inputElement = document.querySelector(`.${elementClass}`);
     const inputValue = inputElement.value.trim();  // Get the value from the input element
@@ -124,12 +139,18 @@ function validateEmail(){
     // If everything is valid
     else if (hasNoNumbers && validLength) {
       document.querySelector(`.${errorSpan}`).innerHTML = ''; // Clear the error message
-      inputElement.style.borderColor = "green";  // Mark the input as valid
+      inputElement.style.borderColor = "green";
+      
+      nameValid = true
+       
     }
+
+    return nameValid
   }
 
 
   function validateAddress(elementClass, errorSpan) {
+    let addressValid;
    
     const inputElement = document.querySelector(`.${elementClass}`);
     const inputValue = inputElement.value.trim();   
@@ -153,12 +174,16 @@ function validateEmail(){
     else if (isValidAddress && validLength) {
       document.querySelector(`.${errorSpan}`).innerHTML = ''; // Clear the error message
       inputElement.style.borderColor = "green";   
+      addressValid = true
   }
+
+  return addressValid
 }
 
 
 
 function validateNumber(elementClass, errorSpan, length) {
+  let numberValid;
   // Get the input element using the provided class name
   const inputElement = document.querySelector(`.${elementClass}`);
   const inputValue = inputElement.value;  // Get the value from the input element
@@ -182,37 +207,78 @@ function validateNumber(elementClass, errorSpan, length) {
   else {
     document.querySelector(`.${errorSpan}`).innerHTML = '';   
     inputElement.style.borderColor = "green";  
+    numberValid = true
   }
+
+  return numberValid
 }
 
 
 
 
 
+document.querySelector('.js-email-input').addEventListener('input',(event)=>{
+ validEmail = validateEmail()
+})
+
+
  
   document.querySelector('.js-address-input').addEventListener('input', () => {
-    validateAddress('js-address-input', 'js-address-caution-span');
+   validAddress = validateAddress('js-address-input', 'js-address-caution-span');
+   console.log(validAddress)
   });
  
   document.querySelector('.js-name-input').addEventListener('input', () => {
-    validateName('js-name-input', 'js-name-caution-span');
+   validName = validateName('js-name-input', 'js-name-caution-span');
+   
   });
 
   document.querySelector('.js-last-name-input').addEventListener('input', () => {
-    validateName('js-last-name-input', 'js-last-name-caution-span');
+  validSurname =  validateName('js-last-name-input', 'js-last-name-caution-span');
+   
   });
 
   document.querySelector('.js-city-input').addEventListener('input', () => {
-    validateName('js-city-input', 'js-city-caution-span');
+   validCity = validateName('js-city-input', 'js-city-caution-span');
+   
   });
  
   document.querySelector('.js-postal-code-input').addEventListener('input', () => {
-    validateNumber('js-postal-code-input', 'js-postal-code-caution-span',4);
+   validPostalCode = validateNumber('js-postal-code-input', 'js-postal-code-caution-span',4);
   });
 
   
   document.querySelector('.js-cell-number-input').addEventListener('input', () => {
-    validateNumber('js-cell-number-input', 'js-cell-number-caution-span',10);
+   validNumber = validateNumber('js-cell-number-input', 'js-cell-number-caution-span',10);
   });
+
+  document.querySelector('.js-payfast-input').addEventListener('click', (event) => {
+    const input = event.target; // Reference to the clicked element
+    const payContainer = document.querySelector('.js-payfast-container')
+    const placeOrderBtn = document.querySelector('.js-place-order')
+    if (input.checked) {
+      if (validEmail && validAddress && validCity && validName && validSurname && validPostalCode && validNumber) {
+        // If all validations are true, allow the container to open
+        payContainer.classList.add('open');
+        placeOrderBtn.style.opacity= "1"; // Make the button fully visible
+        placeOrderBtn.style.pointerEvents = "auto"; // Ensure the button is clickable
+      
+      } else {
+        alert('Make sure all inputs are filled correctly before proceeeding')
+        // If any validation fails, uncheck the input and prevent the action
+        input.checked = false;
+        placeOrderBtn.style.opacity = "0.6"; // Make the button appear disabled
+        placeOrderBtn.style.pointerEvents = "none"; // Prevent clicking on the button
+      
+      }
+    } else {
+      // If the input is unchecked, close the container
+      payContainer.classList.remove('open');
+    }
+  });
+
+ 
+
+  
  
  

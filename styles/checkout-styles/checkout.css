@@ -5,7 +5,7 @@ body {
     font-family: "Roboto", sans-serif;
    
     
-    padding-bottom: 80px;
+    padding-bottom: 10px;
 }
 
 .main{
@@ -114,15 +114,19 @@ body {
 }
 
 .contact-details-container,
-.delivery-details-container{
+.delivery-details-container,
+.order-total-container{
     display: flex;
     justify-content: space-between;
     width: 85%;
     margin-left: 14px;
-    margin-bottom: 6px;
     align-items: center;
     margin-bottom: 12px;
      
+}
+
+.order-total-container{
+ margin-top: 30px;
 }
 
 .delivery-details-container{
@@ -175,7 +179,7 @@ input[type="number"] {
     width: 100%;
     padding: 12px;
     font-size: 16px;
-    border: 1px solid gray;
+    border: 2px solid gray;
     border-radius: 5px;
     outline: none;
     transition: border-color 0.3s;
@@ -255,21 +259,24 @@ input[type="number"]:not(:placeholder-shown) + label {
 }
 
 
-.place-order-button-container{
+.pay-order-button-container{
     display:flex;
     justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 45px;
+    align-items: center;
 }
 
 .place-order-button{
- padding:10px 14px;
- width: 60%;
- margin-top: 20px;
- border: 1px solid red;
- background-color: orangered;
- color: black;
- font-weight: 600;
+ 
+ width: 65%;
+ border: none;
+ background-color: rgb(35, 7, 80);
+ color: white;
  transition: .5s ease;
- opacity: 0;
+ padding: 8px 20px ;
+ opacity: 0.6;
+ 
 }
 
 .place-order-button:hover{
@@ -282,6 +289,7 @@ transition: .5s ease;
 font-weight: bold;
 font-family: oleo script;
 color: rgb(255, 0, 0);
+
 }
 .pay-now-button{
     background-color: rgb(255, 208, 0);
@@ -304,18 +312,25 @@ color: rgb(255, 0, 0);
     transition: .3s ease-in;
 }
 .payfast-container{
-    display: flex;
+    display:none;
     flex-direction: column;
     border: 1px solid grey;
     padding: 15px;
     border-radius: 10px;
     width: 80%;
     margin-left: 16px;
+    margin-top: 20px;
+     
     
 }
 
 .payfast-img{
     width: 100%;
 }
+
+.open{
+  display: flex;
+}
+
 
  
