@@ -4,24 +4,8 @@ import { getDeliveryOption,deliveryOptions } from "./delivery-options.js";
 
  
 
- export const cart = JSON.parse(localStorage.getItem('cart'))
- ||[
-    {
-      productId:'5hgf-ty67-dv4c',
-      quantity:1
-    },
-    {
-      productId:'3jkl-u78g-bn9b',
-      quantity:1
-    },
-  {
-    productId:'9abc-l56d-hg3f',
-    quantity:2
+ export let cart = JSON.parse(localStorage.getItem('cart'))
 
-  }
-   
-
-]
 
 export function addToCart(productId){
     let matchingItem;
@@ -74,7 +58,7 @@ export function addToCart(productId){
   
               </div>
               <div class="delete-item-container">
-                  <span class="delete-item-span">
+                  <span class="delete-item-span js-delete-link" data-product-id ="${productId}">
                       <img class="delete-icon" src="images/header-images/delete-icon.png">
                   </span>
   
@@ -87,6 +71,15 @@ export function addToCart(productId){
      document.querySelector('.js-products-grid').innerHTML =cartSummaryHTML
    
     });
+    document.querySelectorAll('.js-delete-link').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const productId = btn.dataset.productId;
+         deleteCartItem(productId)
+     
+      });
+    });
+    
+      
 
      function showQuantityInput(productId,elementClass){
         document.querySelectorAll(elementClass).forEach((element)=>{
@@ -169,6 +162,21 @@ function updateCartQuantity(productId){
      renderCartQuantity()
   })
 return quantity
+}
+
+
+function deleteCartItem(productId){
+   // Filter the cart to exclude the product with the matching ID
+   const newCart = cart.filter((cartItem) => cartItem.productId !== productId);
+    
+   cart = newCart;
+   localStorage.setItem('cart',JSON.stringify(cart))
+   renderCartItemsHTML()
+   renderCartQuantity()
+   renderOrderSummary()
+
+
+
 }
 
 
@@ -260,7 +268,8 @@ document.querySelectorAll('.save-quantity-button').forEach((button) => {
     });
   
     // Inject the generated HTML into the delivery selection container
-    document.querySelector('.js-delivery-selection-container').innerHTML = deliveryOptionsHTML;
+   
+  document.querySelector('.js-delivery-selection-container').innerHTML = deliveryOptionsHTML;
   
     // Add click event listeners to each delivery option
     document.querySelectorAll('.js-option-selector').forEach((element) => {
