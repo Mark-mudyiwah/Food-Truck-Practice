@@ -1,9 +1,8 @@
  
 import { getProduct } from "./products.js";
 import { getDeliveryOption,deliveryOptions } from "./delivery-options.js";
-import { searchProduct } from "./utils/searchQuery.js";
+
  
-searchProduct()
  export let cart = JSON.parse(localStorage.getItem('cart'))
 
 
@@ -365,6 +364,7 @@ document.querySelectorAll('.save-quantity-button').forEach((button) => {
     localStorage.setItem('orderTotal',JSON.stringify(orderTotal))
     
   }
+
  
  
 
