@@ -1,9 +1,9 @@
 import { products } from "./products.js";
 import { addToCart } from "./cart.js";
 import { headerDisplay } from "./utils/header.js";
-import { searchItem } from "./utils/searchQuery.js";
+import { searchItem ,searchProduct} from "./utils/searchQuery.js";
 
-headerDisplay();
+headerDisplay()
 
 // Function to update the product display on the page
 function updateProductDisplay(filteredProducts) {
@@ -16,10 +16,10 @@ function updateProductDisplay(filteredProducts) {
             </div>
             <div class="information-container">
                 <span class="item-name">${product.name}</span>
-                <span class="item-price">R${(product.price).toFixed(2)}</span>
+                <span class="item-price">R${product.price.toFixed(2)}</span>
                 <div class="add-to-cart-div">
                     <button class="add-to-cart-button" data-product-id="${product.id}">
-                        Add to cart
+                        Add to Cart
                     </button>
                 </div>
             </div>
@@ -31,7 +31,7 @@ function updateProductDisplay(filteredProducts) {
     // Update the product grid with filtered products
     document.querySelector('.products-grid').innerHTML = productsHtml;
 
-    // Reattach the event listeners to the new buttons
+    // Reattach event listeners for the "Add to Cart" buttons
     attachAddToCartEventListeners();
 }
 
@@ -51,18 +51,25 @@ function attachAddToCartEventListeners() {
     });
 }
 
-// Initially display all products
-updateProductDisplay(products);
+// Extract the `query` parameter from the URL
+const url = new URL(window.location.href);
+const query = url.searchParams.get('query');
 
-const searchInput = document.querySelector('.js-search-input');
-console.log(searchInput);
-
-searchInput.addEventListener('keydown', (event) => {
-    const searchWord = searchInput.value;
-    if (event.key === 'Enter') {
-        // Call searchItem when Enter is pressed and update the display
-        const filteredProducts = searchItem(searchWord);
-        updateProductDisplay(filteredProducts); // Update the product display with filtered results
-    searchInput.value = ''
+// Check if the query exists and handle search
+if (query && query.trim() !== '' && query.toLowerCase() !== 'all products') {
+    // Perform the search
+    const filteredProducts = searchItem(query);
+    
+    if (filteredProducts.length > 0) {
+        // Display filtered products if matches are found
+        updateProductDisplay(filteredProducts);
+    } else {
+        // Display all products if no matches are found
+        updateProductDisplay(products);
     }
-});
+} else {
+    // If query is empty or 'all products', display all products
+    updateProductDisplay(products);
+}
+// Handle search input and update URL
+ searchProduct()

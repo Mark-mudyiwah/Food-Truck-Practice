@@ -1,9 +1,9 @@
  
 import { getProduct } from "./products.js";
 import { getDeliveryOption,deliveryOptions } from "./delivery-options.js";
-
+import { searchProduct } from "./utils/searchQuery.js";
  
-
+searchProduct()
  export let cart = JSON.parse(localStorage.getItem('cart'))
 
 
