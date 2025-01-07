@@ -3,7 +3,7 @@ import { getProduct } from "./products.js";
 import { getDeliveryOption,deliveryOptions } from "./delivery-options.js";
 
  
- export let cart = JSON.parse(localStorage.getItem('cart'))
+ export let cart = JSON.parse(localStorage.getItem('cart'))||[]
 
 
 export function addToCart(productId){
