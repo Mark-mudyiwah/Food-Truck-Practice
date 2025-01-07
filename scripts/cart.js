@@ -40,7 +40,7 @@ export function addToCart(productId){
       const matchingProduct = getProduct(productId)
   
       cartSummaryHTML +=`
-         <div class="product-container">
+         <div class="product-container js-product-container-${productId}">
               <div class="item-image-container">
                   <div>
                       <img class="item-image" src="${matchingProduct.image}">
@@ -171,9 +171,11 @@ function deleteCartItem(productId){
     
    cart = newCart;
    localStorage.setItem('cart',JSON.stringify(cart))
-   renderCartItemsHTML()
+ const productHTML = document.querySelector(`.js-product-container-${productId}`)
    renderCartQuantity()
+   productHTML.remove()
    renderOrderSummary()
+  
 
 
 
@@ -361,12 +363,9 @@ document.querySelectorAll('.save-quantity-button').forEach((button) => {
     document.querySelector('.js-cart-item-count').innerHTML = totalCartQuantity;
    
     localStorage.setItem('orderTotal',JSON.stringify(orderTotal))
-  
+    
   }
-
  
-  
-  
  
 
 
