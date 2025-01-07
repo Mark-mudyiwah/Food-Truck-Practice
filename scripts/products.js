@@ -17,7 +17,7 @@ export function getProduct(productId){
 
 
 
-export const products = [
+export let products = [
     
         {
             id: '11abc-x23y-tz5u',
