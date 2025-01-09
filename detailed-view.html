@@ -4,9 +4,349 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detailed-View</title>
+
+    <link rel="stylesheet" href="styles/shared-styles/header.css">
+    <link rel="stylesheet" href="styles/shop-styles/detailed-view.css">
+    <link rel="stylesheet" href="styles/shared-styles/sidebar.css">
+    <link rel="stylesheet" href="styles/shared-styles/nav.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <header class="header">
+        <div class="left-side">
+            <div class="menu-icon-container">
+                <img class="menu-icon" src="images/header-images/menu-icon.png">
+     
+            </div>
+    
+        </div>
+       <a href="index.html">
+         <div class="middle">
+           
+            <div class="logo-container">
+                <div class="goodhope-text">
+                    GOOD HOPE
+                </div>
+                <div class="food-truck-text">
+                   
+                    FOOD TRUCK
+                </div>
+                
+            </div>
+     
+    
+            <div class="truck-container-primary">
+    
+                <div class="truck-container">
+                    <img class="truck-icon" src="images/header-images/truck-icon-white.png">
+    
+                </div>
+            </div>
+       
+       
+         </div>
+        </a>
+        
+        <div class="right-side">
+            <div class="search-icon-container">
+                <img class="search-icon" src="images/header-images/search-icon-white.png">
+            </div>
+    
+            <div class="shopping-bag-container" >
+                <a href="cart.html">
+                    <img class="shopping-bag-icon" src="images/header-images/shopping-bag.png">
+                <div class="cart-quantity-container js-cart-quantity-container">
+                    
+                </div>
+                </a>
+                
+            </div>
+        </div>
+    </header>
+    
+    <div  class="search-input-container-primary">
+        <div class="search-input-container">
+            <input class="search-input js-search-input" list ="search-suggestions" autocomplete = "on" placeholder="Search Products">
+        <datalist  class="data-list" id ="search-suggestions">
+        <option value="Burger">
+        <option value="Hot dog">
+        <option value="Energy drink">
+        <option value="Sausage Rolls">
+        <option value="Breakfast toastie">
+        <option value="Chip roll">
+        <option value="Fries">
+        <option value="score">
+        <option value="Double 'O'">
+        <option value="Milk Shakes">
+        </datalist>
+            </div>
+    </div>
+    
+    <div class="sidebar"></div>
+    
+    <div class="viewed-image-container">
+        <img class="viewed-product-image" src="images/product-images/hot-dog.jpg">
+    </div>
+    
+    <div class="viewed-product-infomation">
+        <div class="next-buttons">
+            <span class="previous-button js-prev-btn">
+                <img class="prev-icon" src="images/header-images/prev-icon.png"> 
+            </span>
+            <span  class="next-button js-next-btn">
+                <img class="next-icon" src="images/header-images/next-icon.png"> 
+            </span> 
+        </div>
+        
+        <span  class="viewed-product-name">
+            Sausage Roll
+        </span>
+
+        <span  class="viewed-product-info">
+            A timeless savory favorite made with premium, seasoned sausage meat, expertly wrapped in layers of golden, flaky puff pastry. Each bite combines the perfect crunch of buttery pastry with the rich, juicy flavors of the filling, enhanced by a blend of select herbs and spices.
+
+            Ideal as a satisfying snack, a party favorite, or a convenient on-the-go meal. Whether enjoyed warm or at room temperature, our sausage rolls deliver a delightful balance of texture and taste.
+
+        <b>Ingredients</b>: Puff pastry, high-quality sausage meat, breadcrumbs, herbs, spices, and egg wash.
+        </span>
+    </div>
+    <span class="viewed-item-price">R 29.99</span>
+
+    <div class="viewed-add-to-cart-container">
+    <button class="viewed-add-to-cart-button js-add-to-cart">
+        Add item to Cart
+    </button>
+
+    </div>
+
+    <span class="product-suggestion-span">
+        <span>You May Also Like These</span>
+        <span>Products</span>
+    </span>
+
+    <div class="featured-products-container">
+
+        <div class="product-container">
+            <div class="image-container">
+                <img class="product-image" src="images/product-images/hot-dog.jpg">
     
     
+            </div>
+            <div class="product-infomation">
+                <div class="product-name">
+                    HOT DOG
+                </div>
+                <div class="product-price">
+                    R 34.99
+    
+                </div>
+                <div class="more-product-info">
+    
+                <span class="see-info-span">See info...</span> 
+    
+                </div>
+                <div  class="add-to-cart-container">
+                    <button class="add-to-cart-button">
+                        Add to Cart
+                    </button>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+        <div class="product-container">
+            <div class="image-container">
+                <img class="product-image" src="images/product-images/burger.jpg">
+    
+    
+            </div>
+            <div class="product-infomation">
+                <div class="product-name">
+                    Good Hope Burger
+                </div>
+                <div class="product-price">
+                    R 49.50
+    
+                </div>
+                <div class="more-product-info">
+    
+                <span class="see-info-span">See info...</span> 
+    
+                </div>
+                <div  class="add-to-cart-container">
+                    <button class="add-to-cart-button">
+                        Add to Cart
+                    </button>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+        <div class="product-container">
+            <div class="image-container">
+                <img class="product-image" src="images/product-images/side-fries.jpg">
+    
+    
+            </div>
+            <div class="product-infomation">
+                <div class="product-name">
+                    Side Fries
+                </div>
+                <div class="product-price">
+                    R 59.99
+    
+                </div>
+                <div class="more-product-info">
+    
+                <span class="see-info-span">See info...</span> 
+    
+                </div>
+                <div  class="add-to-cart-container">
+                    <button class="add-to-cart-button">
+                        Add to Cart
+                    </button>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+        <div class="product-container">
+            <div class="image-container">
+                <img class="product-image" src="images/product-images/smash-burger.jpg">
+    
+    
+            </div>
+            <div class="product-infomation">
+                <div class="product-name">
+                   Smash Burger
+                </div>
+                <div class="product-price">
+                    R 39.50
+    
+                </div>
+                <div class="more-product-info">
+    
+                <span class="see-info-span">See info...</span> 
+    
+                </div>
+                <div  class="add-to-cart-container">
+                    <button class="add-to-cart-button">
+                        Add to Cart
+                    </button>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+        <div class="product-container">
+            <div class="image-container">
+                <img class="product-image" src="images/product-images/chicken-burger.jpg">
+    
+    
+            </div>
+            <div class="product-infomation">
+                <div class="product-name">
+                   Chicken Burger
+                </div>
+                <div class="product-price">
+                    R 29.99
+    
+                </div>
+                <div class="more-product-info">
+    
+                <span class="see-info-span">See info...</span> 
+    
+                </div>
+                <div  class="add-to-cart-container">
+                    <button class="add-to-cart-button">
+                        Add to Cart
+                    </button>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+        <div class="product-container">
+            <div class="image-container">
+                <img class="product-image" src="images/product-images/bashews.jpg">
+    
+    
+            </div>
+            <div class="product-infomation">
+                <div class="product-name">
+                     Bashew Drinks
+                </div>
+                <div class="product-price">
+                    R 7.99
+    
+                </div>
+                <div class="more-product-info">
+    
+                <span class="see-info-span">See info...</span> 
+    
+                </div>
+                <div  class="add-to-cart-container">
+                    <button class="add-to-cart-button">
+                        Add to Cart
+                    </button>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+      
+    </div>
+ 
+      <div class="footer">
+
+        <span class="nav-images-container">
+            <span><img class="nav-image" src="images/header-images/logo-goodhope.png"></span>
+            <span><img class="nav-image" src="images/header-images/food-truck-logo.jpg"></span>
+    
+        </span>
+    
+         <span class="about-us-heading">About Us</span>
+    
+        <div class="about-us-container">
+         
+            <div>About</div>
+            <div>Careers</div>
+            <div>Locations</div>
+            <div>Franchising</div>
+            <div>News</div>
+    
+        </div>
+        <span class="general-info-heading">General Info</span>
+        <div class="general-info-container">
+            
+            <div>Delivery & Returns</div>
+            <div>Refund Policy</div>
+            <div>Terms of Service</div>
+            <div>Privacy</div>
+    
+        </div>
+        <span class="follow-us-heading">Follow Us</span>
+        <div class="follow-us">
+            <div>Facebook</div>
+            <div>Instagram</div>
+            <div>Twitter</div>
+            <div>LinkedIn</div>
+    
+        </div>
+        <p><a href="https://github.com/Mark-mudyiwah">&#169 2024,markmudyiwah.dev</a></a></p>
+     </div>
+
+
 </body>
 </html>
