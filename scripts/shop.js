@@ -11,7 +11,7 @@ function updateProductDisplay(filteredProducts) {
     filteredProducts.forEach((product) => {
         let html = `
         <div class="product-container">
-            <div class="item-image-container">
+            <div class="item-image-container js-image-container"data-product-id ="${product.id}">
                 <img class="item-image" src="${product.image}">
             </div>
             <div class="information-container">
@@ -73,3 +73,11 @@ if (query && query.trim() !== '' && query.toLowerCase() !== 'all products') {
 }
 // Handle search input and update URL
  searchProduct()
+
+ document.querySelectorAll('.js-image-container').forEach((img)=>{
+    img.addEventListener('click',()=>{
+        const productId = img.dataset.productId
+        window.location.href=`detailed-view.html?productId=${productId}`
+        console.log(productId)
+    })
+ })
