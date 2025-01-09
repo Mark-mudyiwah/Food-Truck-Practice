@@ -44,6 +44,7 @@ body{
 .viewed-product-image{
 max-width: 90%;
 border-radius: 10px;
+height: 250px;
 
 }
 
