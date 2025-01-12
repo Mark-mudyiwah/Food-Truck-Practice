@@ -1,4 +1,5 @@
- import { products } from "../products.js";
+ import { addToCart } from "../cart.js";
+import { products } from "../products.js";
 
 export function searchItem(searchWord) {
     // Convert the search word to lowercase for case-insensitive comparison
@@ -27,3 +28,63 @@ searchInput.addEventListener('keydown', (event) => {
     }
 })
  };
+ 
+ 
+ export function featuredProductsHTML() {
+    // Initialize the HTML string
+    let html = '';
+
+    // Loop through products and filter for those with a price of 40
+    products.forEach((product) => {
+        if (product.type === 'featured') {
+            // Append the HTML for each matching product
+            html += `
+                <div class="product-container">
+       <div class="image-container">
+           <img class="product-image" src=" ${product.image}">
+    
+    
+       </div>
+       <div class="product-infomation">
+           <div class="product-name">
+               ${product.name}
+           </div>
+           <div class="product-price">
+             R${product.price.toFixed(2)}
+    
+           </div>
+           <div  class="add-to-cart-container">
+               <button class="add-to-cart-button js-add-to-cart" data-product-id="${product.id}">
+                   Add to Cart
+               </button>
+    
+           </div>
+    
+       </div>
+    
+    </div>
+        
+            `;
+        }
+    });
+
+    // Update the featured items container with the generated HTML
+    const featuredItemsDiv = document.querySelector('.js-featured-items-div');
+    if (featuredItemsDiv) {
+        featuredItemsDiv.innerHTML = html;
+    } else {
+        console.error('Featured items container not found!');
+    }
+
+    document.querySelectorAll('.js-add-to-cart').forEach((btn)=>{
+        btn.addEventListener('click', ()=>{
+            const productId = btn.dataset.productId
+            
+             addToCart(productId)
+             btn.innerHTML= `Added Successfully`
+             setTimeout(()=>{
+                btn.innerHTML = 'Add to Cart'
+             },700)
+         })
+    })  
+}

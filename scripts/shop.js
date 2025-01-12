@@ -79,5 +79,7 @@ if (query && query.trim() !== '' && query.toLowerCase() !== 'all products') {
         const productId = img.dataset.productId
         window.location.href=`detailed-view.html?productId=${productId}`
         console.log(productId)
+
     })
  })
+

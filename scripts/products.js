@@ -219,6 +219,7 @@ export let products = [
         image: "images/product-images/chocolate-bites.jpeg",
         name: 'Chocolate Brownie Bites',
         price: 35,
+        type :'featured',
         info: "Our Chocolate Brownie Bites are rich, fudgy, and bursting with real chocolate flavor. Each bite offers the perfect balance of sweetness and richness, making it the ultimate dessert for chocolate lovers. These decadent little treats are perfect for snacking or as an indulgent dessert to satisfy your sweet tooth.",
         keywords: ['brownie', 'chocolate', 'dessert', 'snack', 'sweet']
     },
@@ -260,6 +261,7 @@ export let products = [
         image: "images/product-images/side-fries.jpg",
         name: 'Side Fries',
         price: 29.99,
+        type :'featured',
         info: "Enjoy our classic fries, made with the perfect balance of crispy and fluffy textures. Ideal as a side to any main meal or as a standalone snack. Each fry is cut to the perfect thickness for an ideal crunch, and seasoned with a blend of spices to enhance their natural flavor. Whether paired with a burger or eaten on their own, they are a must-have for any meal. Served piping hot, these fries are a comforting treat anytime.",
         keywords: ['fries', 'side', 'crispy', 'snack', 'classic']
     },
@@ -300,6 +302,7 @@ export let products = [
         image: "images/product-images/cheese-stuffed-jalapenos.jpeg",
         name: 'Cheese-Stuffed Jalapeños',
         price: 35,
+        type :'featured',
         info: "Spicy jalapeños stuffed with cream cheese, breaded, and fried to golden perfection. These little bites pack a punch, offering a delightful balance of heat and creamy texture. Perfect as an appetizer, party snack, or side dish, these stuffed jalapeños are guaranteed to impress. The crispy coating adds an extra crunch, enhancing the overall experience. Served with a cool dipping sauce, they’re a great way to kick off any meal.",
         keywords: ['jalapeños', 'cheese', 'spicy', 'snack', 'fried']
     },
@@ -341,6 +344,7 @@ export let products = [
         image: "images/product-images/fruit-parfait.jpeg",
         name: 'Fruit Parfait',
         price: 35,
+        type :'featured',
         info: "A delightful treat that layers fresh, seasonal fruit with creamy yogurt and crunchy granola. This fruit parfait is not only delicious but also packed with vitamins and fiber. It’s the ideal option for a healthy breakfast, snack, or dessert. The combination of textures and flavors makes every spoonful satisfying and indulgent. Topped with a drizzle of honey or your favorite nut butter, it’s a refreshing choice that balances sweetness and nourishment.",
         keywords: ['fruit', 'parfait', 'yogurt', 'granola', 'healthy']
     },
@@ -397,6 +401,7 @@ export let products = [
         image: "images/product-images/mango-smoothie.jpeg",
         name: 'Mango Smoothie',
         price: 30,
+        type :'featured',
         info: "A refreshing and tropical treat, our Mango Smoothie is made with ripe mangoes, creamy yogurt, and a touch of honey for added sweetness. This smoothie is not only delicious but also packed with vitamins and minerals, making it a great choice for hydration and energy. Perfect for a mid-day snack or as a refreshing breakfast, it’s the ideal drink for anyone craving a tropical escape. A healthy, cool beverage that’s both satisfying and refreshing.",
         keywords: ['smoothie', 'mango', 'yogurt', 'drink', 'refreshing']
     },
@@ -405,6 +410,7 @@ export let products = [
         image: "images/product-images/margherita-pizza-slice.jpeg",
         name: 'Margherita Pizza Slice',
         price: 30,
+        type :'featured',
         info: "A slice of classic Margherita pizza with fresh mozzarella, fragrant basil, and a tangy tomato sauce. This simple yet delicious pizza is perfect for those who enjoy the pure, authentic flavors of Italy. With its soft crust and balanced toppings, it’s a refreshing twist on a beloved favorite. Whether you’re grabbing a quick lunch or treating yourself to a savory meal, this pizza slice offers a taste of Italy in every bite.",
         keywords: ['pizza', 'margherita', 'cheese', 'basil', 'slice']
     },
