@@ -40,7 +40,7 @@ searchInput.addEventListener('keydown', (event) => {
             // Append the HTML for each matching product
             html += `
                 <div class="product-container">
-       <div class="image-container">
+       <div class="image-container js-image-container" data-product-id="${product.id}">
            <img class="product-image" src=" ${product.image}">
     
     
@@ -81,10 +81,24 @@ searchInput.addEventListener('keydown', (event) => {
             const productId = btn.dataset.productId
             
              addToCart(productId)
-             btn.innerHTML= `Added Successfully`
-             setTimeout(()=>{
-                btn.innerHTML = 'Add to Cart'
-             },700)
+             btn.style.backgroundColor= "green"
+            btn.innerHTML = `Added Successfully &#10004;`;
+            setTimeout(() => {
+                btn.innerHTML= `Add to Cart`;
+                btn.style.backgroundColor = "";
+            }, 900);
          })
     })  
+
+    document.querySelectorAll('.js-image-container').forEach((img)=>{
+        img.addEventListener('click',()=>{
+            const productId = img.dataset.productId
+            window.location.href=`detailed-view.html?productId=${productId}`
+            console.log(productId)
+    
+        })
+     })
+
 }
+
+

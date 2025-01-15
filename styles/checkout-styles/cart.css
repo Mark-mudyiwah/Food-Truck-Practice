@@ -81,6 +81,10 @@ cursor: pointer;
 }
  .item-name{
     font-weight: 500;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden;          /* Hide the overflowing text */
+    text-overflow: ellipsis; 
+    width: 90%; 
  }
  
  .update-button{

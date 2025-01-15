@@ -246,7 +246,7 @@ document.querySelectorAll('.save-quantity-button').forEach((button) => {
 
  export function renderDeliveryOptions() {
     // Fetch the selected ID from localStorage
-    const selectedId = JSON.parse(localStorage.getItem('deliveryOption'));
+    let selectedId = JSON.parse(localStorage.getItem('deliveryOption'));
   
     let deliveryOptionsHTML = ``;
   
@@ -306,7 +306,7 @@ document.querySelectorAll('.save-quantity-button').forEach((button) => {
     let totalCost = 0;
   
     // Fetch the selected ID from localStorage
-    const selectedId = JSON.parse(localStorage.getItem('deliveryOption'));
+    const selectedId = JSON.parse(localStorage.getItem('deliveryOption'))|| 1;
     const selectedDeliveryOption = getDeliveryOption(parseInt(selectedId, 10)); // Ensure `selectedId` is a number
   
     const deliveryCharge = selectedDeliveryOption ? selectedDeliveryOption.price : 0;
