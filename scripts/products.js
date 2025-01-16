@@ -330,9 +330,9 @@ export let products = [
     {
         id: '3jkl-u78g-bn9b',
         image: "images/product-images/side-fries.jpg",
-        image1: "images/product-images/side-fries-1.jpg",
-        image2: "images/product-images/side-fries-2.jpg",
-        image3: "images/product-images/side-fries-3.jpg",
+        image1: "images/product-images/side-fries-1.jpeg",
+        image2: "images/product-images/side-fries-2.jpeg",
+        image3: "images/product-images/side-fries-3.jpeg",
         name: 'Side Fries',
         price: 29.99,
         type: 'featured',
